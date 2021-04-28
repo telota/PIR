@@ -13,7 +13,7 @@
         <div v-if="loading" class="loader">
             <div class="loader-header">PIR</div>
             <div class="loader-bar"></div>
-            <div class="loader-subheader">PROSOPGRAPHIA IMPERII ROMANI</div>
+            <div class="loader-subheader">PROSOPOGRAPHIA IMPERII ROMANI</div>
         </div>
 
         <!-- Appbar -->
@@ -26,8 +26,8 @@
                 <v-col cols="12" sm="10">
                     <!-- PIR -->
                     <div
-                        class="title text-center pt-2"
-                        v-text="$vuetify.breakpoint.mdAndUp ? 'PROSOPGRAPHIA IMPERII ROMANI' : 'PIR'"
+                        class="title text-center pt-2 pb-2"
+                        v-text="$vuetify.breakpoint.mdAndUp ? 'PROSOPOGRAPHIA IMPERII ROMANI' : 'PIR'"
                         style="position: absolute; left: 0; right: 0;"
                     ></div>
                     <div class="d-flex justify-space-between" style="width: 100%;">
@@ -66,7 +66,7 @@
         <v-main class="app_bg" style="background: url('/background.jpg')">
             <div style="border-top: 5px solid #b51212;">
                 <v-fade-transition>
-                    <router-view class="mt-3"></router-view>
+                    <router-view class="mt-5"></router-view>
                 </v-fade-transition>
             </div>
         </v-main>
@@ -167,11 +167,12 @@
                     </p>
                     <p>
                         <b v-text="$root.label('license_sw')"></b><br />
-                       PIR App<br />
-                        <a href="https://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache&nbsp;Software, License Version 2.0</a><br />
+                        <span v-text="$root.label('license_text')"></span>
+                        <a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a>.<br />
+                        <span v-text="$root.label('license_author')"></span>:
+                        <a href="https://orcid.org/0000-0003-2713-5207" target="_blank">Jan Köster</a><br />
                         <span v-text="$root.label('license_available')"></span>
-                        <a href="https://github.com/telota/PIR" target="_blank">Github</a><br />
-                        <span v-text="$root.label('license_author')"></span>: <a href="https://orcid.org/0000-0003-2713-5207" target="_blank">Jan Köster</a>
+                        <a href="https://github.com/telota/PIR" target="_blank">Github</a>.
                     </p>
                 </div>
                 <div class="mb-n3 d-flex justify-center"><v-btn text @click="dialog.license=false">Close</v-btn></div>

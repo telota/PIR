@@ -16,7 +16,8 @@ Vue.use(Vuetify);
 // global component registrations here
 Vue.component('sessioninfo',        require('./modules/sessioninfo.vue').default);
 Vue.component('pagination',         require('./modules/pagination.vue').default);
-Vue.component('ace',                require('./pages/search.vue').default);
+Vue.component('search',             require('./pages/search.vue').default);
+Vue.component('instructions',             require('./modules/instructions.vue').default);
 
 
 // Own global JS variables/functions

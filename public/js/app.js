@@ -1958,6 +1958,209 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/instructions.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/instructions.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    mode: {
+      type: String,
+      required: true
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/pagination.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/pagination.vue?vue&type=script&lang=js& ***!
@@ -2028,6 +2231,10 @@ __webpack_require__.r(__webpack_exports__);
     pagination: {
       type: Object,
       required: true
+    },
+    color: {
+      type: [String],
+      "default": 'bar_prim'
     }
   }
 });
@@ -2189,15 +2396,27 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
+    var _this$$route$params$m;
+
     return {
       loading: false,
       filterExpanded: true,
-      searched: false,
+      searchedString: null,
       no_result: '&ensp;',
       search: {
-        mode: 'keyword',
+        mode: (_this$$route$params$m = this.$route.params.mode) !== null && _this$$route$params$m !== void 0 ? _this$$route$params$m : 'keyword',
         string: null,
         isOr: false,
         isCs: false
@@ -2210,17 +2429,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         text: this.$root.label('search_mode_addenda')
       }],
       items: [],
-      itemsDetails: {},
-      itemsExpanded: [],
-      instructions: {
-        active: false,
-        search: ''
-      },
+      instructions: true,
       queryRefresh: 0,
       queryDialog: false,
       pagination: {
         offset: 0,
-        limit: 50,
+        limit: 20,
         count: 0,
         page: {
           current: 1,
@@ -2234,13 +2448,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   computed: {
-    api: function api() {
-      return '/api';
-    },
     mode: function mode() {
-      var _this$$route$params$m;
+      var _this$$route$params$m2;
 
-      return (_this$$route$params$m = this.$route.params.mode) !== null && _this$$route$params$m !== void 0 ? _this$$route$params$m : 'keyword';
+      return (_this$$route$params$m2 = this.$route.params.mode) !== null && _this$$route$params$m2 !== void 0 ? _this$$route$params$m2 : 'keyword';
     },
     count_formated: function count_formated() {
       // Beautify result counter
@@ -2257,109 +2468,80 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
         return count;
       } else {
-        return null;
+        return this.$root.language === 'de' ? 'Keine' : 'No';
       }
     }
   },
+  watch: {
+    $route: function $route(to, from) {
+      if (window.location.hash.split('?')[1]) this.runSearch();
+    }
+  },
   created: function created() {
-    this.search.mode = this.mode;
+    var query = window.location.hash.split('?')[1];
+
+    if (query) {
+      var _query$split$, _query$split$2, _query$split$3, _query$split$4;
+
+      this.search.string = (_query$split$ = query.split('string=')[1]) !== null && _query$split$ !== void 0 && _query$split$.split('&')[0] ? decodeURI((_query$split$2 = query.split('string=')[1]) === null || _query$split$2 === void 0 ? void 0 : _query$split$2.split('&')[0]) : null;
+      this.search.isCs = ((_query$split$3 = query.split('isCs=')[1]) === null || _query$split$3 === void 0 ? void 0 : _query$split$3.split('&')[0]) == 1 ? true : false;
+      this.search.isOr = ((_query$split$4 = query.split('isOr=')[1]) === null || _query$split$4 === void 0 ? void 0 : _query$split$4.split('&')[0]) == 1 ? true : false;
+      this.runSearch();
+    }
   },
   methods: {
     OpenNewBrowserTab: function OpenNewBrowserTab(url) {
       // Handler for Links to external resources
       window.open(url, '_blank');
     },
-    RunSearch: function RunSearch() {
+    setSearchURL: function setSearchURL(url) {
       var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var _fetch$contents;
+      var params = {};
 
-        var fetch;
+      if (url) {
+        var _url$split$;
+
+        (_url$split$ = url.split('?')[1]) === null || _url$split$ === void 0 ? void 0 : _url$split$.split('&').forEach(function (p) {
+          params[p.split('=')[0]] = p.split('=')[1];
+        });
+      } else {
+        if (this.search.string) params.string = this.search.string;
+        if (this.search.isCs) params.isCs = 1;
+        if (this.search.isOr) params.isOr = 1;
+      }
+
+      this.$router.replace({
+        path: '/search/' + this.mode,
+        query: params
+      })["catch"](function (error) {
+        _this.runSearch();
+      });
+    },
+    runSearch: function runSearch() {
+      var _this2 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var _window$location$hash, _fetch$contents;
+
+        var params, fetch;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 // Execute Query
-                _this.searched = true;
-                _this.itemsExpanded = [];
-                _this.items = [];
-                _this.itemsDetails = {};
+                _this2.instructions = false;
+                _this2.items = [];
+                params = (_window$location$hash = window.location.hash.split('?')[1]) !== null && _window$location$hash !== void 0 ? _window$location$hash : '';
+                console.log(params);
                 _context.next = 6;
-                return _this.FetchData(_this.BuildFetchURL());
+                return _this2.FetchData('/api/' + _this2.mode + '?' + params);
 
               case 6:
                 fetch = _context.sent;
+                // Check if result is empty
+                if (!(fetch !== null && fetch !== void 0 && (_fetch$contents = fetch.contents) !== null && _fetch$contents !== void 0 && _fetch$contents[0])) _this2.no_result = _this2.$root.label('no_records'); // Set Pagination
 
-                // Check if result
-                if (fetch !== null && fetch !== void 0 && (_fetch$contents = fetch.contents) !== null && _fetch$contents !== void 0 && _fetch$contents[0]) {// this.filterExpanded = false
-                } else {
-                  _this.no_result = _this.$root.label('no_records');
-                  setTimeout(function () {
-                    _this.no_result = '&ensp;';
-                  }, 4000);
-                } // JK: Set Pagination
-
-
-                _this.pagination = {
-                  count: fetch.pagination.count,
-                  page: fetch.pagination.page,
-                  first: fetch.pagination.firstPage,
-                  previous: fetch.pagination.previousPage,
-                  next: fetch.pagination.nextPage,
-                  last: fetch.pagination.lastPage
-                };
-                console.log(_this.pagination); // JK: Set Items
-
-                _this.items = fetch.contents;
-                console.log(_this.items);
-
-              case 12:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    },
-    BuildFetchURL: function BuildFetchURL() {
-      // Constructor for API Call
-      var self = this;
-      var url = this.api;
-      var params = []; // Iterate over query Keys
-
-      this.queryKeys.forEach(function (key) {
-        if (self.query[key]) {
-          var value = self.query[key] === true ? 1 : encodeURI(self.query[key]);
-          params.push(key + '=' + value);
-        }
-      });
-
-      if (params[0]) {
-        url = url + '?' + params.join('&');
-      }
-
-      return url;
-    },
-    Navigate: function Navigate(url) {
-      var _this2 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-        var fetch;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                // Method for Navigation Elements
-                _this2.itemsExpanded = [];
-                _this2.items = [];
-                _this2.itemsDetails = {};
-                _context2.next = 5;
-                return _this2.FetchData(url);
-
-              case 5:
-                fetch = _context2.sent;
-                // Set Pagination
                 _this2.pagination = {
                   count: fetch.pagination.count,
                   page: fetch.pagination.page,
@@ -2367,13 +2549,41 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   previous: fetch.pagination.previousPage,
                   next: fetch.pagination.nextPage,
                   last: fetch.pagination.lastPage
-                };
-                console.log(_this2.pagination); // Set Result Items
+                }; // Set Items
 
                 _this2.items = fetch.contents;
-                console.log(_this2.items);
 
               case 10:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    FetchData: function FetchData(url) {
+      var _this3 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        var fetch;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                // Axios Fetch to given URL
+                _this3.loading = true;
+                _this3.searchedString = _this3.search.string ? _this3.search.string : '-';
+                _context2.next = 4;
+                return axios.get(url)["catch"](function (error) {
+                  console.log(error);
+                });
+
+              case 4:
+                fetch = _context2.sent;
+                _this3.loading = false;
+                return _context2.abrupt("return", fetch ? fetch.data : {});
+
+              case 7:
               case "end":
                 return _context2.stop();
             }
@@ -2381,83 +2591,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2);
       }))();
     },
-    FetchData: function FetchData(url) {
-      var _this3 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
-        var fetch;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                // Axios Fetch to given URL
-                _this3.loading = true;
-                _context3.next = 3;
-                return axios.get(url)["catch"](function (error) {
-                  console.log(error);
-                });
-
-              case 3:
-                fetch = _context3.sent;
-                _this3.loading = false;
-                return _context3.abrupt("return", fetch ? fetch.data : {});
-
-              case 6:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3);
-      }))();
-    },
-    ToggleItem: function ToggleItem(id, url) {
+    ResetFilters: function ResetFilters() {
       var _this4 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
-        var fetch;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                if (_this4.itemsExpanded.includes(id)) {
-                  _context4.next = 8;
-                  break;
-                }
-
-                _context4.next = 3;
-                return _this4.FetchData(url);
-
-              case 3:
-                fetch = _context4.sent;
-                //this.itemsDetails[id] = fetch?.contents ? fetch.contents[0] : {}
-                _this4.itemsDetails[id] = fetch !== null && fetch !== void 0 && fetch.contents ? _this4.processSingleItem(fetch.contents[0]) : {};
-
-                _this4.itemsExpanded.push(id);
-
-                _context4.next = 10;
-                break;
-
-              case 8:
-                _this4.itemsExpanded.splice(_this4.itemsExpanded.indexOf(id), 1);
-
-                delete _this4.itemsDetails[id];
-
-              case 10:
-              case "end":
-                return _context4.stop();
-            }
-          }
-        }, _callee4);
-      }))();
-    },
-    ResetFilters: function ResetFilters() {
-      // Reset Search Form Fields to empty
-      var self = this; //if (this.$route.name !== 'search') { this.$router.push({ name: 'search' }) }
-
-      this.queryKeys.forEach(function (key) {
-        self.query[key] = null;
+      // Reset Search Form Fields to default
+      Object.keys(this.search).forEach(function (key) {
+        _this4.search[key] = key === 'mode' ? _this4.mode : null;
       });
-      ++this.queryRefresh;
+      if (window.location.hash.split('?')[1]) this.$router.replace('/search/' + this.mode);
     }
   }
 });
@@ -4355,6 +4496,462 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _vm.mode === "keyword"
+        ? [
+            _vm.$root.language === "de"
+              ? _c("div", [
+                  _c("p", { staticClass: "title" }, [
+                    _vm._v("Stichwort-Suche")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      '\n                Bitte geben sie die Suchbegriffe (oder Zeichenfolgen, "strings") in normaler\n                Schrift und ohne die epigraphischen Klammern ein (also U als U und V als V).\n            '
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                Die Ausgabe erfolgt dann wie in den gedruckten PIR-Bänden: Senatoren in Versalien,\n                Ritter höheren Ranges in Fettdruck, nur teilweise erhaltene Namen mit den üblichen Klammern versehen.\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      '\n                Trennen Sie die einzelnen Suchbegriffe ("strings") bitte durch Blank (= Leerzeichen) ab.\n                Für die Suche können Sie auch Platzhalter-Zeichen ("Joker" oder "wildcards") verwenden.\n            '
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "title" }, [
+                    _vm._v("Erläuterungen zu den Platzhalter–Zeichen")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                Wenn Sie nur nach einem einzelnen Namensteil suchen, werden Sie die folgende Seite nicht benötigen;\n                geben Sie den Namensteil in die Maske ein und starten Sie die Suche.\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                Oft stellen sich aber wesentlich kompliziertere Fragen (jedenfalls geht es uns so).\n                Daher wurde das Suchprogramm so eingerichtet, daß es möglichst viele Wünsche zufriedenstellt.\n                Ein vielseitiges und flexibles Instrumentarium ist aber notwendigerweise ein bißchen kompliziert.\n                Daher sollen zunächst die wichtigsten Suchmöglichkeiten vorgestellt werden.\n                Es folgt dann eine Tabelle mit den (wichtigsten) Platzhalter–Zeichen, die sie verwenden dürfen.\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                Wenn Sie einen einzelnen Begriff (d. h. einen Namensteil wie Rufus) suchen:\n                Geben Sie einfach Ihr Suchwort ein und starten den Suchvorgang.\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                Sie dürfen den Suchbegriff nach Belieben links und rechts trunkieren (d. h. abschneiden).\n                Das Suchprogramm vergleicht nur die Buchstabenfolge, die Sie eingegeben haben, mit den Buchstabenfolgen, die es im Namensverzeichnis der PIR findet.\n                Wenn sie also Quintil eingeben, findet das Programm Quintilius, Quintillus, Quintilia, Quintilianus usw.\n                (und entsprechend bei pilius sowohl Rupilius als auch Popilius).\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      '\n                Sie können wählen, ob das Suchprogramm Groß– und Kleinschreibung unterscheiden soll oder nicht.\n                Wenn sie `Beachten` wählen, gibt das Programm beim Suchbegriff Pius nur die Einträge mit "Pius" aus, andernfalls aber etwa auch "Ulpius".\n            '
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                Etwas weniger einfach ist es, wenn Sie innerhalb Ihres Suchworts Zeichen unbestimmt lassen wollen.\n                 Denn hier kommt es auf Ihre genaue Fragestellung an.\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                Wenn Sie einen einzelnen Buchstaben unbestimmt lassen wollen, geben Sie an dieser Stelle einfach . (einen Punkt) ein.\n                Wenn Sie offenlassen wollen, ob an einer Stelle überhaupt ein Buchstabe steht, geben Sie .? (Punkt und Fragezeichen) ein.\n                Wenn Sie den ganzen Mittelteil eines Wortes unbestimmt lassen wollen, geben Sie an der Stelle bitte [a–z]* ein;\n                dies steht für beliebig viele Kleinbuchstaben. Beim Suchbegriff R[a–z]*ius werden alle Namen gefunden,\n                die mit R beginnen und auf –ius enden (also im wesentlichen die Gentilicia mit R).\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                Es gibt noch viele weitere Möglichkeiten, wie Sie sehr gezielte Abfragen formulieren können. Vergleichen Sie dazu bitte die Tabelle.\n            "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(0)
+                ])
+              : _vm._e()
+          ]
+        : _vm.mode === "addenda"
+        ? void 0
+        : _vm._e()
+    ],
+    2
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      { staticClass: "mt-10", staticStyle: { width: "100%" } },
+      [
+        _c("tr", [
+          _c(
+            "td",
+            { staticClass: "font-weight-bold", attrs: { valign: "top" } },
+            [_vm._v("ZEICHEN")]
+          ),
+          _vm._v(" "),
+          _c(
+            "td",
+            { staticClass: "font-weight-bold", attrs: { valign: "top" } },
+            [_vm._v("BEDEUTUNG")]
+          ),
+          _vm._v(" "),
+          _c(
+            "td",
+            { staticClass: "font-weight-bold", attrs: { valign: "top" } },
+            [_vm._v("BEISPIEL")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v(".")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("ein beliebiges Zeichen (das existieren muß)")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("Ru.ilius")]),
+            _vm._v(' findet "Rutilius", "Rupilius" usw.; '),
+            _c("var", [_vm._v("ius.Ruf")]),
+            _vm._v(' findet "Cluvius Rufus" ebenso wie "Memmius Rufinus".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("?")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("Das davorstehende Zeichen darf fehlen.")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("Aurell?ius")]),
+            _vm._v(' findet "Aurelius" und "Aurellius".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("+")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Das davorstehende Zeichen darf beliebig oft wiederholt sein."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("Mes+al+a")]),
+            _vm._v(' findet "Mesala", "Messala", "Mesalla" und "Messalla".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("*")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Das davorstehende Zeichen darf beliebig oft vorkommen; es darf auch fehlen."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("Mess*all*a")]),
+            _vm._v(' findet "Mesala", "Messala", "Mesalla" und "Messalla".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v(".?")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("ein beliebiges Zeichen, das fehlen darf")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("Rutil.?us")]),
+            _vm._v(' findet "Rutilius" ebenso wie "Rutilus".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v(".+")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("beliebig viele Zeichen (mindestens aber eines)")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("R.+ius")]),
+            _vm._v(
+              ' findet alle Einträge, in denen ein R vorkommt und irgendwo dahinter die Zeichenfolge "ius", also z. B. "Rutilius" ebenso wie "Aelius Rufus Ianuarius".'
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v(".*")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "beliebig viele Zeichen (einschließlich den Fall, daß dort gar keines steht)"
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v("ähnlich")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("[pt]")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle darf eines der in der Klammer angegebenen Zeichen vorkommenden."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("Ru[pt]ilius")]),
+            _vm._v(
+              ' findet sowohl "Rupilius" als auch "Rutilius" (aber sonst nichts).'
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("[a–z]")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle darf ein beliebiger Kleinbuchstabe vorkommen."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("[a–zA–Z0–9]")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle darf ein beliebiger Kleinbuchstabe, Großbuchstabe oder eine Ziffer vorkommen (aber z. B. kein Blank)."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("[a–z]*")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle dürfen beliebig viele Kleinbuchstaben vorkommen (es muß dort aber keiner stehen)."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("R[a–z]*ius")]),
+            _vm._v(
+              ' findet alle Namen, die mit R beginnen und mit –ius enden, aber nicht etwa "Aelius Rufus Ianuarius".'
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("[a–zA–Z0–9]*")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle dürfen beliebig viele Kleinbuchstaben, Großbuchstaben oder Ziffern vorkommen (aber z. B. keine Blanks)."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("[^u]")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle darf alles vorkommen außer dem Buchstaben in der Klammer (es dürfen auch verschiedene Buchstaben gleichzeitig negiert werden)."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("R[^u]s")]),
+            _vm._v(' findet z. B. "Rosianus", aber nicht "Ruso".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("…\\b")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("Die Zeichenfolge vor "),
+            _c("var", [_vm._v("\\b")]),
+            _vm._v(" muß an einem Wortende stehen.")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("Arria\\b")]),
+            _vm._v(' findet "Arria", aber nicht "Arrianus".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("\\b…")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("Die Zeichenfolge nach "),
+            _c("var", [_vm._v("\\b")]),
+            _vm._v(" muß an einem Wortanfang stehen.")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("\\bAr")]),
+            _vm._v(' findet "Arrius" und "Arria", aber nicht "Marius".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("…\\B")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("Die Zeichenfolge vor "),
+            _c("var", [_vm._v("\\B")]),
+            _vm._v(" darf nicht an einem Wortende stehen.")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("Arria\\B")]),
+            _vm._v(' findet "Arrianus", aber nicht "Arria".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("\\B…")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Die Zeichenfolge vor \\B darf nicht an einem Wortanfang stehen."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("\\BAr")]),
+            _vm._v(' findet "Marius", aber nicht "Arrius".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("{1,2}")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Das davorstehende Zeichen muß mindestens einmal und darf höchstens zweimal vorkommen. (Bei dieser Art von Angaben darf auch die Zahl 0 verwendet werden.)"
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("{1,}")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Das davorstehende Zeichen muß mindestens einmal vorkommen, darf aber beliebig oft wiederholt sein."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("[a–z]{1,3}")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Hier muß mindestendens ein Kleinbuchstabe stehen und es dürfen höchstens drei sein."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("R[a–z]{2,3}ius")]),
+            _vm._v(' findet "Raecius", aber nicht "Rutilius".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("var", [_vm._v("…|…")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Die Zeichen vor und hinter dem senkrechten Strich werden als Alternativen behandelt."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("var", [_vm._v("Rupilius|Rutilius")]),
+            _vm._v(
+              ' findet alle Einträge mit "Rupilius" und alle mit "Rutilius".'
+            )
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/pagination.vue?vue&type=template&id=603d19ce&":
 /*!**************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/pagination.vue?vue&type=template&id=603d19ce& ***!
@@ -4377,12 +4974,12 @@ var render = function() {
       _c(
         "v-btn",
         {
-          staticClass: "bar_prim",
           attrs: {
             tile: _vm.pagination.previous ? true : false,
             text: _vm.pagination.previous ? false : true,
             depressed: "",
-            disabled: _vm.pagination.previous ? false : true
+            disabled: _vm.pagination.previous ? false : true,
+            color: _vm.color
           },
           on: {
             click: function($event) {
@@ -4397,12 +4994,12 @@ var render = function() {
       _c(
         "v-btn",
         {
-          staticClass: "bar_prim",
           attrs: {
             tile: _vm.pagination.previous ? true : false,
             text: _vm.pagination.previous ? false : true,
             depressed: "",
-            disabled: _vm.pagination.previous ? false : true
+            disabled: _vm.pagination.previous ? false : true,
+            color: _vm.color
           },
           on: {
             click: function($event) {
@@ -4428,12 +5025,12 @@ var render = function() {
       _c(
         "v-btn",
         {
-          staticClass: "bar_prim",
           attrs: {
             tile: _vm.pagination.next ? true : false,
             text: _vm.pagination.next ? false : true,
             depressed: "",
-            disabled: _vm.pagination.next ? false : true
+            disabled: _vm.pagination.next ? false : true,
+            color: _vm.color
           },
           on: {
             click: function($event) {
@@ -4448,12 +5045,12 @@ var render = function() {
       _c(
         "v-btn",
         {
-          staticClass: "bar_prim",
           attrs: {
             tile: _vm.pagination.next ? true : false,
             text: _vm.pagination.next ? false : true,
             depressed: "",
-            disabled: _vm.pagination.next ? false : true
+            disabled: _vm.pagination.next ? false : true,
+            color: _vm.color
           },
           on: {
             click: function($event) {
@@ -4511,6 +5108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 var render = function() {
+  var this$1 = this
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -4521,247 +5119,325 @@ var render = function() {
         "v-row",
         { attrs: { justify: "center" } },
         [
-          _c(
-            "v-col",
-            { attrs: { cols: "12", sm: "4", md: "3" } },
-            [
-              _c(
-                "v-card",
-                { attrs: { tile: "" } },
-                [
-                  _c(
-                    "v-card-text",
-                    [
-                      _c("v-select", {
-                        attrs: {
-                          items: _vm.modes,
-                          label: _vm.$root.label("search_mode")
-                        },
-                        on: {
-                          change: function($event) {
-                            return _vm.$router.push(
-                              "/search/" + _vm.search.mode
-                            )
-                          }
-                        },
-                        model: {
-                          value: _vm.search.mode,
-                          callback: function($$v) {
-                            _vm.$set(_vm.search, "mode", $$v)
+          _c("v-col", { attrs: { cols: "12", sm: "10" } }, [
+            _c(
+              "div",
+              {
+                style: this.$vuetify.breakpoint.mdAndUp
+                  ? "width: 400px; position: fixed;"
+                  : ""
+              },
+              [
+                _c(
+                  "v-card",
+                  { attrs: { tile: "" } },
+                  [
+                    _c(
+                      "v-card-text",
+                      [
+                        _c("v-select", {
+                          attrs: {
+                            items: _vm.modes,
+                            label: _vm.$root.label("search_mode")
                           },
-                          expression: "search.mode"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("v-text-field", {
-                        attrs: { label: _vm.$root.label("search_string") },
-                        model: {
-                          value: _vm.search.string,
-                          callback: function($$v) {
-                            _vm.$set(_vm.search, "string", $$v)
-                          },
-                          expression: "search.string"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "d-flex justify-center flex-wrap" },
-                        [
-                          _c("v-checkbox", {
-                            staticClass: "mr-5",
-                            attrs: { label: _vm.$root.label("search_isOr") },
-                            model: {
-                              value: _vm.search.isOr,
-                              callback: function($$v) {
-                                _vm.$set(_vm.search, "isOr", $$v)
-                              },
-                              expression: "search.isOr"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("v-checkbox", {
-                            attrs: { label: _vm.$root.label("search_isCs") },
-                            model: {
-                              value: _vm.search.isCs,
-                              callback: function($$v) {
-                                _vm.$set(_vm.search, "isCs", $$v)
-                              },
-                              expression: "search.isCs"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-btn", {
-                        staticClass: "mt-5 primary",
-                        attrs: { tile: "", block: "" },
-                        domProps: {
-                          textContent: _vm._s(_vm.$root.label("search"))
-                        },
-                        on: {
-                          click: function($event) {
-                            return _vm.RunSearch()
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "mt-2 d-flex justify-center" },
-                        [
-                          _c("v-btn", {
-                            attrs: { text: "", small: "" },
-                            domProps: {
-                              textContent: _vm._s(
-                                _vm.$root.label("search_reset")
+                          on: {
+                            input: function($event) {
+                              return _vm.$router.push(
+                                "/search/" + _vm.search.mode
                               )
+                            }
+                          },
+                          model: {
+                            value: _vm.search.mode,
+                            callback: function($$v) {
+                              _vm.$set(_vm.search, "mode", $$v)
                             },
-                            on: {
-                              click: function($event) {
-                                return _vm.ResetFilters(true)
+                            expression: "search.mode"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("v-text-field", {
+                          attrs: { label: _vm.$root.label("search_string") },
+                          on: {
+                            keyup: function($event) {
+                              if (
+                                !$event.type.indexOf("key") &&
+                                _vm._k(
+                                  $event.keyCode,
+                                  "enter",
+                                  13,
+                                  $event.key,
+                                  "Enter"
+                                )
+                              ) {
+                                return null
                               }
+                              return _vm.RunSearch()
                             }
-                          })
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-col",
-            { attrs: { cols: "12", sm: "6", md: "7" } },
-            [
-              _c(
-                "v-card",
-                { attrs: { tile: "", loading: _vm.loading } },
-                [
-                  _c("v-card-title", [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(
-                          _vm.mode === "keyword" ? "Stichwort-" : "Addenda-"
-                        ) +
-                        "Suche\n                "
+                          },
+                          model: {
+                            value: _vm.search.string,
+                            callback: function($$v) {
+                              _vm.$set(_vm.search, "string", $$v)
+                            },
+                            expression: "search.string"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "d-flex justify-center flex-wrap" },
+                          [
+                            _c("v-checkbox", {
+                              staticClass: "mr-5",
+                              attrs: { label: _vm.$root.label("search_isOr") },
+                              model: {
+                                value: _vm.search.isOr,
+                                callback: function($$v) {
+                                  _vm.$set(_vm.search, "isOr", $$v)
+                                },
+                                expression: "search.isOr"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("v-checkbox", {
+                              attrs: { label: _vm.$root.label("search_isCs") },
+                              model: {
+                                value: _vm.search.isCs,
+                                callback: function($$v) {
+                                  _vm.$set(_vm.search, "isCs", $$v)
+                                },
+                                expression: "search.isCs"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-btn", {
+                          staticClass: "mt-5 primary",
+                          attrs: { tile: "", block: "" },
+                          domProps: {
+                            textContent: _vm._s(_vm.$root.label("search"))
+                          },
+                          on: {
+                            click: function($event) {
+                              return _vm.setSearchURL()
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-2 d-flex justify-center" },
+                          [
+                            _c("v-btn", {
+                              attrs: { text: "", small: "" },
+                              domProps: {
+                                textContent: _vm._s(
+                                  _vm.$root.label("search_reset")
+                                )
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.ResetFilters(true)
+                                }
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ],
+                      1
                     )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "v-card-text",
-                    [
-                      !_vm.items[0] && _vm.mode === "keyword"
-                        ? [
-                            _c("p", [
-                              _vm._v(
-                                '\n                            Bitte geben sie die Suchbegriffe (oder Zeichenfolgen, "strings") in normaler\n                            Schrift und ohne die epigraphischen Klammern ein (also U als U und V als V).\n                        '
-                              )
+                  ],
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                style: this.$vuetify.breakpoint.mdAndUp
+                  ? "margin-left: 400px;"
+                  : ""
+              },
+              [
+                _c(
+                  "v-card",
+                  {
+                    staticClass: "mb-5",
+                    class: this.$vuetify.breakpoint.mdAndUp ? "ml-5" : "mt-5",
+                    attrs: { tile: "" }
+                  },
+                  [
+                    _vm.instructions
+                      ? _c(
+                          "v-card-text",
+                          [_c("instructions", { attrs: { mode: _vm.mode } })],
+                          1
+                        )
+                      : _c(
+                          "div",
+                          [
+                            _c(
+                              "div",
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticStyle: {
+                                      position: "absolute",
+                                      right: "0"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-btn",
+                                      {
+                                        staticClass: "ma-1",
+                                        attrs: { icon: "", large: "" },
+                                        on: {
+                                          click: function($event) {
+                                            _vm.instructions = true
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c("v-icon", {
+                                          attrs: { large: "" },
+                                          domProps: {
+                                            textContent: _vm._s("help_outline")
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c("div", {
+                                  staticClass: "pa-2 pt-3 title text-center",
+                                  domProps: {
+                                    innerHTML: _vm._s(
+                                      _vm.count_formated +
+                                        " " +
+                                        _vm.$root.label("records_for") +
+                                        " '" +
+                                        _vm.searchedString +
+                                        "'"
+                                    )
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm.loading
+                                  ? _c("v-progress-linear", {
+                                      attrs: {
+                                        indeterminate: "",
+                                        color: "accent"
+                                      }
+                                    })
+                                  : _c("div", {
+                                      staticStyle: {
+                                        "border-bottom": "3px solid #b51212"
+                                      }
+                                    }),
+                                _vm._v(" "),
+                                _c("pagination", {
+                                  attrs: {
+                                    color: "transparent",
+                                    pagination: _vm.pagination
+                                  },
+                                  on: {
+                                    navigate: function(emit) {
+                                      this$1.setSearchURL(emit)
+                                    }
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("v-expand-transition", [
+                              _vm.loading
+                                ? _c("div", {
+                                    staticClass: "pa-10 text-center",
+                                    domProps: {
+                                      textContent: _vm._s(
+                                        _vm.$root.label("processing")
+                                      )
+                                    }
+                                  })
+                                : _vm.items[0]
+                                ? _c(
+                                    "div",
+                                    { staticClass: "pa-5 pt-8" },
+                                    _vm._l(_vm.items, function(item, i) {
+                                      return _c(
+                                        "div",
+                                        { key: i, staticClass: "mb-5" },
+                                        [
+                                          _c("div", {
+                                            domProps: {
+                                              innerHTML: _vm._s(item.html)
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("div", {
+                                            domProps: {
+                                              innerHTML: _vm._s(item.reference)
+                                            }
+                                          })
+                                        ]
+                                      )
+                                    }),
+                                    0
+                                  )
+                                : _c("div", {
+                                    staticClass: "pa-10 text-center",
+                                    domProps: {
+                                      textContent: _vm._s(
+                                        _vm.$root.label("result_none")
+                                      )
+                                    }
+                                  })
                             ]),
                             _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                "\n                            Die Ausgabe erfolgt dann wie in den gedruckten PIR-Bänden: Senatoren in Versalien,\n                            Ritter höheren Ranges in Fettdruck, nur teilweise erhaltene Namen mit den üblichen Klammern versehen.\n                        "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _vm._v(
-                                '\n                            Trennen Sie die einzelnen Suchbegriffe ("strings") bitte durch Blank (= Leerzeichen) ab.\n                            Für die Suche können Sie auch Platzhalter-Zeichen ("Joker" oder "wildcards") verwenden.\n                        '
-                              )
-                            ])
-                          ]
-                        : _vm._e()
-                    ],
-                    2
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-dialog",
-        {
-          attrs: {
-            "max-width": _vm.$vuetify.breakpoint.lgAndUp ? "50%" : "67%",
-            scrollable: "",
-            fullscreen: _vm.$vuetify.breakpoint.smAndDown
-          },
-          model: {
-            value: _vm.instructions.active,
-            callback: function($$v) {
-              _vm.$set(_vm.instructions, "active", $$v)
-            },
-            expression: "instructions.active"
-          }
-        },
-        [
-          _c(
-            "v-card",
-            { attrs: { tile: "" } },
-            [
-              _c(
-                "div",
-                { staticClass: "d-flex align-center justify-space-between" },
-                [
-                  _c("div", {
-                    staticClass: "font-weight-bold caption ml-3",
-                    domProps: {
-                      innerHTML: _vm._s(_vm.$root.label("abbreviations"))
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { text: "", depressed: "", small: "" },
-                      on: {
-                        click: function($event) {
-                          _vm.abbreviations.active = false
-                        }
-                      }
-                    },
-                    [
-                      _c("v-icon", {
-                        attrs: { small: "" },
-                        domProps: { textContent: _vm._s("clear") }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("div", {
-                staticStyle: {
-                  "border-bottom": "2px solid #b51212",
-                  "background-color": "#fefefe"
-                }
-              }),
-              _vm._v(" "),
-              _c("v-card-title", { staticClass: "bar_prim" }),
-              _vm._v(" "),
-              _c("v-card-text", {
-                staticClass: "pt-5",
-                style: _vm.$vuetify.breakpoint.smAndDown ? "" : "height: 500px"
-              })
-            ],
-            1
-          )
+                            _c(
+                              "div",
+                              {
+                                staticStyle: {
+                                  "border-top": "3px solid #b51212"
+                                }
+                              },
+                              [
+                                _c("pagination", {
+                                  attrs: {
+                                    color: "transparent",
+                                    pagination: _vm.pagination
+                                  },
+                                  on: {
+                                    navigate: function(emit) {
+                                      this$1.setSearchURL(emit)
+                                    }
+                                  }
+                                })
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ])
         ],
         1
       )
@@ -66236,7 +66912,8 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_
 
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('sessioninfo', __webpack_require__(/*! ./modules/sessioninfo.vue */ "./resources/js/app/modules/sessioninfo.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('pagination', __webpack_require__(/*! ./modules/pagination.vue */ "./resources/js/app/modules/pagination.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('ace', __webpack_require__(/*! ./pages/search.vue */ "./resources/js/app/pages/search.vue")["default"]); // Own global JS variables/functions
+vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('search', __webpack_require__(/*! ./pages/search.vue */ "./resources/js/app/pages/search.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('instructions', __webpack_require__(/*! ./modules/instructions.vue */ "./resources/js/app/modules/instructions.vue")["default"]); // Own global JS variables/functions
 
 
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(_global_localization__WEBPACK_IMPORTED_MODULE_6__["default"]);
@@ -67019,7 +67696,8 @@ __webpack_require__.r(__webpack_exports__);
         license_header: 'Lizenzhinweise',
         license_note: 'Bitte beachten Sie unsere Lizenzierungshinweise',
         license_rd: 'Forschungsdaten',
-        license_sw: 'Forschungssoftware',
+        license_sw: 'Software',
+        license_text: 'Die PIR App ist Open Source Software veröffentlicht unter der',
         license_available: 'Quellcode veröffentlicht auf ',
         license_author: 'Autor',
         consent_note: 'Wir nutzen Cookies zur Verbesserung unseres Webangebots. Nähreres entnehmen Sie bitte unserer ',
@@ -67028,10 +67706,17 @@ __webpack_require__.r(__webpack_exports__);
         decline: 'Ablehnen',
         contactperson: 'Ansprechpartner',
         processing: 'Ihre Anfrage wird ausgeführt ...',
+        result_none: 'Keine Treffer für Ihre Anfrage',
         records: 'Einträge',
+        records_for: 'Einträge für',
         search: 'Suche',
         search_reset: 'Suchparameter zurücksetzen',
-        search_string: 'Suchbegriff oder Suchbegriffe'
+        search_string: 'Suchbegriff(e)',
+        search_mode: 'Suchmodus',
+        search_mode_keyword: 'Stichwort',
+        search_mode_addenda: 'Addenda',
+        search_isOr: 'ODER',
+        search_isCs: 'Groß/Klein beachten'
       },
       en: {
         bbaw: 'Berlin-Brandenburg Academy of Sciences and Humanities',
@@ -67046,7 +67731,8 @@ __webpack_require__.r(__webpack_exports__);
         license_header: 'Copyright',
         license_note: 'Please note our copyright remarks',
         license_rd: 'Research Data',
-        license_sw: 'Research Software',
+        license_sw: 'Software',
+        license_text: 'The PIR App is open-sourced software licensed under the',
         license_available: 'Code available on ',
         license_author: 'Author',
         consent_note: 'We are using cookies to enhance our service. Further information in our ',
@@ -67055,10 +67741,17 @@ __webpack_require__.r(__webpack_exports__);
         decline: 'Decline',
         contactperson: 'Contact',
         processing: 'Processing Your request ...',
+        result_none: 'No matching record',
         records: 'records',
+        records_for: 'records for',
         search: 'search',
         search_reset: 'reset search parameters',
-        search_string: 'Search string or strings'
+        search_string: 'Search string(s)',
+        search_mode: 'Search mode',
+        search_mode_keyword: 'Keywords',
+        search_mode_addenda: 'Addenda',
+        search_isOr: 'OR',
+        search_isCs: 'Case sensitive'
       }
     };
   }
@@ -67105,6 +67798,75 @@ router.afterEach(function (to, from) {
   },1000)*/
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
+
+/***/ }),
+
+/***/ "./resources/js/app/modules/instructions.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/app/modules/instructions.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./instructions.vue?vue&type=template&id=cc68594e& */ "./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e&");
+/* harmony import */ var _instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./instructions.vue?vue&type=script&lang=js& */ "./resources/js/app/modules/instructions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/modules/instructions.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/modules/instructions.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/app/modules/instructions.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./instructions.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/instructions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./instructions.vue?vue&type=template&id=cc68594e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

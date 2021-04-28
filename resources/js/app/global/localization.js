@@ -16,7 +16,8 @@ export default {
                 license_header: 'Lizenzhinweise',
                 license_note: 'Bitte beachten Sie unsere Lizenzierungshinweise',
                 license_rd: 'Forschungsdaten',
-                license_sw: 'Forschungssoftware',
+                license_sw: 'Software',
+                license_text: 'Die PIR App ist Open Source Software veröffentlicht unter der',
                 license_available: 'Quellcode veröffentlicht auf ',
                 license_author: 'Autor',
 
@@ -28,10 +29,17 @@ export default {
 
                 contactperson: 'Ansprechpartner',
                 processing: 'Ihre Anfrage wird ausgeführt ...',
+                result_none: 'Keine Treffer für Ihre Anfrage',
                 records: 'Einträge',
+                records_for: 'Einträge für',
                 search: 'Suche',
                 search_reset: 'Suchparameter zurücksetzen',
-                search_string: 'Suchbegriff oder Suchbegriffe'
+                search_string: 'Suchbegriff(e)',
+                search_mode: 'Suchmodus',
+                search_mode_keyword: 'Stichwort',
+                search_mode_addenda: 'Addenda',
+                search_isOr: 'ODER',
+                search_isCs: 'Groß/Klein beachten'
             },
             en: {
                 bbaw: 'Berlin-Brandenburg Academy of Sciences and Humanities',
@@ -48,7 +56,8 @@ export default {
                 license_header: 'Copyright',
                 license_note: 'Please note our copyright remarks',
                 license_rd: 'Research Data',
-                license_sw: 'Research Software',
+                license_sw: 'Software',
+                license_text: 'The PIR App is open-sourced software licensed under the',
                 license_available: 'Code available on ',
                 license_author: 'Author',
 
@@ -60,10 +69,17 @@ export default {
 
                 contactperson: 'Contact',
                 processing: 'Processing Your request ...',
+                result_none: 'No matching record',
                 records: 'records',
+                records_for: 'records for',
                 search: 'search',
                 search_reset: 'reset search parameters',
-                search_string: 'Search string or strings'
+                search_string: 'Search string(s)',
+                search_mode: 'Search mode',
+                search_mode_keyword: 'Keywords',
+                search_mode_addenda: 'Addenda',
+                search_isOr: 'OR',
+                search_isCs: 'Case sensitive',
             }
         }
     }

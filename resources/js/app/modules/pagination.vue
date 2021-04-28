@@ -6,7 +6,7 @@
         :text="pagination.previous ? false : true"
         depressed
         :disabled="pagination.previous ? false : true"
-        class="bar_prim"
+        :color="color"
         @click="$emit('navigate', pagination.first)"
     >
         <v-icon v-text="'first_page'"></v-icon>
@@ -17,7 +17,7 @@
         :text="pagination.previous ? false : true"
         depressed
         :disabled="pagination.previous ? false : true"
-        class="bar_prim"
+        :color="color"
         @click="$emit('navigate', pagination.previous)"
     >
         <v-icon v-text="'navigate_before'"></v-icon>
@@ -34,7 +34,7 @@
         :text="pagination.next ? false : true"
         depressed
         :disabled="pagination.next ? false : true"
-        class="bar_prim"
+        :color="color"
         @click="$emit('navigate', pagination.next)"
     >
         <v-icon v-text="'navigate_next'"></v-icon>
@@ -45,7 +45,7 @@
         :text="pagination.next ? false : true"
         depressed
         :disabled="pagination.next ? false : true"
-        class="bar_prim"
+        :color="color"
         @click="$emit('navigate', pagination.last)"
     >
         <v-icon v-text="'last_page'"></v-icon>
@@ -57,7 +57,8 @@
 <script>
 export default {
     props: {
-        pagination: { type: Object, required: true }
+        pagination: { type: Object, required: true },
+        color:      {type: [String], default: 'bar_prim'}
     }
 }
 </script>
