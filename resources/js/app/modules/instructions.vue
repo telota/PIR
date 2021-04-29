@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <template v-if="mode === 'keyword'">
+    <template v-if="mode === 'keywords'">
         <div v-if="$root.language === 'de'">
             <p class="title">Stichwort-Suche</p>
 

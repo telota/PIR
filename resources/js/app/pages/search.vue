@@ -10,28 +10,45 @@
                 <v-card tile>
                     <v-card-text>
                         <!-- Filters -->
-                        <v-select
-                            v-model="search.mode"
-                            :items="modes"
-                            :label="$root.label('search_mode')"
-                            @input="$router.push('/search/' + search.mode)"
-                        />
-                        <v-text-field
-                            v-model="search.string"
-                            :label="$root.label('search_string')"
-                            v-on:keyup.enter="RunSearch()"
-                        />
-                        <div class="d-flex justify-center flex-wrap">
-                            <v-checkbox
-                                v-model="search.isOr"
-                                :label="$root.label('search_isOr')"
-                                class="mr-5"
+                            <!-- Search String -->
+                            <div class="caption mb-n4" v-text="$root.label('search_string')" />
+                            <v-text-field
+                                v-model="search.string"
+                                v-on:keyup.enter="RunSearch()"
                             />
-                            <v-checkbox
-                                v-model="search.isCs"
-                                :label="$root.label('search_isCs')"
-                            />
-                        </div>
+                            <!-- Search Mode -->
+                            <div class="caption mb-n3" v-text="$root.label('search_mode')" />
+                            <v-radio-group v-model="search.mode">
+                                <v-row>
+                                    <v-col cols=6 v-for="(item, i) in modes" :key="'sm' + i">
+                                        <v-radio :label="item.text" :value="item.value" />
+                                    </v-col>
+                                </v-row>
+                            </v-radio-group>
+                            <!-- Logical Connector -->
+                            <div class="caption mb-n3 mt-1" v-text="$root.label('search_isOr')" />
+                            <v-radio-group v-model="search.isOr">
+                                <v-row>
+                                    <v-col>
+                                        <v-radio :label="$root.label('search_isOr_false')" :value="false" />
+                                    </v-col>
+                                    <v-col>
+                                        <v-radio :label="$root.label('search_isOr_true')" :value="true" />
+                                    </v-col>
+                                </v-row>
+                            </v-radio-group>
+                            <!-- Case sensitivity -->
+                            <div class="caption mb-n3 mt-1" v-text="$root.label('search_isCs')" />
+                            <v-radio-group v-model="search.isCs">
+                                <v-row>
+                                    <v-col>
+                                        <v-radio :label="$root.label('search_isCs_false')" :value="false" />
+                                    </v-col>
+                                    <v-col>
+                                        <v-radio :label="$root.label('search_isCs_true')" :value="true" />
+                                    </v-col>
+                                </v-row>
+                            </v-radio-group>
                         <!-- Search Button -->
                         <v-btn
                             tile
@@ -84,13 +101,13 @@
                                 class="pa-10 text-center"
                                 v-text="$root.label('processing')"
                             />
-                            <div v-else-if="items[0]" class="pa-5 pt-8">
+                            <div v-else-if="items[0]" class="pa-5">
                                 <div
                                     v-for="(item, i) in items"
                                     :key="i"
                                     class="mb-5"
                                 >
-                                    <div v-html="item.html" />
+                                    <div v-html="item.htmlContent" />
                                     <div v-html="item.reference" />
                                 </div>
                             </div>
@@ -127,14 +144,14 @@ export default {
             no_result: '&ensp;',
 
             search: {
-                mode: this.$route.params.mode ?? 'keyword',
+                mode: this.$route.params.mode ?? 'keywords',
                 string: null,
                 isOr: false,
                 isCs: false,
             },
 
             modes: [
-                { value: 'keyword', text: this.$root.label('search_mode_keyword') },
+                { value: 'keywords', text: this.$root.label('search_mode_keywords') },
                 { value: 'addenda', text: this.$root.label('search_mode_addenda') }
             ],
 
@@ -163,7 +180,7 @@ export default {
     computed: {
 
         mode () {
-            return this.$route.params.mode ?? 'keyword'
+            return this.$route.params.mode ?? 'keywords'
         },
 
         count_formated () { // Beautify result counter
@@ -186,6 +203,9 @@ export default {
     watch: {
         $route(to, from) {
             if (window.location.hash.split('?')[1]) this.runSearch()
+        },
+        'search.mode' () {
+            this.$router.push('/search/' + this.search.mode)
         }
     },
 
@@ -218,7 +238,7 @@ export default {
                 if (this.search.isOr) params.isOr = 1
             }
 
-            this.$router.replace({ path: '/search/' + this.mode, query: params }).catch((error) => { this.runSearch() })
+            this.$router.push({ path: '/search/' + this.mode, query: params }).catch((error) => { this.runSearch() })
         },
 
         async runSearch () { // Execute Query
@@ -258,7 +278,7 @@ export default {
             Object.keys(this.search).forEach((key) => {
                 this.search[key] = key === 'mode' ? this.mode : null
             })
-            if (window.location.hash.split('?')[1]) this.$router.replace('/search/' + this.mode)
+            if (window.location.hash.split('?')[1]) this.$router.push('/search/' + this.mode)
         },
     }
 }

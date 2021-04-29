@@ -2406,6 +2406,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     var _this$$route$params$m;
@@ -2416,14 +2433,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       searchedString: null,
       no_result: '&ensp;',
       search: {
-        mode: (_this$$route$params$m = this.$route.params.mode) !== null && _this$$route$params$m !== void 0 ? _this$$route$params$m : 'keyword',
+        mode: (_this$$route$params$m = this.$route.params.mode) !== null && _this$$route$params$m !== void 0 ? _this$$route$params$m : 'keywords',
         string: null,
         isOr: false,
         isCs: false
       },
       modes: [{
-        value: 'keyword',
-        text: this.$root.label('search_mode_keyword')
+        value: 'keywords',
+        text: this.$root.label('search_mode_keywords')
       }, {
         value: 'addenda',
         text: this.$root.label('search_mode_addenda')
@@ -2451,7 +2468,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     mode: function mode() {
       var _this$$route$params$m2;
 
-      return (_this$$route$params$m2 = this.$route.params.mode) !== null && _this$$route$params$m2 !== void 0 ? _this$$route$params$m2 : 'keyword';
+      return (_this$$route$params$m2 = this.$route.params.mode) !== null && _this$$route$params$m2 !== void 0 ? _this$$route$params$m2 : 'keywords';
     },
     count_formated: function count_formated() {
       // Beautify result counter
@@ -2475,6 +2492,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   watch: {
     $route: function $route(to, from) {
       if (window.location.hash.split('?')[1]) this.runSearch();
+    },
+    'search.mode': function searchMode() {
+      this.$router.push('/search/' + this.search.mode);
     }
   },
   created: function created() {
@@ -2511,7 +2531,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         if (this.search.isOr) params.isOr = 1;
       }
 
-      this.$router.replace({
+      this.$router.push({
         path: '/search/' + this.mode,
         query: params
       })["catch"](function (error) {
@@ -2598,7 +2618,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       Object.keys(this.search).forEach(function (key) {
         _this4.search[key] = key === 'mode' ? _this4.mode : null;
       });
-      if (window.location.hash.split('?')[1]) this.$router.replace('/search/' + this.mode);
+      if (window.location.hash.split('?')[1]) this.$router.push('/search/' + this.mode);
     }
   }
 });
@@ -4514,7 +4534,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm.mode === "keyword"
+      _vm.mode === "keywords"
         ? [
             _vm.$root.language === "de"
               ? _c("div", [
@@ -5135,29 +5155,16 @@ var render = function() {
                     _c(
                       "v-card-text",
                       [
-                        _c("v-select", {
-                          attrs: {
-                            items: _vm.modes,
-                            label: _vm.$root.label("search_mode")
-                          },
-                          on: {
-                            input: function($event) {
-                              return _vm.$router.push(
-                                "/search/" + _vm.search.mode
-                              )
-                            }
-                          },
-                          model: {
-                            value: _vm.search.mode,
-                            callback: function($$v) {
-                              _vm.$set(_vm.search, "mode", $$v)
-                            },
-                            expression: "search.mode"
+                        _c("div", {
+                          staticClass: "caption mb-n4",
+                          domProps: {
+                            textContent: _vm._s(
+                              _vm.$root.label("search_string")
+                            )
                           }
                         }),
                         _vm._v(" "),
                         _c("v-text-field", {
-                          attrs: { label: _vm.$root.label("search_string") },
                           on: {
                             keyup: function($event) {
                               if (
@@ -5184,32 +5191,160 @@ var render = function() {
                           }
                         }),
                         _vm._v(" "),
+                        _c("div", {
+                          staticClass: "caption mb-n3",
+                          domProps: {
+                            textContent: _vm._s(_vm.$root.label("search_mode"))
+                          }
+                        }),
+                        _vm._v(" "),
                         _c(
-                          "div",
-                          { staticClass: "d-flex justify-center flex-wrap" },
+                          "v-radio-group",
+                          {
+                            model: {
+                              value: _vm.search.mode,
+                              callback: function($$v) {
+                                _vm.$set(_vm.search, "mode", $$v)
+                              },
+                              expression: "search.mode"
+                            }
+                          },
                           [
-                            _c("v-checkbox", {
-                              staticClass: "mr-5",
-                              attrs: { label: _vm.$root.label("search_isOr") },
-                              model: {
-                                value: _vm.search.isOr,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.search, "isOr", $$v)
-                                },
-                                expression: "search.isOr"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("v-checkbox", {
-                              attrs: { label: _vm.$root.label("search_isCs") },
-                              model: {
-                                value: _vm.search.isCs,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.search, "isCs", $$v)
-                                },
-                                expression: "search.isCs"
-                              }
-                            })
+                            _c(
+                              "v-row",
+                              _vm._l(_vm.modes, function(item, i) {
+                                return _c(
+                                  "v-col",
+                                  { key: "sm" + i, attrs: { cols: "6" } },
+                                  [
+                                    _c("v-radio", {
+                                      attrs: {
+                                        label: item.text,
+                                        value: item.value
+                                      }
+                                    })
+                                  ],
+                                  1
+                                )
+                              }),
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticClass: "caption mb-n3 mt-1",
+                          domProps: {
+                            textContent: _vm._s(_vm.$root.label("search_isOr"))
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "v-radio-group",
+                          {
+                            model: {
+                              value: _vm.search.isOr,
+                              callback: function($$v) {
+                                _vm.$set(_vm.search, "isOr", $$v)
+                              },
+                              expression: "search.isOr"
+                            }
+                          },
+                          [
+                            _c(
+                              "v-row",
+                              [
+                                _c(
+                                  "v-col",
+                                  [
+                                    _c("v-radio", {
+                                      attrs: {
+                                        label: _vm.$root.label(
+                                          "search_isOr_false"
+                                        ),
+                                        value: false
+                                      }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "v-col",
+                                  [
+                                    _c("v-radio", {
+                                      attrs: {
+                                        label: _vm.$root.label(
+                                          "search_isOr_true"
+                                        ),
+                                        value: true
+                                      }
+                                    })
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticClass: "caption mb-n3 mt-1",
+                          domProps: {
+                            textContent: _vm._s(_vm.$root.label("search_isCs"))
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "v-radio-group",
+                          {
+                            model: {
+                              value: _vm.search.isCs,
+                              callback: function($$v) {
+                                _vm.$set(_vm.search, "isCs", $$v)
+                              },
+                              expression: "search.isCs"
+                            }
+                          },
+                          [
+                            _c(
+                              "v-row",
+                              [
+                                _c(
+                                  "v-col",
+                                  [
+                                    _c("v-radio", {
+                                      attrs: {
+                                        label: _vm.$root.label(
+                                          "search_isCs_false"
+                                        ),
+                                        value: false
+                                      }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "v-col",
+                                  [
+                                    _c("v-radio", {
+                                      attrs: {
+                                        label: _vm.$root.label(
+                                          "search_isCs_true"
+                                        ),
+                                        value: true
+                                      }
+                                    })
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
                           ],
                           1
                         ),
@@ -5374,7 +5509,7 @@ var render = function() {
                                 : _vm.items[0]
                                 ? _c(
                                     "div",
-                                    { staticClass: "pa-5 pt-8" },
+                                    { staticClass: "pa-5" },
                                     _vm._l(_vm.items, function(item, i) {
                                       return _c(
                                         "div",
@@ -5382,7 +5517,9 @@ var render = function() {
                                         [
                                           _c("div", {
                                             domProps: {
-                                              innerHTML: _vm._s(item.html)
+                                              innerHTML: _vm._s(
+                                                item.htmlContent
+                                              )
                                             }
                                           }),
                                           _vm._v(" "),
@@ -67708,15 +67845,19 @@ __webpack_require__.r(__webpack_exports__);
         processing: 'Ihre Anfrage wird ausgeführt ...',
         result_none: 'Keine Treffer für Ihre Anfrage',
         records: 'Einträge',
-        records_for: 'Einträge für',
+        records_for: 'Treffer für',
         search: 'Suche',
         search_reset: 'Suchparameter zurücksetzen',
         search_string: 'Suchbegriff(e)',
-        search_mode: 'Suchmodus',
-        search_mode_keyword: 'Stichwort',
+        search_mode: 'Suche in',
+        search_mode_keywords: 'Stichworte',
         search_mode_addenda: 'Addenda',
-        search_isOr: 'ODER',
-        search_isCs: 'Groß/Klein beachten'
+        search_isOr: 'Logischer Operator',
+        search_isOr_true: 'ODER',
+        search_isOr_false: 'UND',
+        search_isCs: 'Groß-Kleinschreibung beachten',
+        search_isCs_true: 'Ja',
+        search_isCs_false: 'Nein'
       },
       en: {
         bbaw: 'Berlin-Brandenburg Academy of Sciences and Humanities',
@@ -67743,15 +67884,19 @@ __webpack_require__.r(__webpack_exports__);
         processing: 'Processing Your request ...',
         result_none: 'No matching record',
         records: 'records',
-        records_for: 'records for',
+        records_for: 'matching records for',
         search: 'search',
         search_reset: 'reset search parameters',
         search_string: 'Search string(s)',
-        search_mode: 'Search mode',
-        search_mode_keyword: 'Keywords',
+        search_mode: 'Searching in',
+        search_mode_keywords: 'Keywords',
         search_mode_addenda: 'Addenda',
-        search_isOr: 'OR',
-        search_isCs: 'Case sensitive'
+        search_isOr: 'Logical Operator',
+        search_isOr_true: 'OR',
+        search_isOr_false: 'AND',
+        search_isCs: 'Case sensitivity',
+        search_isCs_true: 'case-sensitive',
+        search_isCs_false: 'case-insensitive'
       }
     };
   }
@@ -67778,13 +67923,13 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '/',
-    redirect: '/search/keyword'
+    redirect: '/search/keywords'
   }, {
     path: '/search',
-    redirect: '/search/keyword'
+    redirect: '/search/keywords'
   }, {
     path: '/search/:mode',
-    name: 'search',
+    name: '/search',
     component: __webpack_require__(/*! ./../pages/search */ "./resources/js/app/pages/search.vue")["default"]
   }]
 });
