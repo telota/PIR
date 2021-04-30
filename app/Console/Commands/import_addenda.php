@@ -37,11 +37,14 @@ class import_addenda extends Command {
             if (!empty($raw)) {
                 $pk = explode('@', $r);
                 $pk = trim($pk[0]);
+                $pk = str_replace('PIR1', 'PIR¹', $pk);
+                $pk = str_replace('PIR2', 'PIR²', $pk);
+                $pk = str_replace('#H:2#G:', '²', $pk);
 
-                $item = $item_nn = ['id' => $pk === '-' ? null : $pk];
+                $item = $item_nn = ['id_pir' => $pk === '-' ? null : $pk];
 
                 foreach ([
-                    'rf' => 'identifier',
+                    'rf' => 'reference',
                     'pn' => 'name',
                     'tr' => 'tribe',
                     'or' => 'origin',
@@ -63,7 +66,22 @@ class import_addenda extends Command {
                         $val = explode('@', $val[1]);
                         $val = trim($val[0]);
 
-                        if ($at === 'rf' && $val === '-') $val = null;
+                        if (!empty($val)) {
+                            $val = str_replace('%>s', 'š', $val);
+                            $val = str_replace('%>S', 'Š', $val);
+                            $val = str_replace("\n", ' ', $val);
+                        }
+
+                        if ($at === 'rf') {
+                            if ($val === '-') $val = null;
+                            else {
+                                $val = preg_replace('/\r\n|\r|\n/', ' ', $val);
+                                $val = str_replace('PIR1', 'PIR¹', $val);
+                                $val = str_replace('PIR2', 'PIR²', $val);
+                                $val = str_replace('#H:2#G:', '²', $val);
+                            }
+                            $item['reference'] = $item_nn['reference'] = $val;
+                        }
 
                         if (!empty($val)) {
                             if ($at === 'da') {
@@ -71,16 +89,19 @@ class import_addenda extends Command {
                                 if (!empty($date[0]) && !empty($date[1]) && !empty($date[2])) $item[$key] = $item_nn[$key] = trim($date[2]).'-'.trim($date[1]).'-'.trim($date[0]);
                             }
                             else {
-                                $item[$key] = $item_nn[$key] = $val;
+                                if (!in_array($at, ['bv', 'tr', 'to', 'lz', 'ka', 'tb', 'vw'])) $item_nn[$key] = $val;
+                                $item[$key] = $val;
                             }
                         }
                         else $item[$key] = null;
                     }
                 }
-                unset($item_nn['note']);
 
-                if (empty($item['id']) && empty($item['identifier'])) $empty[] = $item;
-                if ($item['note'] === 'F') $public[] = $item_nn;
+                if (empty($item['id_pir']) && empty($item['reference'])) $empty[] = $item;
+                if ($item['note'] === 'F') {
+                    $public[] = $item_nn;
+                    echo "\t".($item_nn['id_pir'] ?? '-')."\t".($item_nn['reference'] ?? '-')."\n";
+                }
                 $data[] = $item;
             }
         }
