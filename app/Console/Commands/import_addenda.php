@@ -45,7 +45,7 @@ class import_addenda extends Command {
 
                 foreach ([
                     'rf' => 'reference',
-                    'pn' => 'name',
+                    'pn' => 'string',
                     'tr' => 'tribe',
                     'or' => 'origin',
                     'bv' => 'note',
@@ -88,6 +88,11 @@ class import_addenda extends Command {
                                 $date = explode('.', $val);
                                 if (!empty($date[0]) && !empty($date[1]) && !empty($date[2])) $item[$key] = $item_nn[$key] = trim($date[2]).'-'.trim($date[1]).'-'.trim($date[0]);
                             }
+                            else if ($at === 'pn') {
+                                $unesc = $this->unescapeName($val);
+                                $item[$key] = $item_nn[$key] = $unesc[$key];
+                                $item['annotated'] = $item_nn['annotated'] = $unesc['annotated'];
+                            }
                             else {
                                 if (!in_array($at, ['bv', 'tr', 'to', 'lz', 'ka', 'tb', 'vw'])) $item_nn[$key] = $val;
                                 $item[$key] = $val;
@@ -118,5 +123,45 @@ class import_addenda extends Command {
 
         echo "SUCCESS!\n\nExecution time: ".(date('U') - $time)." sec\n";
         echo "\n\n--------------------- END ----------------------\n\n";
+    }
+
+    public function unescapeName ($val) {
+        $annotated = $val;
+
+        foreach ([
+            'F' => 'b',
+            '/' => 'i'
+        ] as $tustep => $html) {
+            $char = $tustep;
+            if ($char === '/') $char = '\/';
+            $pattern = '/#'.$char.'\+(.*?)#'.$char.'-/';
+
+            $annotated = preg_replace_callback($pattern, function ($match) use ($html) {
+                return '<'.$html.'>'.trim($match[1]).'</'.$html.'>';
+            }, $annotated);
+        }
+
+
+        $val = preg_replace('/<i>(.*?)<\/i>/', ' ', $annotated);
+
+        // Handle Capitalize
+        $val = preg_replace_callback('/#K\+(.*?)#K-/', function ($match) {
+            return trim($match[1]);
+        }, $val);
+
+        $val = trim(strip_tags($val));
+        $val = trim(preg_replace('/[^a-zA-Z.\s]/', '', $val));
+        $val = trim(preg_replace('/\s+/', ' ', $val));
+
+        // Handle Capitalize
+        $annotated = preg_replace_callback('/#K\+(.*?)#K-/', function ($match) {
+            return strtoupper(trim($match[1]));
+        }, $annotated);
+        $annotated = trim(preg_replace('/\s+/', ' ', $annotated));
+
+        return [
+            'string' => $val,
+            'annotated' => $annotated
+        ];
     }
 }
