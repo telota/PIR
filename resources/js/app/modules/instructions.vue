@@ -1,7 +1,7 @@
 <template>
 <div>
 
-    <template v-if="mode === 'keywords'">
+    <!--<template v-if="mode === 'keywords'">-->
         <div v-if="$root.language === 'de'">
             <p class="title">Stichwort-Suche</p>
 
@@ -173,10 +173,10 @@
                 </tr>
             </table>
         </div>
-    </template>
+    <!--</template>
 
     <template v-else-if="mode === 'addenda'">
-    </template>
+    </template>-->
 
 </div>
 </template>

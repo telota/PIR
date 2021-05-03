@@ -26,9 +26,12 @@
                 <v-col cols="12" sm="10">
                     <!-- PIR -->
                     <div
-                        class="title text-center pt-2 pb-2"
+                        class="text-h4 text-center pt-1 pb-2"
                         v-text="$vuetify.breakpoint.mdAndUp ? 'PROSOPOGRAPHIA IMPERII ROMANI' : 'PIR'"
-                        style="position: absolute; left: 0; right: 0;"
+                        style="
+                            position: absolute; left: 0; right: 0;
+                            font-family: palatio, serif !important
+                        "
                     ></div>
                     <div class="d-flex justify-space-between" style="width: 100%;">
                         <!-- PIR Logo -->

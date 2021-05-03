@@ -76,7 +76,7 @@
 
                     <!-- Instructions -->
                     <v-card-text v-if="instructions">
-                        <instructions :mode="mode" />
+                        <instructions />
                     </v-card-text>
 
                     <!-- Results -->
@@ -107,7 +107,7 @@
                                     :key="i"
                                     class="mb-5"
                                 >
-                                    <div v-html="item.htmlContent" />
+                                    <div v-html="item.annotated" />
                                     <div v-html="item.reference" />
                                 </div>
                             </div>
@@ -178,11 +178,6 @@ export default {
     },
 
     computed: {
-
-        mode () {
-            return this.$route.params.mode ?? 'keywords'
-        },
-
         count_formated () { // Beautify result counter
             let count = this.pagination.count
 
@@ -203,9 +198,6 @@ export default {
     watch: {
         $route(to, from) {
             if (window.location.hash.split('?')[1]) this.runSearch()
-        },
-        'search.mode' () {
-            this.$router.push('/search/' + this.search.mode)
         }
     },
 
@@ -238,7 +230,7 @@ export default {
                 if (this.search.isOr) params.isOr = 1
             }
 
-            this.$router.push({ path: '/search/' + this.mode, query: params }).catch((error) => { this.runSearch() })
+            this.$router.push({ path: '/search', query: params }).catch((error) => { this.runSearch() })
         },
 
         async runSearch () { // Execute Query
@@ -247,7 +239,7 @@ export default {
 
             const params = window.location.hash.split('?')[1] ?? ''
             console.log(params)
-            const fetch = await this.FetchData('/api/' + this.mode + '?' + params)
+            const fetch = await this.FetchData('/api/persons' + '?' + params)
 
             // Check if result is empty
             if (!fetch?.contents?.[0]) this.no_result = this.$root.label('no_records')
@@ -276,9 +268,9 @@ export default {
 
         ResetFilters () { // Reset Search Form Fields to default
             Object.keys(this.search).forEach((key) => {
-                this.search[key] = key === 'mode' ? this.mode : null
+                this.search[key] = key === 'mode' ? 'persons' : null
             })
-            if (window.location.hash.split('?')[1]) this.$router.push('/search/' + this.mode)
+            if (window.location.hash.split('?')[1]) this.$router.push('/search')
         },
     }
 }

@@ -2465,11 +2465,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   computed: {
-    mode: function mode() {
-      var _this$$route$params$m2;
-
-      return (_this$$route$params$m2 = this.$route.params.mode) !== null && _this$$route$params$m2 !== void 0 ? _this$$route$params$m2 : 'keywords';
-    },
     count_formated: function count_formated() {
       // Beautify result counter
       var count = this.pagination.count;
@@ -2492,9 +2487,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   watch: {
     $route: function $route(to, from) {
       if (window.location.hash.split('?')[1]) this.runSearch();
-    },
-    'search.mode': function searchMode() {
-      this.$router.push('/search/' + this.search.mode);
     }
   },
   created: function created() {
@@ -2532,7 +2524,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
 
       this.$router.push({
-        path: '/search/' + this.mode,
+        path: '/search',
         query: params
       })["catch"](function (error) {
         _this.runSearch();
@@ -2555,7 +2547,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 params = (_window$location$hash = window.location.hash.split('?')[1]) !== null && _window$location$hash !== void 0 ? _window$location$hash : '';
                 console.log(params);
                 _context.next = 6;
-                return _this2.FetchData('/api/' + _this2.mode + '?' + params);
+                return _this2.FetchData('/api/persons' + '?' + params);
 
               case 6:
                 fetch = _context.sent;
@@ -2616,9 +2608,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       // Reset Search Form Fields to default
       Object.keys(this.search).forEach(function (key) {
-        _this4.search[key] = key === 'mode' ? _this4.mode : null;
+        _this4.search[key] = key === 'mode' ? 'persons' : null;
       });
-      if (window.location.hash.split('?')[1]) this.$router.push('/search/' + this.mode);
+      if (window.location.hash.split('?')[1]) this.$router.push('/search');
     }
   }
 });
@@ -4531,97 +4523,85 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm.mode === "keywords"
-        ? [
-            _vm.$root.language === "de"
-              ? _c("div", [
-                  _c("p", { staticClass: "title" }, [
-                    _vm._v("Stichwort-Suche")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      '\n                Bitte geben sie die Suchbegriffe (oder Zeichenfolgen, "strings") in normaler\n                Schrift und ohne die epigraphischen Klammern ein (also U als U und V als V).\n            '
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n                Die Ausgabe erfolgt dann wie in den gedruckten PIR-Bänden: Senatoren in Versalien,\n                Ritter höheren Ranges in Fettdruck, nur teilweise erhaltene Namen mit den üblichen Klammern versehen.\n            "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      '\n                Trennen Sie die einzelnen Suchbegriffe ("strings") bitte durch Blank (= Leerzeichen) ab.\n                Für die Suche können Sie auch Platzhalter-Zeichen ("Joker" oder "wildcards") verwenden.\n            '
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "title" }, [
-                    _vm._v("Erläuterungen zu den Platzhalter–Zeichen")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n                Wenn Sie nur nach einem einzelnen Namensteil suchen, werden Sie die folgende Seite nicht benötigen;\n                geben Sie den Namensteil in die Maske ein und starten Sie die Suche.\n            "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n                Oft stellen sich aber wesentlich kompliziertere Fragen (jedenfalls geht es uns so).\n                Daher wurde das Suchprogramm so eingerichtet, daß es möglichst viele Wünsche zufriedenstellt.\n                Ein vielseitiges und flexibles Instrumentarium ist aber notwendigerweise ein bißchen kompliziert.\n                Daher sollen zunächst die wichtigsten Suchmöglichkeiten vorgestellt werden.\n                Es folgt dann eine Tabelle mit den (wichtigsten) Platzhalter–Zeichen, die sie verwenden dürfen.\n            "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n                Wenn Sie einen einzelnen Begriff (d. h. einen Namensteil wie Rufus) suchen:\n                Geben Sie einfach Ihr Suchwort ein und starten den Suchvorgang.\n            "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n                Sie dürfen den Suchbegriff nach Belieben links und rechts trunkieren (d. h. abschneiden).\n                Das Suchprogramm vergleicht nur die Buchstabenfolge, die Sie eingegeben haben, mit den Buchstabenfolgen, die es im Namensverzeichnis der PIR findet.\n                Wenn sie also Quintil eingeben, findet das Programm Quintilius, Quintillus, Quintilia, Quintilianus usw.\n                (und entsprechend bei pilius sowohl Rupilius als auch Popilius).\n            "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      '\n                Sie können wählen, ob das Suchprogramm Groß– und Kleinschreibung unterscheiden soll oder nicht.\n                Wenn sie `Beachten` wählen, gibt das Programm beim Suchbegriff Pius nur die Einträge mit "Pius" aus, andernfalls aber etwa auch "Ulpius".\n            '
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n                Etwas weniger einfach ist es, wenn Sie innerhalb Ihres Suchworts Zeichen unbestimmt lassen wollen.\n                 Denn hier kommt es auf Ihre genaue Fragestellung an.\n            "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n                Wenn Sie einen einzelnen Buchstaben unbestimmt lassen wollen, geben Sie an dieser Stelle einfach . (einen Punkt) ein.\n                Wenn Sie offenlassen wollen, ob an einer Stelle überhaupt ein Buchstabe steht, geben Sie .? (Punkt und Fragezeichen) ein.\n                Wenn Sie den ganzen Mittelteil eines Wortes unbestimmt lassen wollen, geben Sie an der Stelle bitte [a–z]* ein;\n                dies steht für beliebig viele Kleinbuchstaben. Beim Suchbegriff R[a–z]*ius werden alle Namen gefunden,\n                die mit R beginnen und auf –ius enden (also im wesentlichen die Gentilicia mit R).\n            "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n                Es gibt noch viele weitere Möglichkeiten, wie Sie sehr gezielte Abfragen formulieren können. Vergleichen Sie dazu bitte die Tabelle.\n            "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(0)
-                ])
-              : _vm._e()
-          ]
-        : _vm.mode === "addenda"
-        ? void 0
-        : _vm._e()
-    ],
-    2
-  )
+  return _c("div", [
+    _vm.$root.language === "de"
+      ? _c("div", [
+          _c("p", { staticClass: "title" }, [_vm._v("Stichwort-Suche")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              '\n                Bitte geben sie die Suchbegriffe (oder Zeichenfolgen, "strings") in normaler\n                Schrift und ohne die epigraphischen Klammern ein (also U als U und V als V).\n            '
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Die Ausgabe erfolgt dann wie in den gedruckten PIR-Bänden: Senatoren in Versalien,\n                Ritter höheren Ranges in Fettdruck, nur teilweise erhaltene Namen mit den üblichen Klammern versehen.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              '\n                Trennen Sie die einzelnen Suchbegriffe ("strings") bitte durch Blank (= Leerzeichen) ab.\n                Für die Suche können Sie auch Platzhalter-Zeichen ("Joker" oder "wildcards") verwenden.\n            '
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "title" }, [
+            _vm._v("Erläuterungen zu den Platzhalter–Zeichen")
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Wenn Sie nur nach einem einzelnen Namensteil suchen, werden Sie die folgende Seite nicht benötigen;\n                geben Sie den Namensteil in die Maske ein und starten Sie die Suche.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Oft stellen sich aber wesentlich kompliziertere Fragen (jedenfalls geht es uns so).\n                Daher wurde das Suchprogramm so eingerichtet, daß es möglichst viele Wünsche zufriedenstellt.\n                Ein vielseitiges und flexibles Instrumentarium ist aber notwendigerweise ein bißchen kompliziert.\n                Daher sollen zunächst die wichtigsten Suchmöglichkeiten vorgestellt werden.\n                Es folgt dann eine Tabelle mit den (wichtigsten) Platzhalter–Zeichen, die sie verwenden dürfen.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Wenn Sie einen einzelnen Begriff (d. h. einen Namensteil wie Rufus) suchen:\n                Geben Sie einfach Ihr Suchwort ein und starten den Suchvorgang.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Sie dürfen den Suchbegriff nach Belieben links und rechts trunkieren (d. h. abschneiden).\n                Das Suchprogramm vergleicht nur die Buchstabenfolge, die Sie eingegeben haben, mit den Buchstabenfolgen, die es im Namensverzeichnis der PIR findet.\n                Wenn sie also Quintil eingeben, findet das Programm Quintilius, Quintillus, Quintilia, Quintilianus usw.\n                (und entsprechend bei pilius sowohl Rupilius als auch Popilius).\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              '\n                Sie können wählen, ob das Suchprogramm Groß– und Kleinschreibung unterscheiden soll oder nicht.\n                Wenn sie `Beachten` wählen, gibt das Programm beim Suchbegriff Pius nur die Einträge mit "Pius" aus, andernfalls aber etwa auch "Ulpius".\n            '
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Etwas weniger einfach ist es, wenn Sie innerhalb Ihres Suchworts Zeichen unbestimmt lassen wollen.\n                 Denn hier kommt es auf Ihre genaue Fragestellung an.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Wenn Sie einen einzelnen Buchstaben unbestimmt lassen wollen, geben Sie an dieser Stelle einfach . (einen Punkt) ein.\n                Wenn Sie offenlassen wollen, ob an einer Stelle überhaupt ein Buchstabe steht, geben Sie .? (Punkt und Fragezeichen) ein.\n                Wenn Sie den ganzen Mittelteil eines Wortes unbestimmt lassen wollen, geben Sie an der Stelle bitte [a–z]* ein;\n                dies steht für beliebig viele Kleinbuchstaben. Beim Suchbegriff R[a–z]*ius werden alle Namen gefunden,\n                die mit R beginnen und auf –ius enden (also im wesentlichen die Gentilicia mit R).\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n                Es gibt noch viele weitere Möglichkeiten, wie Sie sehr gezielte Abfragen formulieren können. Vergleichen Sie dazu bitte die Tabelle.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -5409,11 +5389,7 @@ var render = function() {
                   },
                   [
                     _vm.instructions
-                      ? _c(
-                          "v-card-text",
-                          [_c("instructions", { attrs: { mode: _vm.mode } })],
-                          1
-                        )
+                      ? _c("v-card-text", [_c("instructions")], 1)
                       : _c(
                           "div",
                           [
@@ -5517,9 +5493,7 @@ var render = function() {
                                         [
                                           _c("div", {
                                             domProps: {
-                                              innerHTML: _vm._s(
-                                                item.htmlContent
-                                              )
+                                              innerHTML: _vm._s(item.annotated)
                                             }
                                           }),
                                           _vm._v(" "),
@@ -67923,13 +67897,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '/',
-    redirect: '/search/keywords'
+    redirect: '/search'
   }, {
     path: '/search',
-    redirect: '/search/keywords'
-  }, {
-    path: '/search/:mode',
-    name: '/search',
+    name: 'search',
     component: __webpack_require__(/*! ./../pages/search */ "./resources/js/app/pages/search.vue")["default"]
   }]
 });

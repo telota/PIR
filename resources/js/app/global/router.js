@@ -6,11 +6,10 @@ Vue.use(Router)
 
 const router = new Router ({
     routes: [
-        { path: '/', redirect: '/search/keywords', },
-        { path: '/search', redirect: '/search/keywords', },
+        { path: '/', redirect: '/search', },
         {
-            path: '/search/:mode',
-            name: '/search',
+            path: '/search',
+            name: 'search',
             component: require('./../pages/search').default
         }
     ],
