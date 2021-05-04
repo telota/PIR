@@ -90,7 +90,17 @@ const app = new Vue({
             preferences: {
                 show_filters: false,
             },
-            language: 'en'
+            language: 'en',
+
+            navigation: [
+                'search',
+                'overview',
+                'publications',
+                'methods',
+                'history',
+                'keywords',
+                'addenda',
+            ]
         }
     },
 

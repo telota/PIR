@@ -7,10 +7,41 @@ Vue.use(Router)
 const router = new Router ({
     routes: [
         { path: '/', redirect: '/search', },
+
         {
             path: '/search',
             name: 'search',
             component: require('./../pages/search').default
+        },
+        {
+            path: '/overview',
+            name: 'overview',
+            component: require('./../pages/overview').default
+        },
+        {
+            path: '/publications',
+            name: 'publications',
+            component: require('./../pages/publications').default
+        },
+        {
+            path: '/methods',
+            name: 'methods',
+            component: require('./../pages/methods').default
+        },
+        {
+            path: '/history',
+            name: 'history',
+            component: require('./../pages/history').default
+        },
+        {
+            path: '/keywords',
+            name: 'keywords',
+            component: require('./../pages/keywords').default
+        },
+        {
+            path: '/addenda',
+            name: 'addenda',
+            component: require('./../pages/addenda').default
         }
     ],
 })

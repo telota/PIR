@@ -44,6 +44,14 @@ export default {
                 search_isCs: 'Groß-Kleinschreibung beachten',
                 search_isCs_true: 'Ja',
                 search_isCs_false: 'Nein',
+
+                nav_search: 'Suche',
+                nav_overview: 'Überblick',
+                nav_publications: 'Publikationen',
+                nav_methods: 'Arbeitsweise',
+                nav_history: 'Geschichte',
+                nav_keywords: 'Stichwortliste',
+                nav_addenda: 'Addenda'
             },
             en: {
                 bbaw: 'Berlin-Brandenburg Academy of Sciences and Humanities',
@@ -88,6 +96,14 @@ export default {
                 search_isCs: 'Case sensitivity',
                 search_isCs_true: 'case-sensitive',
                 search_isCs_false: 'case-insensitive',
+
+                nav_search: 'Search',
+                nav_overview: 'Overview',
+                nav_publications: 'Publications',
+                nav_methods: 'Methods',
+                nav_history: 'History',
+                nav_keywords: 'Keywords',
+                nav_addenda: 'Addenda'
             }
         }
     }

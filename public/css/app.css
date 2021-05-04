@@ -83,3 +83,12 @@ a {
 table td, table td * {
     vertical-align: top;
 }
+
+#pir-header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: #fefefe;
+    border-bottom: 5px solid #b51212;
+    z-index: 100;
+}

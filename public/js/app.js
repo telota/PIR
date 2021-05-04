@@ -2271,6 +2271,386 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/addenda.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/addenda.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/history.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/history.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/keywords.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/keywords.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/methods.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/methods.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/overview.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/overview.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/publications.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/publications.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/search.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/search.vue?vue&type=script&lang=js& ***!
@@ -2288,7 +2668,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -2611,6 +2990,43 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         _this4.search[key] = key === 'mode' ? 'persons' : null;
       });
       if (window.location.hash.split('?')[1]) this.$router.push('/search');
+    },
+    parseInfo: function parseInfo(item) {
+      var _this5 = this;
+
+      var html = []; // Basic Information
+
+      var base = [];
+
+      if (item.sex) {
+        if (item.sex.toLowerCase().substring(0, 1) === 'f') base.push('weiblich');else if (item.sex.toLowerCase().substring(0, 1) === 'm') base.push('männlich');
+      }
+
+      if (item["class"]) {
+        if (item["class"].toLowerCase() === 'senator') base.push('ordo senatorius');else if (item["class"].toLowerCase() === 'eques') base.push('ordo equester');
+      }
+
+      if (base[0]) html.push(base.join(', ')); // Additional Information
+
+      var adds = ['tribe', 'origin', 'lifespan', 'career', 'occupations', 'relatives', 'article', 'sources', 'literature', 'notes'];
+      adds.forEach(function (key) {
+        if (item[key]) {
+          html.push(_this5.removeComments(item[key]));
+        }
+      });
+      return '<div class="mb-1">' + html.join('</div>\n<div class="mb-1">') + '</div>';
+    },
+    parseName: function parseName(name) {
+      return name.replaceAll(/<b>(.*?)<\/b>/g, function (match) {
+        return '<span class="font-weight-medium">' + match + '</span>';
+      }).replaceAll(/<k>(.*?)<\/k>/g, function (match) {
+        return '<span class="font-weight-light text-uppercase">' + match + '</span>';
+      });
+    },
+    removeComments: function removeComments(item) {
+      return item.replaceAll(/{{(.*?)}}/g, function (match) {
+        return match.slice(2, -2).trim();
+      });
     }
   }
 });
@@ -5096,6 +5512,547 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("v-card", { staticClass: "pa-5", attrs: { tile: "" } }, [
+    _c("h3", [_vm._v("Addenda")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Die PIR hat eine lange Entstehungszeit. Der erste Band erschien bereits im Jahr 1933, die anderen folgten in mehr oder weniger langem Abstand.\n            Vor allem für die ersten Bände ist seit der Veröffentlichung viel neues Quellenmaterial erschienen,\n            aber auch die Auseinandersetzung mit dem schon bekannten Material hat zu vielen neuen Erkenntnissen geführt.\n            Um die PIR insgesamt für den Benutzer näher an den gegenwärtigen Stand der Forschung heranzuführen,\n            werden hier nach der Stichwortliste von nun an in regelmäßigen Abständen addenda zu den gedruckten Bänden der zweiten Auflage veröffentlicht\n            und sukzessive dem interessierten Kreis von Fachkollegen zugänglich gemacht.\n            Aufgenommen wird im wesentlichen neues Quellenmaterial, und zwar sowohl zu bereits bekannten Personen wie vor allem zu neuen Personen.\n            Sekundärliteratur wird nur begrenzt ausgewertet, um den Fortgang der Präsentation nicht zu sehr zu verzögern.\n            Aus dem gleichen Grund werden Standardwerke (wie beispielsweise Pflaum Carrières, Devijver PME oder Raepsaet FOS) nur im Einzelfall zitiert,\n            sie müssen also prinzipiell unabhängig davon, ob hier zitiert oder nicht, herangezogen werden. Die Einträge bestehen aus\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("ul", [
+      _c("li", [_vm._v("Namen + PIR-Nr. der 2. Auflage")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "neuen Quellen. Konkordanzen beschränken sich auf notwendige Fälle."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Auswahl der substantiell wichtigen Literatur")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("knapper kommentierter Auswertung der neuen Quellen")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Bearbeitungsdatum. Dieses sollte vom Benutzer als Hinweis auf den Forschungsstand stets berücksichtigt werden."
+        )
+      ])
+    ]),
+    _c("br"),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Zitiert wird nach den Prinzipien der PIR unter Verwendung des Abkürzungsverzeichnisses des jeweils neuesten Bandes.\n            Aus praktischen Gründen hat im laufenden Text das Latein der deutschen Sprache weichen müssen außer bei den termini,\n            bei denen aber auf das Griechische verzichtet werden mußte. Der Ausgangspunkt für den Benutzer ist die Stichwortliste,\n            von der man mittels link von der einzelnen Person zu den addenda gelangt. Darüber hinaus soll es eine begrenzte Freitextsuche ermöglichen,\n            die addenda nach bestimmten Begriffen zu durchsuchen. Es sollte aber immer nach Varianten eines Begriffes\n            (etwa Prokonsul - proconsul; praefectus - Präfekt; Moesia inferior - Untermösien - Niedermoesien;\n            praefectus Aegypti - Praefekt von Ägypten; Statthalter - legatus Augusti pro praetore - Präses - praeses usw.) gesucht werden.\n            Klammern spielen keine Rolle, sie werden bei der Suche unterdrückt.\n            Bei der Suche können die selben Platzhalterzeichen wie bei der Stichwortliste verwendet werden.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Die Präsentation dieser addenda wird als Versuch gestartet; deshalb wird um möglichst zahlreiche - positive wie negative - Reaktionen gebeten:\n            Berichtigung von Fehlern, Verbesserungsvorschläge, Hinweise auf Lücken usw. Die Adresse ist bei jeder Datei angegeben.\n            Die Netzeingabe der Einträge erfolgt sukzessiv in nicht zu langen Abständen;\n            gleichzeitig werden kontinuierlich Verbesserungen und Zusätze an den bereits zugänglichen Texten vorgenommen.\n            Die Zusammenstellung des Materials und Abfassung der einzelnen Einträge erfolgen durch A. Strobach.\n            Die Programmierarbeiten und laufende technische Betreuung liegen in der Hand von M. Heil.\n            Für die Zitierung dieser addenda in Veröffentlichungen wird folgende Form empfohlen: (Personenname) PIR addenda electronica (Datum).\n            Diese addenda stehen als Parergon neben der Fertigstellung der zweiten Auflage der PIR und\n            können nur entsprechend den zur Verfügung stehenden zusätzlichen personellen wie finanziellen Mitteln vorangebracht werden.\n            Der Anfang wurde durch eine großzügige finanzielle Unterstützung der Heckmann Wenzel-Stiftung ermöglicht.\n            Dafür sei an dieser Stelle herzlich gedankt.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("\n            Berlin, im Juli 2001"),
+      _c("br"),
+      _vm._v("\n            Werner Eck; Klaus Wachtel\n        ")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _c("a", { attrs: { href: "/#/search" } }, [
+        _c("strong", [_vm._v("Suche starten")])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/history.vue?vue&type=template&id=92eaf466&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/history.vue?vue&type=template&id=92eaf466& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("v-card", { staticClass: "pa-5", attrs: { tile: "" } }, [
+    _c("h3", [_vm._v("Geschichte des Vorhabens")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Als die großen Quellensammlungen - allen voran die Corpora der griechischen und lateinischen Inschriften -\n            gegen Ende des 19. Jahrhunderts zu einem gewissen, dem damaligen Stand entsprechenden Abschluß gekommen waren,\n            war es wie für viele andere wissenschaftliche Unternehmungen wiederum Theodor Mommsen,\n            auf dessen Initiative hin ein Vorhaben an der Berliner Akademie inauguriert wurde, das den -\n            von Mommsen selbst als nicht ganz glücklich empfundenen - Titel Prosopographie erhielt.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Ursprünglich sollte es vor allem dazu dienen, das Personenmaterial der Inschriften,\n            soweit es sich um den beschriebenen Personenkreis handelte,\n            leichter zu erschließen und beim Fund neuer Inschriften eine schnellere Information zu erlauben.\n            Mit dieser Aufgabe wurden Elimar Klebs, Paul von Rohden und Hermann Dessau betraut, die 1897 und 1898 das Werk in drei Bänden herausbrachten.\n            Ein vierter Band, der chronologische Listen, sog. Fasten der Konsuln und Inhaber weiterer öffentlicher Ämter, enthalten sollte, erschien nicht mehr.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Nach knapp zwei Jahrzehnten erwies sich das Werk, besonders durch die verstärkten epigraphischen Neufunde, bereits als so veraltet,\n            daß sich die Berliner Akademie 1915 zu einer Neubearbeitung entschloß, deren erster Band (Buchstaben A und B),\n            bearbeitet von Edmund Groag und Arthur Stein, 1933 erschien.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Einen ursprünglich angestrebten zügigen Fortgang - der zweite Band (C) folgte 1936 - verhinderten bald die politische Situation und der Krieg.\n            Zumindest der dritte Band (D-F) konnte noch 1943 erscheinen, der nächste Faszikel (G) aber erst 1952.\n            Er war von Stein und Groag noch im Manuskript fertiggestellt worden; zum Druck besorgt hat ihn jedoch erst Leiva Petersen,\n            die seit 1951 die PIR betreute und bis zum Faszikel V 3 (N und O), der 1987 erschien, trotz mannigfacher Hindernisse,\n            aber auch unter mehr oder minder aktiver internationaler Unterstützung, voranbrachte.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [_c("strong", [_vm._v(" Vgl. hierzu: ")])]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            K. Christ, Römische Geschichte und deutsche Geschichtsschreibung, München 1982, S. 166 f. "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v(
+        "\n            W. Eck in: Gedenken an Leiva Petersen: 1912 - 1992, Köln-Weimar -Wien 1993, S. 25 - 31;  K. "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v("\n            Wachtel, Klio 74, 1992, S. 564.\n        ")
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("v-card", { staticClass: "pa-5", attrs: { tile: "" } }, [
+    _c("h3", [_vm._v("Stichwortliste")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Zur besseren Strukturierung des gesammelten Materials führt das Unternehmen eine Stichwortliste mit den Namen aller Personen,\n            die in der PIR Aufnahme finden (vgl. dazu Überblick; das bedeutet aber beispielsweise:\n            Angehörige der munizipalen und provinzialen Oberschicht sind in der Regel nur berücksichtigt,\n            wenn familiäre Verbindungen zu römischen Senatoren belegt oder die Bekleidung von Reichsämtern bekannt ist).\n            Dieses Personenverzeichnis der Oberschicht des Römischen Reiches (mit den genannten Einschränkungen)\n            soll hiermit der Forschung zu einer ersten informierenden Recherche zur Verfügung gestellt werden.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Die Eintragungen bestehen jeweils aus den Personennamen und einer Referenz zur eindeutigen Identifizierung der Personen:\n            Nummer in PIR2 bzw. PIR1, RE-Artikeln, Quellenpublikation oder anderen Standardwerken.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        '\n            Gesucht werden kann nach Gentilnamen oder Cognomina - jeweils einzeln oder kombiniert - sowie nach Namensfragmenten.\n            Um eine möglichst präzise und vielseitige Suche zu gestatten, ist ein Suchprogramm gewählt worden,\n            das die Verwendung verschiedener Platzhalter-Zeichen ("Joker" oder "wildcards") zuläßt. Näheres finden Sie hier.\n        '
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Diese Stichwortliste beansprucht nicht, eine eigenständige und bereits fertige wissenschaftliche Leistung zu sein;\n            sie ist primär ein internes Arbeitsmittel, das lediglich der Orientierung dienen soll.\n            Fehler, die sich bei einer solchen Dokumentation nie ganz vermeiden lassen, werden korrigiert, wo immer sie bemerkt werden.\n            Wenn Sie einen Fehler entdecken oder feststellen, daß eine Person fehlt, schicken Sie der PIR-Arbeitsstelle bitte eine kurze Nachricht.\n            Wir sind unsererseits jederzeit bereit, Ihre Fragen zu beantworten, so gut es unser PIR-Material und unsere personelle Situation erlauben.\n            "
+      ),
+      _c("br"),
+      _vm._v(
+        "\n            Die Liste wird fortlaufend ergänzt. Es ist geplant, auch die Internet-Version in kürzeren Abständen zu aktualisieren.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Die gegenwärtige Fassung wurde zuletzt am 08. 10. 2004 geändert.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _c("a", { attrs: { href: "/#/search" } }, [
+        _c("strong", [_vm._v("Suche starten")])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/methods.vue?vue&type=template&id=6b5a2deb&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/methods.vue?vue&type=template&id=6b5a2deb& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-card",
+    { staticClass: "pa-5", attrs: { tile: "" } },
+    [
+      _c("h3", [_vm._v("Arbeitsweise")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          '\n            Das Quellenmaterial, aus dem die Nachrichten kommen, ist weitgespannt.\n            Es  umfaßt die gesamte kaiserzeitliche Literatur, also nicht nur die  Geschichtsschreibung, sondern beispielsweise auch die Werke der Dichter,\n            Briefsammlungen, Fachbücher und Juristenschriften.\n            Eine herausragende Rolle spielen ferner Inschriften in lateinischer und griechischer Sprache sowie Papyri und Münzen.\n            Unter kritischer Berücksichtigung der Sekundärliteratur werden so präzis und kurz wie möglich "Biographien" in lateinischer Sprache erarbeitet,\n            die bei mehreren Zeugnissen und etwas reichhaltigeren Informationen für eine Person eine gewisse standardisierte Form erhalten:\n            am Anfang erscheinen alle außerliterarischen Zeugnisse, die, soweit nötig, auch eine Charakterisierung erfahren,\n            da der Aussagegehalt je  nach Art der Quelle sehr unterschiedlich sein kann.\n            Dies gilt vor allem für  Inschriften, unter denen sich Dokumente höchst offizieller Art finden,\n            wie  Kaiserbriefe, Bürgerrechtsurkunden oder Meilensteine, ebenso aber auch private Grabinschriften,\n            deren Inhalt leicht von  persönlichen Absichten beeinflußt sein konnte.\n        '
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n            In den Lexikonartikeln wird zunächst der vollständige Name angegeben, so,  wie er sich aus den Zeugnissen rekonstruieren läßt.\n            Dann werden Inschriften, Papyri und Münzen  aufgelistet, denen wesentliche Informationen zu entnehmen sind.\n            Auf die  Zeugnisse folgen die inhaltlichen Informationen, angefangen mit den verschiedenen Namensformen,\n            in denen eine Person überliefert ist, gefolgt  von Hinweisen auf die Herkunft, den Ämtern im staatlichen Bereich,\n            seien sie  ziviler oder militärischer Natur, sowie einer Beschreibung der Tätigkeit  während der Funktionen, soweit sie bekannt ist.\n            Aufgenommen werden sodann  alle verwandtschaftlichen Beziehungen, die, wenn nötig, durch einen Stammbaum verdeutlicht werden.\n            Ferner werden alle  Informationen erfaßt, die sich auf Besitz und Vermögen beziehen,\n            auf intellektuelle und literarische Tätigkeit sowie die Verbindung zu den  verschiedenen sozialen Gruppen im Reich,\n            vor allem zur  Munizipalaristokratie.\n        "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n            Auf diese Weise sind in dem Lexikon vor allem die soziopolitischen  Führungsschichten des Weltreiches erfaßt.\n            Es werden damit die Grundlagen  geschaffen für die Erforschung sozialer Strukturen, vor allem der  Oberschicht,\n            ebenso wie für die Gewinnung von Erkenntnissen in Politik und  Administration des Imperium Romanum;\n            Familienpolitik auf der Grundlage von familiären Verknüpfungen zu erkennen,\n            wird ebenso ermöglicht wie den Aufstieg und Niedergang von Familien aus Italien und den  Provinzen zu verfolgen.\n            Vor allem aber soll das Lexikon dazu dienen, das  ungeheuer weit verstreute,\n            auch für Spezialisten nicht mehr überschaubare  Quellenmaterial einschließlich der wissenschaftlichen Diskussion zu erfassen\n            und für weiterführende Arbeiten jeglicher Art verfügbar zu machen.\n        "
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "v-row",
+        [
+          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
+            _c("b", [_vm._v("Inschrift I.I. 4,1,147")]),
+            _vm._v(" "),
+            _c("div", [
+              _vm._v(
+                "\n                    Ehreninschrift für den Senator C. Popilius Carus Pedo mit der Laufbahn  des Geehrten;\n                    er war einer der Konsuln des Jahres 147 n. Chr. und später  Statthalter in Obergermanien.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("img", { attrs: { src: "/img/inschrift.gif" } })
+          ]),
+          _vm._v(" "),
+          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
+            _c("b", [_vm._v("Militärdiplom")]),
+            _vm._v(" "),
+            _c("div", [
+              _vm._v(
+                "\n                    Umzeichnung eines sogenannten Militärdiplom (Original: Bronze) mit  wichtigen prosopographischen Nachrichten zu den ersten Statthaltern der Provinz Dacia.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("img", { attrs: { src: "/img/mil_dipl.gif" } })
+          ]),
+          _vm._v(" "),
+          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
+            _c("b", [_vm._v("Probeseite (2. Aufl., 2. Bd., S.  101)")]),
+            _vm._v(" "),
+            _c("div", [
+              _vm._v(
+                "\n                    Seite aus dem 1. Band der 2. Auflage mit den biographischen Daten des  Dichters Lukan (Nr. 611);\n                    die Kapitälchen seines Namens weisen auf seine  Zugehörigkeit zum Senatorenstand;\n                    auf die ritterliche Standeszugehörigkeit  seines Vaters (Nr. 613) weist die halbfette Wiedergabe des Namens.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("img", { attrs: { src: "/img/seite.gif" } })
+          ]),
+          _vm._v(" "),
+          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
+            _c("b", [_vm._v("Stammbaum")]),
+            _c("br"),
+            _vm._v(" "),
+            _c("img", { attrs: { src: "/img/stammbaum.gif" } })
+          ])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/overview.vue?vue&type=template&id=3884f710&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/overview.vue?vue&type=template&id=3884f710& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("v-card", { staticClass: "pa-5", attrs: { tile: "" } }, [
+    _c("h3", [_vm._v("Kurzfassung ")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Die Prosopographia Imperii Romani (PIR) ist ein Personenlexikon."
+      ),
+      _c("br"),
+      _vm._v(
+        "\n            Es soll im wesentlichen die Führungsschicht des Römischen Reiches in der Frühen und Hohen Kaiserzeit erfassen.\n            Die untere zeitliche Grenze ist die Schlacht von Aktium 31 v. Chr., seit der die monarchische Herrschaftsstruktur für Rom endgültig geworden war;\n            die obere Grenze bildet die Herrschaft Diokletians (284-305),\n            mit der eine wesentliche Änderung im staatlichen und gesellschaftlichen Aufbau des Reiches durchgesetzt wurde.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("h3", [_vm._v("Ausführliche Fassung")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "Der in dem Nachschlagewerk behandelte Personenkreis besteht im Einzelnen aus:"
+      )
+    ]),
+    _vm._v(" "),
+    _c("ol", [
+      _c("li", [
+        _vm._v(
+          "\n                den römischen Kaisern und ihren Familienmitgliedern\n            "
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "\n                den Angehörigen des Senatorenstandes (wie etwa P. Quinctilius Varus, der in der Schlacht im Teutoburger Wald umgekommen ist,\n                oder dem Geschichtsschreiber Tacitus und seinem Schwiegervater, Cn. Iulius Agricola)\n            "
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "\n                den Römern ritterlichen Ranges, soweit sie Aufgaben in der kaiserlichen Verwaltung übernommen hatten\n                (wie beispielsweise dem Präfekten von Iudaea Pontius Pilatus oder dem älteren Plinius,\n                der beim Vesuvausbruch des Jahres 79 n. Chr. als Präfekt der Flotte von Misenum umkam) und ihren Angehörigen\n            "
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "\n                allen literarisch für die beschriebene Zeit belegten Personen, soweit sie nicht schon zu einer der bereits aufgeführten Personengruppen gehörten;\n                unter ihnen befinden sich natürlich auch die Dichter und Schriftsteller selbst wie etwa Vergil, Horaz, Ovid und Martial oder Pausanias, Plotin und Plutarch. "
+        ),
+        _c("br"),
+        _vm._v(
+          "\n                Aufgenommen sind auch die Angehörigen der regierenden Familien in den von Rom abhängigen Klientelstaaten bzw. unabhängiger Reiche, soweit sie mit Rom in Kontakt standen,\n                so etwa Herodes d. Gr. in Iudaea oder die Könige des Partherreiches.\n            "
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/publications.vue?vue&type=template&id=3f4cfede&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/publications.vue?vue&type=template&id=3f4cfede& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("v-card", { staticClass: "pa-5", attrs: { tile: "" } }, [
+    _c("h3", [_vm._v("Erste Auflage")]),
+    _vm._v(" "),
+    _c("p", [_vm._v("Prosopographia Imperii Romani saec. I. II. III")]),
+    _vm._v(" "),
+    _c("p", [_vm._v("Pars")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("I  ed. Elimarus Klebs 1897 "),
+      _c("br"),
+      _vm._v(" (Buchstaben A - C)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("II "),
+      _c("br"),
+      _vm._v(" ed. Hermannus Dessau 1897 "),
+      _c("br"),
+      _vm._v(" (D - O)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("III "),
+      _c("br"),
+      _vm._v(" ed. Paulus de Rohden et Hermannus Dessau 1898 "),
+      _c("br"),
+      _vm._v(" (P - Z)")
+    ]),
+    _vm._v(" "),
+    _c("h3", [_vm._v("Zweite Auflage")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("Prosopographia Imperii Romani saec. I. II. III "),
+      _c("br"),
+      _vm._v(" Pars")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("I "),
+      _c("br"),
+      _vm._v(" Edmundus Groag et Arturus Stein 1933 "),
+      _c("br"),
+      _vm._v(" (Buchstaben A und B)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("II "),
+      _c("br"),
+      _vm._v(" ed. Edmundus Groag et Arturus Stein 1936 "),
+      _c("br"),
+      _vm._v(" (Buchstabe C)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("III "),
+      _c("br"),
+      _vm._v(" ed. Edmundus Groag et Arturus Stein 1943 "),
+      _c("br"),
+      _vm._v(" (Buchstaben D - F)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("IV "),
+      _c("br"),
+      _vm._v(" Fasc. 1 ed. Arturus Stein 1952 "),
+      _c("br"),
+      _vm._v(" (Buchstabe G)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("2 e schedis Edmundi Groag et Arturi Stein edita 1958 "),
+      _c("br"),
+      _vm._v(" (Buchstabe H)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("3 ed. Leiva Petersen 1966 "),
+      _c("br"),
+      _vm._v(" (Buchstabe I) "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" V "),
+      _c("br"),
+      _vm._v(" Fasc. 1 ed. Leiva Petersen 1970 "),
+      _c("br"),
+      _vm._v(" (Buchstabe L)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("2 ed. Leiva Petersen 1983 "),
+      _c("br"),
+      _vm._v(" (Buchstabe M)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("3 ed. Leiva Petersen 1987 "),
+      _c("br"),
+      _vm._v(" (Buchstaben N und O)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("VI \ted. Leiva Petersen et Klaus Wachtel 1998 "),
+      _c("br"),
+      _vm._v(" (Buchstabe P)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("VII "),
+      _c("br"),
+      _vm._v(" Fasc. 1 ed. Klaus Wachtel 1999"),
+      _c("br"),
+      _vm._v(" (Buchstaben Q und R)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("Fasc. 2 ed. Matthäus Heil et Klaus Wachtel 2006 "),
+      _c("br"),
+      _vm._v(" (Buchstabe S)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("VIII "),
+      _c("br"),
+      _vm._v(
+        " Fasc. 1 ed. Werner Eck, Matthäus Heil, Johannes Heinrichs 2009 "
+      ),
+      _c("br"),
+      _vm._v(" (Buchstabe T)")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("Fasc. 2 ed. Werner Eck, Matthäus Heil, Johannes Heinrichs 2015 "),
+      _c("br"),
+      _vm._v(" (Buchstaben U/V-Z)")
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/search.vue?vue&type=template&id=4627937f&":
 /*!********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/search.vue?vue&type=template&id=4627937f& ***!
@@ -5112,251 +6069,131 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "v-row",
-        { attrs: { justify: "center" } },
-        [
-          _c("v-col", { attrs: { cols: "12", sm: "10" } }, [
+  return _c("div", [
+    _c(
+      "div",
+      {
+        style: this.$vuetify.breakpoint.mdAndUp
+          ? "width: 400px; position: fixed;"
+          : ""
+      },
+      [
+        _c(
+          "v-card",
+          { attrs: { tile: "" } },
+          [
             _c(
-              "div",
-              {
-                style: this.$vuetify.breakpoint.mdAndUp
-                  ? "width: 400px; position: fixed;"
-                  : ""
-              },
+              "v-card-text",
               [
+                _c("div", {
+                  staticClass: "caption mb-n4",
+                  domProps: {
+                    textContent: _vm._s(_vm.$root.label("search_string"))
+                  }
+                }),
+                _vm._v(" "),
+                _c("v-text-field", {
+                  on: {
+                    keyup: function($event) {
+                      if (
+                        !$event.type.indexOf("key") &&
+                        _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                      ) {
+                        return null
+                      }
+                      return _vm.setSearchURL()
+                    }
+                  },
+                  model: {
+                    value: _vm.search.string,
+                    callback: function($$v) {
+                      _vm.$set(_vm.search, "string", $$v)
+                    },
+                    expression: "search.string"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "caption mb-n3",
+                  domProps: {
+                    textContent: _vm._s(_vm.$root.label("search_mode"))
+                  }
+                }),
+                _vm._v(" "),
                 _c(
-                  "v-card",
-                  { attrs: { tile: "" } },
+                  "v-radio-group",
+                  {
+                    model: {
+                      value: _vm.search.mode,
+                      callback: function($$v) {
+                        _vm.$set(_vm.search, "mode", $$v)
+                      },
+                      expression: "search.mode"
+                    }
+                  },
                   [
                     _c(
-                      "v-card-text",
+                      "v-row",
+                      _vm._l(_vm.modes, function(item, i) {
+                        return _c(
+                          "v-col",
+                          { key: "sm" + i, attrs: { cols: "6" } },
+                          [
+                            _c("v-radio", {
+                              attrs: { label: item.text, value: item.value }
+                            })
+                          ],
+                          1
+                        )
+                      }),
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "caption mb-n3 mt-1",
+                  domProps: {
+                    textContent: _vm._s(_vm.$root.label("search_isOr"))
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "v-radio-group",
+                  {
+                    model: {
+                      value: _vm.search.isOr,
+                      callback: function($$v) {
+                        _vm.$set(_vm.search, "isOr", $$v)
+                      },
+                      expression: "search.isOr"
+                    }
+                  },
+                  [
+                    _c(
+                      "v-row",
                       [
-                        _c("div", {
-                          staticClass: "caption mb-n4",
-                          domProps: {
-                            textContent: _vm._s(
-                              _vm.$root.label("search_string")
-                            )
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("v-text-field", {
-                          on: {
-                            keyup: function($event) {
-                              if (
-                                !$event.type.indexOf("key") &&
-                                _vm._k(
-                                  $event.keyCode,
-                                  "enter",
-                                  13,
-                                  $event.key,
-                                  "Enter"
-                                )
-                              ) {
-                                return null
+                        _c(
+                          "v-col",
+                          [
+                            _c("v-radio", {
+                              attrs: {
+                                label: _vm.$root.label("search_isOr_false"),
+                                value: false
                               }
-                              return _vm.RunSearch()
-                            }
-                          },
-                          model: {
-                            value: _vm.search.string,
-                            callback: function($$v) {
-                              _vm.$set(_vm.search, "string", $$v)
-                            },
-                            expression: "search.string"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass: "caption mb-n3",
-                          domProps: {
-                            textContent: _vm._s(_vm.$root.label("search_mode"))
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "v-radio-group",
-                          {
-                            model: {
-                              value: _vm.search.mode,
-                              callback: function($$v) {
-                                _vm.$set(_vm.search, "mode", $$v)
-                              },
-                              expression: "search.mode"
-                            }
-                          },
-                          [
-                            _c(
-                              "v-row",
-                              _vm._l(_vm.modes, function(item, i) {
-                                return _c(
-                                  "v-col",
-                                  { key: "sm" + i, attrs: { cols: "6" } },
-                                  [
-                                    _c("v-radio", {
-                                      attrs: {
-                                        label: item.text,
-                                        value: item.value
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              }),
-                              1
-                            )
+                            })
                           ],
                           1
                         ),
                         _vm._v(" "),
-                        _c("div", {
-                          staticClass: "caption mb-n3 mt-1",
-                          domProps: {
-                            textContent: _vm._s(_vm.$root.label("search_isOr"))
-                          }
-                        }),
-                        _vm._v(" "),
                         _c(
-                          "v-radio-group",
-                          {
-                            model: {
-                              value: _vm.search.isOr,
-                              callback: function($$v) {
-                                _vm.$set(_vm.search, "isOr", $$v)
-                              },
-                              expression: "search.isOr"
-                            }
-                          },
+                          "v-col",
                           [
-                            _c(
-                              "v-row",
-                              [
-                                _c(
-                                  "v-col",
-                                  [
-                                    _c("v-radio", {
-                                      attrs: {
-                                        label: _vm.$root.label(
-                                          "search_isOr_false"
-                                        ),
-                                        value: false
-                                      }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "v-col",
-                                  [
-                                    _c("v-radio", {
-                                      attrs: {
-                                        label: _vm.$root.label(
-                                          "search_isOr_true"
-                                        ),
-                                        value: true
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass: "caption mb-n3 mt-1",
-                          domProps: {
-                            textContent: _vm._s(_vm.$root.label("search_isCs"))
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "v-radio-group",
-                          {
-                            model: {
-                              value: _vm.search.isCs,
-                              callback: function($$v) {
-                                _vm.$set(_vm.search, "isCs", $$v)
-                              },
-                              expression: "search.isCs"
-                            }
-                          },
-                          [
-                            _c(
-                              "v-row",
-                              [
-                                _c(
-                                  "v-col",
-                                  [
-                                    _c("v-radio", {
-                                      attrs: {
-                                        label: _vm.$root.label(
-                                          "search_isCs_false"
-                                        ),
-                                        value: false
-                                      }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "v-col",
-                                  [
-                                    _c("v-radio", {
-                                      attrs: {
-                                        label: _vm.$root.label(
-                                          "search_isCs_true"
-                                        ),
-                                        value: true
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("v-btn", {
-                          staticClass: "mt-5 primary",
-                          attrs: { tile: "", block: "" },
-                          domProps: {
-                            textContent: _vm._s(_vm.$root.label("search"))
-                          },
-                          on: {
-                            click: function($event) {
-                              return _vm.setSearchURL()
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "mt-2 d-flex justify-center" },
-                          [
-                            _c("v-btn", {
-                              attrs: { text: "", small: "" },
-                              domProps: {
-                                textContent: _vm._s(
-                                  _vm.$root.label("search_reset")
-                                )
-                              },
-                              on: {
-                                click: function($event) {
-                                  return _vm.ResetFilters(true)
-                                }
+                            _c("v-radio", {
+                              attrs: {
+                                label: _vm.$root.label("search_isOr_true"),
+                                value: true
                               }
                             })
                           ],
@@ -5367,173 +6204,141 @@ var render = function() {
                     )
                   ],
                   1
+                ),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "caption mb-n3 mt-1",
+                  domProps: {
+                    textContent: _vm._s(_vm.$root.label("search_isCs"))
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "v-radio-group",
+                  {
+                    model: {
+                      value: _vm.search.isCs,
+                      callback: function($$v) {
+                        _vm.$set(_vm.search, "isCs", $$v)
+                      },
+                      expression: "search.isCs"
+                    }
+                  },
+                  [
+                    _c(
+                      "v-row",
+                      [
+                        _c(
+                          "v-col",
+                          [
+                            _c("v-radio", {
+                              attrs: {
+                                label: _vm.$root.label("search_isCs_false"),
+                                value: false
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-col",
+                          [
+                            _c("v-radio", {
+                              attrs: {
+                                label: _vm.$root.label("search_isCs_true"),
+                                value: true
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("v-btn", {
+                  staticClass: "mt-5 primary",
+                  attrs: { tile: "", block: "" },
+                  domProps: { textContent: _vm._s(_vm.$root.label("search")) },
+                  on: {
+                    click: function($event) {
+                      return _vm.setSearchURL()
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mt-2 d-flex justify-center" },
+                  [
+                    _c("v-btn", {
+                      attrs: { text: "", small: "" },
+                      domProps: {
+                        textContent: _vm._s(_vm.$root.label("search_reset"))
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.ResetFilters(true)
+                        }
+                      }
+                    })
+                  ],
+                  1
                 )
               ],
               1
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                style: this.$vuetify.breakpoint.mdAndUp
-                  ? "margin-left: 400px;"
-                  : ""
-              },
-              [
-                _c(
-                  "v-card",
-                  {
-                    staticClass: "mb-5",
-                    class: this.$vuetify.breakpoint.mdAndUp ? "ml-5" : "mt-5",
-                    attrs: { tile: "" }
-                  },
+            )
+          ],
+          1
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { style: this.$vuetify.breakpoint.mdAndUp ? "margin-left: 400px;" : "" },
+      [
+        _c(
+          "v-card",
+          {
+            staticClass: "mb-5",
+            class: this.$vuetify.breakpoint.mdAndUp ? "ml-5" : "mt-5",
+            attrs: { tile: "" }
+          },
+          [
+            _vm.instructions
+              ? _c("v-card-text", [_c("instructions")], 1)
+              : _c(
+                  "div",
                   [
-                    _vm.instructions
-                      ? _c("v-card-text", [_c("instructions")], 1)
-                      : _c(
+                    _c(
+                      "div",
+                      [
+                        _c(
                           "div",
+                          { staticStyle: { position: "absolute", right: "0" } },
                           [
                             _c(
-                              "div",
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticStyle: {
-                                      position: "absolute",
-                                      right: "0"
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "v-btn",
-                                      {
-                                        staticClass: "ma-1",
-                                        attrs: { icon: "", large: "" },
-                                        on: {
-                                          click: function($event) {
-                                            _vm.instructions = true
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _c("v-icon", {
-                                          attrs: { large: "" },
-                                          domProps: {
-                                            textContent: _vm._s("help_outline")
-                                          }
-                                        })
-                                      ],
-                                      1
-                                    )
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("div", {
-                                  staticClass: "pa-2 pt-3 title text-center",
-                                  domProps: {
-                                    innerHTML: _vm._s(
-                                      _vm.count_formated +
-                                        " " +
-                                        _vm.$root.label("records_for") +
-                                        " '" +
-                                        _vm.searchedString +
-                                        "'"
-                                    )
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _vm.loading
-                                  ? _c("v-progress-linear", {
-                                      attrs: {
-                                        indeterminate: "",
-                                        color: "accent"
-                                      }
-                                    })
-                                  : _c("div", {
-                                      staticStyle: {
-                                        "border-bottom": "3px solid #b51212"
-                                      }
-                                    }),
-                                _vm._v(" "),
-                                _c("pagination", {
-                                  attrs: {
-                                    color: "transparent",
-                                    pagination: _vm.pagination
-                                  },
-                                  on: {
-                                    navigate: function(emit) {
-                                      this$1.setSearchURL(emit)
-                                    }
-                                  }
-                                })
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c("v-expand-transition", [
-                              _vm.loading
-                                ? _c("div", {
-                                    staticClass: "pa-10 text-center",
-                                    domProps: {
-                                      textContent: _vm._s(
-                                        _vm.$root.label("processing")
-                                      )
-                                    }
-                                  })
-                                : _vm.items[0]
-                                ? _c(
-                                    "div",
-                                    { staticClass: "pa-5" },
-                                    _vm._l(_vm.items, function(item, i) {
-                                      return _c(
-                                        "div",
-                                        { key: i, staticClass: "mb-5" },
-                                        [
-                                          _c("div", {
-                                            domProps: {
-                                              innerHTML: _vm._s(item.annotated)
-                                            }
-                                          }),
-                                          _vm._v(" "),
-                                          _c("div", {
-                                            domProps: {
-                                              innerHTML: _vm._s(item.reference)
-                                            }
-                                          })
-                                        ]
-                                      )
-                                    }),
-                                    0
-                                  )
-                                : _c("div", {
-                                    staticClass: "pa-10 text-center",
-                                    domProps: {
-                                      textContent: _vm._s(
-                                        _vm.$root.label("result_none")
-                                      )
-                                    }
-                                  })
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
+                              "v-btn",
                               {
-                                staticStyle: {
-                                  "border-top": "3px solid #b51212"
+                                staticClass: "ma-1",
+                                attrs: { icon: "", large: "" },
+                                on: {
+                                  click: function($event) {
+                                    _vm.instructions = true
+                                  }
                                 }
                               },
                               [
-                                _c("pagination", {
-                                  attrs: {
-                                    color: "transparent",
-                                    pagination: _vm.pagination
-                                  },
-                                  on: {
-                                    navigate: function(emit) {
-                                      this$1.setSearchURL(emit)
-                                    }
+                                _c("v-icon", {
+                                  attrs: { large: "" },
+                                  domProps: {
+                                    textContent: _vm._s("help_outline")
                                   }
                                 })
                               ],
@@ -5541,20 +6346,132 @@ var render = function() {
                             )
                           ],
                           1
-                        )
+                        ),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticClass: "pa-2 pt-3 title text-center",
+                          domProps: {
+                            innerHTML: _vm._s(
+                              _vm.count_formated +
+                                " " +
+                                _vm.$root.label("records_for") +
+                                " '" +
+                                _vm.searchedString +
+                                "'"
+                            )
+                          }
+                        }),
+                        _vm._v(" "),
+                        _vm.loading
+                          ? _c("v-progress-linear", {
+                              attrs: { indeterminate: "", color: "accent" }
+                            })
+                          : _c("div", {
+                              staticStyle: {
+                                "border-bottom": "3px solid #b51212"
+                              }
+                            }),
+                        _vm._v(" "),
+                        _c("pagination", {
+                          attrs: {
+                            color: "transparent",
+                            pagination: _vm.pagination
+                          },
+                          on: {
+                            navigate: function(emit) {
+                              this$1.setSearchURL(emit)
+                            }
+                          }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("v-expand-transition", [
+                      _vm.loading
+                        ? _c("div", {
+                            staticClass: "pa-10 text-center",
+                            domProps: {
+                              textContent: _vm._s(_vm.$root.label("processing"))
+                            }
+                          })
+                        : _vm.items[0]
+                        ? _c(
+                            "div",
+                            { staticClass: "pa-5" },
+                            _vm._l(_vm.items, function(item, i) {
+                              return _c(
+                                "div",
+                                { key: i, staticClass: "mb-5" },
+                                [
+                                  _c("div", {
+                                    staticClass: "body-1",
+                                    domProps: {
+                                      innerHTML: _vm._s(
+                                        item.annotated
+                                          ? _vm.parseName(item.annotated)
+                                          : ""
+                                      )
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "body-2" }, [
+                                    _c("div", {
+                                      staticClass: "mt-1",
+                                      domProps: {
+                                        innerHTML: _vm._s(_vm.parseInfo(item))
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("div", {
+                                      domProps: {
+                                        innerHTML: _vm._s(item.reference)
+                                      }
+                                    })
+                                  ])
+                                ]
+                              )
+                            }),
+                            0
+                          )
+                        : _c("div", {
+                            staticClass: "pa-10 text-center",
+                            domProps: {
+                              textContent: _vm._s(
+                                _vm.$root.label("result_none")
+                              )
+                            }
+                          })
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticStyle: { "border-top": "3px solid #b51212" } },
+                      [
+                        _c("pagination", {
+                          attrs: {
+                            color: "transparent",
+                            pagination: _vm.pagination
+                          },
+                          on: {
+                            navigate: function(emit) {
+                              this$1.setSearchURL(emit)
+                            }
+                          }
+                        })
+                      ],
+                      1
+                    )
                   ],
                   1
                 )
-              ],
-              1
-            )
-          ])
-        ],
-        1
-      )
-    ],
-    1
-  )
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -67083,7 +68000,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
       preferences: {
         show_filters: false
       },
-      language: 'en'
+      language: 'en',
+      navigation: ['search', 'overview', 'publications', 'methods', 'history', 'keywords', 'addenda']
     };
   },
   created: function created() {//this.drawer.active = this.$vuetify.breakpoint.mdAndUp;
@@ -67831,7 +68749,14 @@ __webpack_require__.r(__webpack_exports__);
         search_isOr_false: 'UND',
         search_isCs: 'Groß-Kleinschreibung beachten',
         search_isCs_true: 'Ja',
-        search_isCs_false: 'Nein'
+        search_isCs_false: 'Nein',
+        nav_search: 'Suche',
+        nav_overview: 'Überblick',
+        nav_publications: 'Publikationen',
+        nav_methods: 'Arbeitsweise',
+        nav_history: 'Geschichte',
+        nav_keywords: 'Stichwortliste',
+        nav_addenda: 'Addenda'
       },
       en: {
         bbaw: 'Berlin-Brandenburg Academy of Sciences and Humanities',
@@ -67870,7 +68795,14 @@ __webpack_require__.r(__webpack_exports__);
         search_isOr_false: 'AND',
         search_isCs: 'Case sensitivity',
         search_isCs_true: 'case-sensitive',
-        search_isCs_false: 'case-insensitive'
+        search_isCs_false: 'case-insensitive',
+        nav_search: 'Search',
+        nav_overview: 'Overview',
+        nav_publications: 'Publications',
+        nav_methods: 'Methods',
+        nav_history: 'History',
+        nav_keywords: 'Keywords',
+        nav_addenda: 'Addenda'
       }
     };
   }
@@ -67902,6 +68834,30 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     path: '/search',
     name: 'search',
     component: __webpack_require__(/*! ./../pages/search */ "./resources/js/app/pages/search.vue")["default"]
+  }, {
+    path: '/overview',
+    name: 'overview',
+    component: __webpack_require__(/*! ./../pages/overview */ "./resources/js/app/pages/overview.vue")["default"]
+  }, {
+    path: '/publications',
+    name: 'publications',
+    component: __webpack_require__(/*! ./../pages/publications */ "./resources/js/app/pages/publications.vue")["default"]
+  }, {
+    path: '/methods',
+    name: 'methods',
+    component: __webpack_require__(/*! ./../pages/methods */ "./resources/js/app/pages/methods.vue")["default"]
+  }, {
+    path: '/history',
+    name: 'history',
+    component: __webpack_require__(/*! ./../pages/history */ "./resources/js/app/pages/history.vue")["default"]
+  }, {
+    path: '/keywords',
+    name: 'keywords',
+    component: __webpack_require__(/*! ./../pages/keywords */ "./resources/js/app/pages/keywords.vue")["default"]
+  }, {
+    path: '/addenda',
+    name: 'addenda',
+    component: __webpack_require__(/*! ./../pages/addenda */ "./resources/js/app/pages/addenda.vue")["default"]
   }]
 });
 router.beforeEach(function (to, from, next) {
@@ -68119,6 +69075,420 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_sessioninfo_vue_vue_type_template_id_725ca3c0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_sessioninfo_vue_vue_type_template_id_725ca3c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/addenda.vue":
+/*!********************************************!*\
+  !*** ./resources/js/app/pages/addenda.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addenda.vue?vue&type=template&id=6aebfa80& */ "./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80&");
+/* harmony import */ var _addenda_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addenda.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/addenda.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _addenda_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/pages/addenda.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/addenda.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/app/pages/addenda.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./addenda.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/addenda.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./addenda.vue?vue&type=template&id=6aebfa80& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/history.vue":
+/*!********************************************!*\
+  !*** ./resources/js/app/pages/history.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _history_vue_vue_type_template_id_92eaf466___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./history.vue?vue&type=template&id=92eaf466& */ "./resources/js/app/pages/history.vue?vue&type=template&id=92eaf466&");
+/* harmony import */ var _history_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./history.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/history.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _history_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _history_vue_vue_type_template_id_92eaf466___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _history_vue_vue_type_template_id_92eaf466___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/pages/history.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/history.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/app/pages/history.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_history_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./history.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/history.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_history_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/history.vue?vue&type=template&id=92eaf466&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/app/pages/history.vue?vue&type=template&id=92eaf466& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_history_vue_vue_type_template_id_92eaf466___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./history.vue?vue&type=template&id=92eaf466& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/history.vue?vue&type=template&id=92eaf466&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_history_vue_vue_type_template_id_92eaf466___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_history_vue_vue_type_template_id_92eaf466___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/keywords.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/app/pages/keywords.vue ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./keywords.vue?vue&type=template&id=34a428c1& */ "./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1&");
+/* harmony import */ var _keywords_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./keywords.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/keywords.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _keywords_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/pages/keywords.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/keywords.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/app/pages/keywords.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./keywords.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/keywords.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1& ***!
+  \****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./keywords.vue?vue&type=template&id=34a428c1& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/methods.vue":
+/*!********************************************!*\
+  !*** ./resources/js/app/pages/methods.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _methods_vue_vue_type_template_id_6b5a2deb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./methods.vue?vue&type=template&id=6b5a2deb& */ "./resources/js/app/pages/methods.vue?vue&type=template&id=6b5a2deb&");
+/* harmony import */ var _methods_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./methods.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/methods.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _methods_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _methods_vue_vue_type_template_id_6b5a2deb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _methods_vue_vue_type_template_id_6b5a2deb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/pages/methods.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/methods.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/app/pages/methods.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_methods_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./methods.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/methods.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_methods_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/methods.vue?vue&type=template&id=6b5a2deb&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/app/pages/methods.vue?vue&type=template&id=6b5a2deb& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_methods_vue_vue_type_template_id_6b5a2deb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./methods.vue?vue&type=template&id=6b5a2deb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/methods.vue?vue&type=template&id=6b5a2deb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_methods_vue_vue_type_template_id_6b5a2deb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_methods_vue_vue_type_template_id_6b5a2deb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/overview.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/app/pages/overview.vue ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _overview_vue_vue_type_template_id_3884f710___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./overview.vue?vue&type=template&id=3884f710& */ "./resources/js/app/pages/overview.vue?vue&type=template&id=3884f710&");
+/* harmony import */ var _overview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./overview.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/overview.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _overview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _overview_vue_vue_type_template_id_3884f710___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _overview_vue_vue_type_template_id_3884f710___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/pages/overview.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/overview.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/app/pages/overview.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_overview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./overview.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/overview.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_overview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/overview.vue?vue&type=template&id=3884f710&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/app/pages/overview.vue?vue&type=template&id=3884f710& ***!
+  \****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_overview_vue_vue_type_template_id_3884f710___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./overview.vue?vue&type=template&id=3884f710& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/overview.vue?vue&type=template&id=3884f710&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_overview_vue_vue_type_template_id_3884f710___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_overview_vue_vue_type_template_id_3884f710___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/publications.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/app/pages/publications.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _publications_vue_vue_type_template_id_3f4cfede___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./publications.vue?vue&type=template&id=3f4cfede& */ "./resources/js/app/pages/publications.vue?vue&type=template&id=3f4cfede&");
+/* harmony import */ var _publications_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./publications.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/publications.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _publications_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _publications_vue_vue_type_template_id_3f4cfede___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _publications_vue_vue_type_template_id_3f4cfede___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/pages/publications.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/publications.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/app/pages/publications.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_publications_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./publications.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/publications.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_publications_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/publications.vue?vue&type=template&id=3f4cfede&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/app/pages/publications.vue?vue&type=template&id=3f4cfede& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_publications_vue_vue_type_template_id_3f4cfede___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./publications.vue?vue&type=template&id=3f4cfede& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/publications.vue?vue&type=template&id=3f4cfede&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_publications_vue_vue_type_template_id_3f4cfede___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_publications_vue_vue_type_template_id_3f4cfede___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

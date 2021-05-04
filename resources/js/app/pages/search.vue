@@ -1,133 +1,132 @@
 <template>
 <div>
 
-    <!-- Query Form -->
-    <v-row justify="center">
-        <v-col cols=12 sm=10>
+    <!-- Search Form -->
+    <div :style="this.$vuetify.breakpoint.mdAndUp ? 'width: 400px; position: fixed;' : ''">
+        <v-card tile>
+            <v-card-text>
+                <!-- Filters -->
+                    <!-- Search String -->
+                    <div class="caption mb-n4" v-text="$root.label('search_string')" />
+                    <v-text-field
+                        v-model="search.string"
+                        v-on:keyup.enter="setSearchURL()"
+                    />
+                    <!-- Search Mode -->
+                    <div class="caption mb-n3" v-text="$root.label('search_mode')" />
+                    <v-radio-group v-model="search.mode">
+                        <v-row>
+                            <v-col cols=6 v-for="(item, i) in modes" :key="'sm' + i">
+                                <v-radio :label="item.text" :value="item.value" />
+                            </v-col>
+                        </v-row>
+                    </v-radio-group>
+                    <!-- Logical Connector -->
+                    <div class="caption mb-n3 mt-1" v-text="$root.label('search_isOr')" />
+                    <v-radio-group v-model="search.isOr">
+                        <v-row>
+                            <v-col>
+                                <v-radio :label="$root.label('search_isOr_false')" :value="false" />
+                            </v-col>
+                            <v-col>
+                                <v-radio :label="$root.label('search_isOr_true')" :value="true" />
+                            </v-col>
+                        </v-row>
+                    </v-radio-group>
+                    <!-- Case sensitivity -->
+                    <div class="caption mb-n3 mt-1" v-text="$root.label('search_isCs')" />
+                    <v-radio-group v-model="search.isCs">
+                        <v-row>
+                            <v-col>
+                                <v-radio :label="$root.label('search_isCs_false')" :value="false" />
+                            </v-col>
+                            <v-col>
+                                <v-radio :label="$root.label('search_isCs_true')" :value="true" />
+                            </v-col>
+                        </v-row>
+                    </v-radio-group>
+                <!-- Search Button -->
+                <v-btn
+                    tile
+                    block
+                    class="mt-5 primary"
+                    v-text="$root.label('search')"
+                    @click="setSearchURL()"
+                />
+                <!-- Search Reset -->
+                <div class="mt-2 d-flex justify-center">
+                    <v-btn
+                        text
+                        small
+                        v-text="$root.label('search_reset')"
+                        @click="ResetFilters(true)"
+                    ></v-btn>
+                </div>
+            </v-card-text>
+        </v-card>
+    </div>
 
-            <!-- Search Form -->
-            <div :style="this.$vuetify.breakpoint.mdAndUp ? 'width: 400px; position: fixed;' : ''">
-                <v-card tile>
-                    <v-card-text>
-                        <!-- Filters -->
-                            <!-- Search String -->
-                            <div class="caption mb-n4" v-text="$root.label('search_string')" />
-                            <v-text-field
-                                v-model="search.string"
-                                v-on:keyup.enter="RunSearch()"
-                            />
-                            <!-- Search Mode -->
-                            <div class="caption mb-n3" v-text="$root.label('search_mode')" />
-                            <v-radio-group v-model="search.mode">
-                                <v-row>
-                                    <v-col cols=6 v-for="(item, i) in modes" :key="'sm' + i">
-                                        <v-radio :label="item.text" :value="item.value" />
-                                    </v-col>
-                                </v-row>
-                            </v-radio-group>
-                            <!-- Logical Connector -->
-                            <div class="caption mb-n3 mt-1" v-text="$root.label('search_isOr')" />
-                            <v-radio-group v-model="search.isOr">
-                                <v-row>
-                                    <v-col>
-                                        <v-radio :label="$root.label('search_isOr_false')" :value="false" />
-                                    </v-col>
-                                    <v-col>
-                                        <v-radio :label="$root.label('search_isOr_true')" :value="true" />
-                                    </v-col>
-                                </v-row>
-                            </v-radio-group>
-                            <!-- Case sensitivity -->
-                            <div class="caption mb-n3 mt-1" v-text="$root.label('search_isCs')" />
-                            <v-radio-group v-model="search.isCs">
-                                <v-row>
-                                    <v-col>
-                                        <v-radio :label="$root.label('search_isCs_false')" :value="false" />
-                                    </v-col>
-                                    <v-col>
-                                        <v-radio :label="$root.label('search_isCs_true')" :value="true" />
-                                    </v-col>
-                                </v-row>
-                            </v-radio-group>
-                        <!-- Search Button -->
-                        <v-btn
-                            tile
-                            block
-                            class="mt-5 primary"
-                            v-text="$root.label('search')"
-                            @click="setSearchURL()"
-                        />
-                        <!-- Search Reset -->
-                        <div class="mt-2 d-flex justify-center">
-                            <v-btn
-                                text
-                                small
-                                v-text="$root.label('search_reset')"
-                                @click="ResetFilters(true)"
-                            ></v-btn>
-                        </div>
-                    </v-card-text>
-                </v-card>
-            </div>
+    <!-- Container -->
+    <div :style="this.$vuetify.breakpoint.mdAndUp ? 'margin-left: 400px;' : ''">
+        <v-card tile class="mb-5" :class="this.$vuetify.breakpoint.mdAndUp ? 'ml-5' : 'mt-5'">
 
-            <!-- Container -->
-            <div :style="this.$vuetify.breakpoint.mdAndUp ? 'margin-left: 400px;' : ''">
-                <v-card tile class="mb-5" :class="this.$vuetify.breakpoint.mdAndUp ? 'ml-5' : 'mt-5'">
+            <!-- Instructions -->
+            <v-card-text v-if="instructions">
+                <instructions />
+            </v-card-text>
 
-                    <!-- Instructions -->
-                    <v-card-text v-if="instructions">
-                        <instructions />
-                    </v-card-text>
+            <!-- Results -->
+            <div v-else>
+                <!-- Pagination -->
+                <div>
+                    <div style="position: absolute; right: 0;">
+                        <v-btn icon large class="ma-1" @click="instructions = true">
+                            <v-icon large v-text="'help_outline'" />
+                        </v-btn>
+                    </div>
+                    <div class="pa-2 pt-3 title text-center" v-html="count_formated + ' ' + $root.label('records_for') + ' \'' + searchedString + '\''" />
+                    <v-progress-linear v-if="loading" indeterminate color="accent" />
+                    <div v-else style="border-bottom: 3px solid #b51212;" />
+                    <pagination  color="transparent" :pagination="pagination" v-on:navigate="(emit) => { this.setSearchURL(emit) }"></pagination>
+                </div>
 
-                    <!-- Results -->
-                    <div v-else>
-                        <!-- Pagination -->
-                        <div>
-                            <div style="position: absolute; right: 0;">
-                                <v-btn icon large class="ma-1" @click="instructions = true">
-                                    <v-icon large v-text="'help_outline'" />
-                                </v-btn>
+                <!-- Result List -->
+                <v-expand-transition>
+                    <div
+                        v-if="loading"
+                        class="pa-10 text-center"
+                        v-text="$root.label('processing')"
+                    />
+                    <div v-else-if="items[0]" class="pa-5">
+                        <div
+                            v-for="(item, i) in items"
+                            :key="i"
+                            class="mb-5"
+                        >
+                            <!-- annotated Name -->
+                            <div class="body-1" v-html="item.annotated ? parseName(item.annotated) : ''" />
+                            <div class="body-2">
+                                <!-- Information -->
+                                <div class="mt-1" v-html="parseInfo(item)" />
+                                <!-- Reference -->
+                                <div v-html="item.reference" />
                             </div>
-                            <div class="pa-2 pt-3 title text-center" v-html="count_formated + ' ' + $root.label('records_for') + ' \'' + searchedString + '\''" />
-                            <v-progress-linear v-if="loading" indeterminate color="accent" />
-                            <div v-else style="border-bottom: 3px solid #b51212;" />
-                            <pagination  color="transparent" :pagination="pagination" v-on:navigate="(emit) => { this.setSearchURL(emit) }"></pagination>
-                        </div>
-
-                        <!-- Result List -->
-                        <v-expand-transition>
-                            <div
-                                v-if="loading"
-                                class="pa-10 text-center"
-                                v-text="$root.label('processing')"
-                            />
-                            <div v-else-if="items[0]" class="pa-5">
-                                <div
-                                    v-for="(item, i) in items"
-                                    :key="i"
-                                    class="mb-5"
-                                >
-                                    <div v-html="item.annotated" />
-                                    <div v-html="item.reference" />
-                                </div>
-                            </div>
-                            <div
-                                v-else
-                                class="pa-10 text-center"
-                                v-text="$root.label('result_none')"
-                            />
-                        </v-expand-transition>
-
-                        <!-- Pagination -->
-                        <div style="border-top: 3px solid #b51212;">
-                            <pagination color="transparent" :pagination="pagination" v-on:navigate="(emit) => { this.setSearchURL(emit) }"></pagination>
                         </div>
                     </div>
-                </v-card>
-            </div>
+                    <div
+                        v-else
+                        class="pa-10 text-center"
+                        v-text="$root.label('result_none')"
+                    />
+                </v-expand-transition>
 
-        </v-col>
-    </v-row>
+                <!-- Pagination -->
+                <div style="border-top: 3px solid #b51212;">
+                    <pagination color="transparent" :pagination="pagination" v-on:navigate="(emit) => { this.setSearchURL(emit) }"></pagination>
+                </div>
+            </div>
+        </v-card>
+    </div>
 
 </div>
 </template>
@@ -272,6 +271,45 @@ export default {
             })
             if (window.location.hash.split('?')[1]) this.$router.push('/search')
         },
+
+        parseInfo (item) {
+            const html = []
+
+            // Basic Information
+            const base = []
+
+            if (item.sex) {
+                if (item.sex.toLowerCase().substring(0, 1) === 'f') base.push('weiblich')
+                else if (item.sex.toLowerCase().substring(0, 1) === 'm') base.push('männlich')
+            }
+
+            if (item.class) {
+                if (item.class.toLowerCase() === 'senator') base.push('ordo senatorius')
+                else if (item.class.toLowerCase() === 'eques') base.push('ordo equester')
+            }
+
+            if (base[0]) html.push(base.join(', '))
+
+            // Additional Information
+            const adds = ['tribe', 'origin', 'lifespan', 'career', 'occupations', 'relatives', 'article', 'sources', 'literature', 'notes']
+            adds.forEach((key) => {
+                if (item[key]) {
+                    html.push(this.removeComments(item[key]))
+                }
+            })
+
+            return '<div class="mb-1">' + html.join('</div>\n<div class="mb-1">') + '</div>'
+        },
+
+        parseName (name) {
+            return name
+                .replaceAll(/<b>(.*?)<\/b>/g, (match) => { return '<span class="font-weight-medium">' + match + '</span>'})
+                .replaceAll(/<k>(.*?)<\/k>/g, (match) => { return '<span class="font-weight-light text-uppercase">' + match + '</span>'})
+        },
+
+        removeComments (item) {
+            return item.replaceAll(/{{(.*?)}}/g, (match) => { return match.slice(2, -2).trim() })
+        }
     }
 }
 </script>

@@ -78,7 +78,7 @@ class import_persons extends Command {
                                 $val = str_replace('PIR2', 'PIR²', $val);
                                 $val = str_replace('#H:2#G:', '²', $val);
 
-                                if (empty($item['reference'])) $item['reference'] = trim($val);
+                                if (empty($item['reference'])) $item['reference'] = ($at === 'pk' ? 'PIR ' : '').trim($val);
                                 else $item['reference'] .= '; '.trim($val);
                             }
                         }
@@ -129,6 +129,7 @@ class import_persons extends Command {
         $annotated = $val;
 
         foreach ([
+            'K' => 'k',
             'F' => 'b',
             '/' => 'i'
         ] as $tustep => $html) {
@@ -144,9 +145,9 @@ class import_persons extends Command {
         $val = preg_replace('/<i>(.*?)<\/i>/', ' ', $annotated);
 
         // Handle Capitalize
-        $val = preg_replace_callback('/#K\+(.*?)#K-/', function ($match) {
+        /*$val = preg_replace_callback('/#K\+(.*?)#K-/', function ($match) {
             return trim($match[1]);
-        }, $val);
+        }, $val);*/
 
         $val = trim(strip_tags($val));
         $val = str_replace('---', '...', $val);
@@ -154,9 +155,9 @@ class import_persons extends Command {
         $val = trim(preg_replace('/\s+/', ' ', $val));
 
         // Handle Capitalize
-        $annotated = preg_replace_callback('/#K\+(.*?)#K-/', function ($match) {
+        /*$annotated = preg_replace_callback('/#K\+(.*?)#K-/', function ($match) {
             return strtoupper(trim($match[1]));
-        }, $annotated);
+        }, $annotated);*/
         $annotated = trim(preg_replace('/\s+/', ' ', $annotated));
 
         return [

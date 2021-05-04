@@ -17,44 +17,60 @@
         </div>
 
         <!-- Appbar -->
-        <v-app-bar
-            app
-            fixed
-            style="background-color: #fefefe"
-        >
+        <div id="pir-header">
             <v-row justify="center" align="center">
                 <v-col cols="12" sm="10">
-                    <!-- PIR -->
-                    <div
-                        class="text-h4 text-center pt-1 pb-2"
-                        v-text="$vuetify.breakpoint.mdAndUp ? 'PROSOPOGRAPHIA IMPERII ROMANI' : 'PIR'"
-                        style="
-                            position: absolute; left: 0; right: 0;
-                            font-family: palatio, serif !important
-                        "
-                    ></div>
-                    <div class="d-flex justify-space-between" style="width: 100%;">
-                        <!-- PIR Logo -->
+                    <div class="pt-1 d-flex justify-space-between align-center" style="width: 100%">
+                        <!-- Navigation -->
                         <div>
-
+                            <!-- Title -->
+                            <div
+                                class="text-h4"
+                                v-text="$vuetify.breakpoint.mdAndUp ? 'PROSOPOGRAPHIA IMPERII ROMANI' : 'PIR'"
+                                style="
+                                    font-family: palatio, serif !important;
+                                    letter-spacing: .1rem !important;
+                                "
+                            ></div>
+                            <!-- Nav-Items -->
+                            <div class="d-flex mt-1">
+                                <v-hover
+                                    v-for="(nav) in navigation"
+                                    :key="nav"
+                                    v-slot="{ hover }"
+                                >
+                                    <a
+                                        :href="'/#/' + nav"
+                                        v-text="label('nav_' + nav)"
+                                        class="mr-5"
+                                        :class="($route.name === nav ? 'accent--text' : (hover ? 'primary--text' : 'black--text')) + (nav === 'search' ? ' font-weight-bold' : '')"
+                                        :disabled="$route.name === nav"
+                                        style="
+                                            letter-spacing: .05rem !important;
+                                        "
+                                    ></a>
+                                </v-hover>
+                            </div>
                         </div>
+
                         <!-- BBAW Logo -->
                         <div>
                             <a href="https://www.bbaw.de" alte="BBAW Homepage" target="_blank">
                                 <v-img
                                     v-if="$vuetify.breakpoint.mdAndUp"
                                     src="/bbaw-logo.svg"
-                                    max-height="45"
-                                    max-width="150"
+                                    max-height="60"
+                                    max-width="200"
                                     contain
+                                    style="margin-right: -30px"
                                 ></v-img>
-                                <div v-else class="title accent--text pr-8 pt-1" v-text="'BBAW'"></div>
+                                <div v-else class="title accent--text" v-text="'BBAW'"></div>
                             </a>
                         </div>
                     </div>
                 </v-col>
             </v-row>
-            <!-- Language -->
+            <!-- Language
             <div class="d-flex justify-end align-center" style="position: absolute; right: 5px; z-index: 3">
                 <v-btn
                     icon
@@ -62,16 +78,18 @@
                     v-text="$root.language === 'de' ? 'EN' : 'DE'"
                     @click="$root.language = $root.language === 'de' ? 'en' : 'de'"
                 ></v-btn>
-            </div>
-        </v-app-bar>
+            </div> -->
+        </div>
 
         <!-- Routed Component -->
-        <v-main class="app_bg" style="background: url('/background.jpg')">
-            <div style="border-top: 5px solid #b51212;">
-                <v-fade-transition>
-                    <router-view class="mt-5"></router-view>
-                </v-fade-transition>
-            </div>
+        <v-main class="app_bg" style="margin-top: 80px; background: url('/background.jpg')">
+            <v-row justify="center">
+                <v-col cols="12" sm="10">
+                    <v-fade-transition>
+                        <router-view class="mt-5 mb-5"></router-view>
+                    </v-fade-transition>
+                </v-col>
+            </v-row>
         </v-main>
 
         <!-- Tracking Consent -->
