@@ -100,6 +100,7 @@ const app = new Vue({
                 'history',
                 'keywords',
                 'addenda',
+                'api',
             ]
         }
     },
@@ -128,22 +129,22 @@ const app = new Vue({
             if (string) {
                 const response = []
                 string.split(',').forEach((value) => {
-                    if (this.labels[value]) {
-                        response.push(this.labels[value])
-                    }
-                    else {
-                        response.push(value.slice(0, 1).toUpperCase() + value.slice(1).replaceAll('_', ' '))
-                    }
+                    if (this.labels[value]) response.push(this.labels[value])
+                    else response.push(value.slice(0, 1).toUpperCase() + value.slice(1).replaceAll('_', ' '))
                 })
                 return response.join(" ")
             }
-            else {
-                return 'NONE'
-            }
+            else return 'NONE'
         },
 
         openInNewTab (link) {
             if (link) { window.open(link) }
+        },
+
+        formatDate (date) {
+            if (!date) date = ['----', '--', '--']
+            else date = date?.split('-')
+            return this.language === 'de' ? date.reverse().join('.') : [date[1], date[2], date[0]].join('/')
         },
 
         // JK: DBI-API-AXIOS Functions ----------------------------------------------------------------------------------
@@ -153,7 +154,7 @@ const app = new Vue({
                 const source = 'dbi/' + entity + (id ? ('/' + id) : '')
                 let dbi = {}
 
-                console.log ('AXIOS: Fetching Data from "' + source + '" using GET. Awaiting Server Response ...');
+                console.log('AXIOS: Fetching Data from "' + source + '" using GET. Awaiting Server Response ...');
 
                 await axios.get(source)
                     .then((response) => {

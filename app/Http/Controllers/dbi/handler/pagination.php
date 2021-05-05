@@ -63,7 +63,8 @@ class pagination {
 
     function finalize ($pagination, $where) {
 
-        $sort_by = strtolower(str_replace(' ', '.', $pagination['sort_by']));
+        //$sort_by = strtolower(str_replace(' ', '.', $pagination['sort_by']));
+        $sort_by = null;
         $params = [];
 
         // Flat Single-Entry-Arrays for better Readability
@@ -75,7 +76,8 @@ class pagination {
         return [
             'self'              => $this -> offset($params, $pagination['limit'], $pagination['offset'], $sort_by),
             'pageOf'            => http_build_query($params),
-            'sort_by'           => $pagination['sort_by'],
+            'requestedAt'      => date('Y-m-d'),
+            //'sort_by'           => $pagination['sort_by'],
             'limit'             => $pagination['limit'],
             'offset'            => $pagination['offset'],
             'count'             => $pagination['count'],

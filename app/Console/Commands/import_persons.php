@@ -33,7 +33,8 @@ class import_persons extends Command {
         foreach ($raw as $r) {
             if (!empty($r)) {
                 $item = [];
-                $item['id'] = 'pir-id-'.sprintf('%06d', count($data) + 1);
+                //$item['id'] = 'pir-id-'.sprintf('%06d', count($data) + 1);
+                $item['id'] = 'https://pir.bbaw.de/id/'.(count($data) + 1);
                 echo "\t".$item['id'];
 
                 $r = ' @pk'.$r;
@@ -44,7 +45,7 @@ class import_persons extends Command {
                     'pn' => 'string',
                     'tr' => 'tribe',
                     'or' => 'origin',
-                    'ge' => 'sex',
+                    'ge' => 'gender',
                     'st' => 'status',
                     'lz' => 'lifespan',
                     'ka' => 'career',
@@ -74,9 +75,7 @@ class import_persons extends Command {
                         if ($at === 'pk' || $at === 'rf') {
                             if ($val != '-') {
                                 $val = trim($val);
-                                $val = str_replace('PIR1', 'PIR¹', $val);
-                                $val = str_replace('PIR2', 'PIR²', $val);
-                                $val = str_replace('#H:2#G:', '²', $val);
+                                $val = $this->unescapeTustep($val);
 
                                 if (empty($item['reference'])) $item['reference'] = ($at === 'pk' ? 'PIR ' : '').trim($val);
                                 else $item['reference'] .= '; '.trim($val);
@@ -86,10 +85,10 @@ class import_persons extends Command {
                         if (!empty($val)) {
                             // Personname
                             if ($at === 'pn') {
-                                $unesc = $this->unescapeName($val);
-                                $item[$key] = $unesc[$key];
+                                $item[$key] = $val;
+                                $item['annotated'] = $this->unescapeTustep($val);
+                                $item[$key] = $this->createSearchString($item['annotated']);
                                 echo "\t".$item[$key]."\n";
-                                $item['annotated'] = $unesc['annotated'];
 
                                 if (str_contains($val, '#F+')) $item['class'] = 'eques';
                                 else if (str_contains($val, '#K+')) $item['class'] = 'senator';
@@ -103,7 +102,7 @@ class import_persons extends Command {
                                 }
                             }
                             else if ($at !== 'pk' && $at !== 'rf') {
-                                $item[$key] = $val;
+                                $item[$key] = $this->unescapeTustep($val);
                             }
                         }
                         // Note about Publication ("F" means "show")
@@ -125,8 +124,7 @@ class import_persons extends Command {
         echo "\n\n--------------------- END ----------------------\n\n";
     }
 
-    public function unescapeName ($val) {
-        $annotated = $val;
+    public function unescapeTustep ($val) {
 
         foreach ([
             'K' => 'k',
@@ -137,32 +135,29 @@ class import_persons extends Command {
             if ($char === '/') $char = '\/';
             $pattern = '/#'.$char.'\+(.*?)#'.$char.'-/';
 
-            $annotated = preg_replace_callback($pattern, function ($match) use ($html) {
+            $val = preg_replace_callback($pattern, function ($match) use ($html) {
                 return '<'.$html.'>'.trim($match[1]).'</'.$html.'>';
-            }, $annotated);
+            }, $val);
         }
 
-        $val = preg_replace('/<i>(.*?)<\/i>/', ' ', $annotated);
+        $val = preg_replace_callback('/#H:(.*?)#G:/', function ($match) use ($html) {
+            return '<sup>'.trim($match[1]).'</sup>';
+        }, $val);
 
-        // Handle Capitalize
-        /*$val = preg_replace_callback('/#K\+(.*?)#K-/', function ($match) {
-            return trim($match[1]);
-        }, $val);*/
 
-        $val = trim(strip_tags($val));
-        $val = str_replace('---', '...', $val);
-        $val = trim(preg_replace('/[^a-zA-Z.\s]/', '', $val));
         $val = trim(preg_replace('/\s+/', ' ', $val));
 
-        // Handle Capitalize
-        /*$annotated = preg_replace_callback('/#K\+(.*?)#K-/', function ($match) {
-            return strtoupper(trim($match[1]));
-        }, $annotated);*/
-        $annotated = trim(preg_replace('/\s+/', ' ', $annotated));
+        return $val;
+    }
 
-        return [
-            'string' => $val,
-            'annotated' => $annotated
-        ];
+    public function createSearchString ($string) {
+
+        $string = preg_replace('/<i>(.*?)<\/i>/', ' ', $string);
+        $string = trim(strip_tags($string));
+        $string = str_replace('---', '...', $string);
+        $string = trim(preg_replace('/[^a-zA-Z.\s]/', '', $string));
+        $string = trim(preg_replace('/\s+/', ' ', $string));
+
+        return $string;
     }
 }

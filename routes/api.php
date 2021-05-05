@@ -20,5 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::namespace('App\Http\Controllers\dbi')->group(function () {
 
-    Route::match(['get', 'post'], '/{entity}/{id?}',    'dbiController@select');
+    Route::match(['get', 'post'], '/{opt?}', 'APIController@select');
 });

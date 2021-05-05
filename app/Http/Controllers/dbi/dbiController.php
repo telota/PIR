@@ -4,56 +4,55 @@ namespace App\Http\Controllers\dbi;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\dbi\dbiManager;
+use App\Http\Controllers\dbi\DataConverter;
 use Response;
-use Auth;
 
 
 class dbiController extends Controller {
 
-    public function select ($entity, $id = NULL) {
+    public function provideJson ($id) {
+        $split = explode('-', $id);
+        $split = explode('/', end($split));
+        $id = intval(end($split));
 
         $user = ['id' => 1, 'level' => 11];
         $manager = new dbiManager();
-        $dbi = $manager->select($user, $entity, $id);
+        $dbi = $manager->select($user, 'persons', $id);
 
-        if (empty($dbi['error'])){
-
-            // Detailed Response (if Contents is given by entity)
-            if(isset($dbi['contents'])) {
-
-                // Add url to pagination
-                $dbi['pagination']['self']   = env('APP_URL').'/api/'.$entity.(empty($dbi['pagination']['self']) ? '' : ('?'.$dbi['pagination']['self']));
-                $dbi['pagination']['pageOf'] = env('APP_URL').'/api/'.$entity.(empty($dbi['pagination']['pageOf']) ? '' : ('?'.$dbi['pagination']['pageOf']));
-                foreach(['firstPage', 'previousPage', 'nextPage', 'lastPage'] as $i) {
-                    $dbi['pagination'][$i] = (empty($dbi['pagination'][$i]) ? null : (env('APP_URL').'/api/'.$entity.'?'.$dbi['pagination'][$i]));
-                }
-
-                $response = [
-                    'pagination' => isset($dbi['pagination']) ? $dbi['pagination'] : [],
-                    'contents'  => $dbi['contents']
-                ];
-            }
-            // Minimal Response (just array of results given)
+        if (empty($dbi['error'])) {
+            if (empty($dbi['contents'][0]['id'])) die(abort(404, 'unknown ID'));
             else {
-                $response = [
-                    'pagination' => ['count' => count($dbi)],
-                    'contents' => $dbi
-                ];
+                $converter = new DataConverter();
+                return $converter->jsonld($dbi['contents']);
             }
-
-            return Response::json($response, 200);
         }
-        else {
-            return Response::json($dbi, 200);
-        }
+        else return Response::json($dbi, 400);
     }
 
-    // Helper Functions ---------------------------------------------------
+    public function provideTxt ($id) {
+        $split = explode('-', $id);
+        $split = explode('/', end($split));
+        $id = intval(end($split));
 
-    public function identitifyUser () {
-        return [
-            'id' => Auth::user()->id,
-            'level' => Auth::user()->access_level
-        ];
+        $user = ['id' => 1, 'level' => 11];
+        $manager = new dbiManager();
+        $dbi = $manager->select($user, 'persons', $id);
+
+        if (empty($dbi['error'])) {
+            if (empty($dbi['contents'][0]['id'])) die(abort(404, 'unknown ID'));
+            else {
+                $converter = new DataConverter();
+                return $converter->txt($dbi['contents']);
+            }
+        }
+        else return Response::json($dbi, 400);
+    }
+
+    public function redirectID ($id) {
+        $split = explode('-', $id);
+        $split = explode('/', end($split));
+        $id = intval(end($split));
+
+        return redirect('/#/search?id='.$id);
     }
 }

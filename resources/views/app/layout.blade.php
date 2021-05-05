@@ -9,12 +9,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>PIR | Prosopographia Imperii Romani</title>
+    <title>Prosopographia Imperii Romani</title>
 
     <!-- Styles -->
     {{--<link rel="shortcut icon" href="favicon.ico">--}}
-    <link rel="icon" type="image/png" href="favicon.png" sizes="96x96">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
@@ -24,7 +24,6 @@
         var LSK_APP = {};
         LSK_APP.APP_URL = '{{env('APP_URL')}}';
     </script>
-
 </head>
 
 <body>
@@ -45,11 +44,9 @@
         </div>
     </div>
 
-    <!-- Vue SPA -->
+    <!-- Vue App -->
     <div id="app">
-        <div id="vue">
-            @yield('template')
-        </div>
+        @yield('template')
     </div>
 
     <!-- App JS -->

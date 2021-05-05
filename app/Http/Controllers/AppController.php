@@ -14,4 +14,11 @@ class AppController extends Controller {
             'data' => []
         ]);
     }
+
+    public function redirectSearch () {
+        $query = Request::server('QUERY_STRING');
+        if (!empty($query)) $query = '?'.$query;
+
+        return redirect('/#/search'.$query);
+    }
 }

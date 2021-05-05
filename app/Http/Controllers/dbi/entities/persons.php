@@ -15,12 +15,39 @@ class persons implements dbiInterface  {
 
         $post = Request::post();
 
+        // pagination parameters
         $offset = empty($post['offset']) ? 0 : intval($post['offset']);
         $limit = empty($post['limit']) ? 50 : (intval($post['limit']) > 100 ? 100 : intval($post['limit']));
 
-        $find = empty($post['string']) ? null : trim($post['string']);
-        $isCs = empty($post['isCs']) ? false : true;
-        $isOr = empty($post['isOr']) ? false : true;
+        // ID
+        if (empty($post['id']) && $id === null) $id = null;
+        else {
+            $id = $post['id'] ?? $id;
+            $split = explode('-', $id);
+            $split = explode('/', end($split));
+            $id = 'https://pir.bbaw.de/id/'.intval(end($split));
+        }
+        // Keywords or Addenda
+        $isAdd = empty($post['resource']) || $post['resource'] === 'keywords' ? false : true;
+        // String
+        $string = empty($post['string']) ? null : trim($post['string']);
+        // Case
+        $isCs = empty($post['case']) || $post['case'] === 'insensitive' ? false : true;
+        // Connector
+        $isOr = empty($post['connector']) || strtolower($post['connector']) === 'and' ? false : true;
+        // Gender
+        if (empty($post['gender'])) $gender = null;
+        else {
+            if (strtolower($post['gender']) === 'female') $gender = 'female';
+            if (strtolower($post['gender']) === 'male') $gender = 'male';
+        }
+        // Class
+        if (empty($post['class'])) $class = null;
+        else {
+            if (strtolower($post['class']) === 'normal') $class = 'normal';
+            if (strtolower($post['class']) === 'eques') $class = 'eques';
+            if (strtolower($post['class']) === 'senator') $class = 'senator';
+        }
 
         // Get Items from File
         $items = file_get_contents('../data/persons.json');
@@ -29,9 +56,26 @@ class persons implements dbiInterface  {
         // Iterate over Items and check Match
         $data = [];
         foreach ($items as $item) {
-            $matched = empty($find) ? true : $this->validateInput([$item['string'], $find, $isCs, $isOr]);
+            $matched = true;
+            // Check ID
+            if (!empty($id) && $item['id'] != $id) $matched = false;
+            // Check Gender
+            $item_gender = $item['gender'] ?? null;
+            if ($matched === true && !empty($gender) && substr($gender, 0, 1) !== substr($item_gender, 0, 1)) $matched = false;
+            // Check Social Class
+            $item_class = $item['class'] ?? null;
+            if ($matched === true && !empty($class) && $class !== $item_class) $matched = false;
+            // Check String
+            if ($matched === true && !empty($string)) $matched = $this->checkMatch([
+                'isAdd' => $isAdd,
+                'item' => $item,
+                'find' => $string,
+                'isCs' => $isCs,
+                'isOr' => $isOr
+            ]);
 
             if ($matched === true) {
+                // Check if additional data can be shown
                 if ($item['is_public'] === true) {
                     unset($item['is_public']);
                     $data[] = $item;
@@ -43,7 +87,7 @@ class persons implements dbiInterface  {
                         'string' => $item['string'],
                         'annotated' => $item['annotated'],
                         'class' => $item['class'],
-                        'sex' => $item['sex'] ?? null,
+                        'gender' => $item['gender'] ?? null,
                         'updated_at' => $item['updated_at'] ?? null
                     ];
                 }
@@ -57,46 +101,50 @@ class persons implements dbiInterface  {
         $paginator = new pagination;
         $pagination = $paginator -> process($count, ['offset' => $offset, 'limit' => $limit, 'sort_by' => 'string ASC']);
         $pagination['count'] = $count;
-        $pagination['sort_by'] = 'string.asc';
+        //$pagination['sort_by'] = 'string.asc';
         $offset = $pagination['offset'];
         $limit = $pagination['limit'];
 
         // Data to return
         $to_return = [];
         for($i = $offset; $i < ($offset + $limit) && $i < count($data); ++$i) {
+            if (empty($data[$i])) break;
             $to_return[] = $data[$i];
         }
 
         return [
             'pagination' => $paginator -> finalize($pagination, [
-                'string' => $find,
-                'isCs' => $isCs,
-                'isOr' => $isOr
+                'string' => $string,
+                'connector' => $isOr === true ? 'OR' : 'AND',
+                'case' => $isCs === true ? 'sensitive' : 'insensitive',
+                'class' => empty($class) ? 'all' : $class,
+                'gender' => empty($gender) ? 'all' : $gender
             ]),
             'contents' => $to_return
         ];
     }
 
-    public function input ($user, $input) {
-        die (abort(404, 'Not supported!'));
-    }
-
-    public function delete ($user, $input) {
-        die (abort(404, 'Not supported!'));
-    }
-
-    public function connect ($user, $input) {
-        die (abort(404, 'Not supported!'));
-    }
-
-
     // Helper-Functions ------------------------------------------------------------------
 
-    public function validateInput ($input) {
-        $string = empty($input[2]) ? strtolower($input[0]) : $input[0];
-        $finds = empty($input[2]) ? strtolower($input[1]) : $input[1];
+    public function checkMatch ($input) {
+
+        if ($input['isAdd'] === true) {
+            if ($input['item']['is_public'] !== true) return false;
+            else {
+                unset($input['item']['is_public']);
+                unset($input['item']['updated_at']);
+                unset($input['item']['class']);
+                unset($input['item']['gender']);
+
+                $string = implode('||', $input['item']);
+            }
+        }
+        else $string = $input['item']['string'];
+
+        $string = empty($input['isCs']) ? strtolower($string) : $string;
+        $finds = empty($input['isCs']) ? strtolower($input['find']) : $input['find'];
         $finds = preg_split('/\s+/', $finds);
-        $isOr = empty($input[3]) ? false : true;
+        $isOr = empty($input['isOr']) ? false : true;
 
         $no_match = 0;
         foreach ($finds as $find) {

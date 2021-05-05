@@ -42,6 +42,11 @@ const router = new Router ({
             path: '/addenda',
             name: 'addenda',
             component: require('./../pages/addenda').default
+        },
+        {
+            path: '/api',
+            name: 'api',
+            component: require('./../pages/api').default
         }
     ],
 })
