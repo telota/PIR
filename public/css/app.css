@@ -96,3 +96,7 @@ h3 {
     border-bottom: 5px solid #b51212;
     z-index: 100;
 }
+
+li {
+    margin-bottom: 10px;
+}

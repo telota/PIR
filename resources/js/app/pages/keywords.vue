@@ -26,11 +26,9 @@
             Fehler, die sich bei einer solchen Dokumentation nie ganz vermeiden lassen, werden korrigiert, wo immer sie bemerkt werden.
             Wenn Sie einen Fehler entdecken oder feststellen, daß eine Person fehlt, schicken Sie der PIR-Arbeitsstelle bitte eine kurze Nachricht.
             Wir sind unsererseits jederzeit bereit, Ihre Fragen zu beantworten, so gut es unser PIR-Material und unsere personelle Situation erlauben.
-            <br />
-            Die Liste wird fortlaufend ergänzt. Es ist geplant, auch die Internet-Version in kürzeren Abständen zu aktualisieren.
         </p>
         <p>
-            Die gegenwärtige Fassung wurde zuletzt am 08. 10. 2004 geändert.
+            Da das Forschungshaben offiziell als abgeschlossen gilt, erfolgen Aktualisierungen nur in unregelmäßigen Abständen.
         </p>
         <p>
             <a href="/#/search"><strong>Suche starten</strong></a>

@@ -29,10 +29,9 @@
             die seit 1951 die PIR betreute und bis zum Faszikel V 3 (N und O), der 1987 erschien, trotz mannigfacher Hindernisse,
             aber auch unter mehr oder minder aktiver internationaler Unterstützung, voranbrachte.
         </p>
-        <p><strong> Vgl. hierzu: </strong></p>
-        <p>
-            K. Christ, Römische Geschichte und deutsche Geschichtsschreibung, München 1982, S. 166 f. <br /><br />
-            W. Eck in: Gedenken an Leiva Petersen: 1912 - 1992, Köln-Weimar -Wien 1993, S. 25 - 31;  K. <br /><br />
+        <p><strong> Vgl. hierzu: </strong><br/>
+            K. Christ, Römische Geschichte und deutsche Geschichtsschreibung, München 1982, S. 166 f. <br />
+            W. Eck in: Gedenken an Leiva Petersen: 1912 - 1992, Köln-Weimar -Wien 1993, S. 25 - 31;  K. <br />
             Wachtel, Klio 74, 1992, S. 564.
         </p>
     <!--</template>-->

@@ -36,7 +36,7 @@ class APIController extends Controller {
             ],
             'dataProvider' => [
                 'name' => 'Prosopographia Imperii Romani',
-                'link' => 'https://pir.bbaw.de'
+                'link' => env('APP_URL')
             ],
             'operatingInstructions' => [
                 'manual' => env('APP_URL').'/#/api',

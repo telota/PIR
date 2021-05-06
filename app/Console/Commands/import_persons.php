@@ -34,7 +34,7 @@ class import_persons extends Command {
             if (!empty($r)) {
                 $item = [];
                 //$item['id'] = 'pir-id-'.sprintf('%06d', count($data) + 1);
-                $item['id'] = 'https://pir.bbaw.de/id/'.(count($data) + 1);
+                $item['id'] = count($data) + 1;
                 echo "\t".$item['id'];
 
                 $r = ' @pk'.$r;

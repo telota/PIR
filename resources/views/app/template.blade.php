@@ -2,8 +2,10 @@
 
 @section('template')
 
-<!-- Session -->
-<sessioninfo :data='{!! json_encode(['language' => $language]) !!}'></sessioninfo>
+<!-- Settings -->
+<settings
+    :data='{!! json_encode($settings) !!}'
+></settings>
 
 <!-- Template -->
 <template>
@@ -22,7 +24,7 @@
                 <v-col cols="12" sm="10">
                     <div class="pt-1 d-flex justify-space-between align-center" style="width: 100%">
                         <!-- Navigation -->
-                        <div>
+                        <div style="width: 100%">
                             <!-- Title -->
                             <div
                                 class="text-h4"
@@ -33,7 +35,7 @@
                                 "
                             ></div>
                             <!-- Nav-Items -->
-                            <div class="d-flex mt-1">
+                            <div class="d-flex mt-1" style="overflow-y: auto">
                                 <v-hover
                                     v-for="(nav) in navigation"
                                     :key="nav"
@@ -93,33 +95,7 @@
         </v-main>
 
         <!-- Tracking Consent -->
-        <v-card
-            v-if="consent === null"
-            tile
-            style="position: fixed; bottom: 50px; right: 20px; width: 250px"
-        >
-            <div class="mr-1 mt-1 d-flex justify-end">
-                <v-icon small @click="consent = false">clear</v-icon>
-            </div>
-            <v-card-text class="caption text-justify mt-n3">
-                <span v-text="$root.label('consent_note')"></span>
-                <a
-                    href=""
-                    target="_blank"
-                    class="font-weight-bold"
-                    style="text-decoration: none"
-                    v-text="$root.label('consent_declaration')"
-                ></a>.
-            </v-card-text>
-            <v-card-actions class="pt-0">
-                <v-spacer></v-spacer>
-                <v-btn small text v-text="$root.label('decline')" class="bar_prim--text" @click="consent = false"></v-btn>
-                <v-spacer></v-spacer>
-                <v-btn small text v-text="$root.label('accept')" @click="consent = true"></v-btn>
-                <v-spacer></v-spacer>
-            </v-card-actions>
-        </v-card>
-
+        <trackingconsent></trackingconsent>
 
         <!-- Footer -->
         <v-footer app fixed class="primary d-flex justify-space-between white--text caption">

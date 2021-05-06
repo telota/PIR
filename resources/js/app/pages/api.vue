@@ -7,7 +7,7 @@
             Die API bietet Ihnen die Möglichkeit, die PIR-Datensätze machinell zu durchsuchen und auszulesen.<br/>
             Es stehen die gleichen Kritieren wie in der Suchemaske zur Verfügung. Sie müssen sie lediglich als GET-Parameter übergeben:<br/>
             Wenn sie z.B. den Parameter <code>string</code> mit dem Wert <code>caesar</code> an die API-URL
-            (<code>https://pir.bbaw.de/api?string=caesar</code>)
+            (<code>{{ $root.baseURL }}/api?string=caesar</code>)
             übergeben,
             erhalten Sie alle Datensätze, deren Name diesen String enthält.
         </p>
@@ -40,8 +40,8 @@
         </ul>
         <p>
             Möchten Sie einen Datensatz direkt über seine ID aufrufen, müssen Sie nicht den Umweg über die API nehmen.<br/>
-            Sie können ihn direkt mit <code>https://pir.bbaw.de/id/{id}.jsonld</code> aufrufen, z.B.
-            <a href="/id/1.jsonld" target="_blank">https://pir.bbaw.de/id/1.jsonld</a>.
+            Sie können ihn direkt mit <code>{{ $root.baseURL }}/id/{id}.jsonld</code> aufrufen, z.B.
+            <a :href="$root.baseURL + '/id/1.jsonld'" target="_blank">{{ $root.baseURL }}/id/1.jsonld</a>.
         </p>
         <p>
             <a href="/api" target="_blank"><strong>Zur API wechseln</strong></a>

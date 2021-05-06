@@ -9,10 +9,10 @@ use Request;
 class AppController extends Controller {
 
     public function initiate () {
-        return view('app.template', [
+        return view('app.template', ['settings' => [
             'language' => substr(Request::server('HTTP_ACCEPT_LANGUAGE'), 0, 2) === 'de' ? 'de' : 'en',
-            'data' => []
-        ]);
+            'baseURL' => rtrim(env('APP_URL', '/'))
+        ]]);
     }
 
     public function redirectSearch () {

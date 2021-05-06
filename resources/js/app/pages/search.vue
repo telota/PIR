@@ -2,82 +2,86 @@
 <div>
 
     <!-- Search Form -->
-    <div :style="this.$vuetify.breakpoint.mdAndUp ? 'width: 400px; position: fixed;' : ''">
-        <v-card tile>
-            <v-card-text>
-                <!-- Filters -->
-                    <!-- Search Resource -->
-                    <div class="caption mb-n4" v-text="$root.label('search_resource')" />
-                    <v-radio-group v-model="search.resource">
-                        <v-row>
-                            <v-col cols=6 v-for="(item, i) in resources" :key="'resource' + i">
-                                <v-radio :label="item.text" :value="item.value" />
-                            </v-col>
-                        </v-row>
-                    </v-radio-group>
-                    <!-- Search String -->
-                    <div class="caption mb-n4" v-text="$root.label('search_string')" />
-                    <v-text-field
-                        v-model="search.string"
-                        v-on:keyup.enter="setSearchURL()"
-                    />
-                    <!-- Logical Connector -->
-                    <div class="caption mb-n4" v-text="$root.label('search_connector')" />
-                    <v-radio-group v-model="search.connector">
-                        <v-row>
-                            <v-col>
-                                <v-radio :label="$root.label('search_connector_and')" value="AND" />
-                            </v-col>
-                            <v-col>
-                                <v-radio :label="$root.label('search_connector_or')" value="OR" />
-                            </v-col>
-                        </v-row>
-                    </v-radio-group>
-                    <!-- Case sensitivity -->
-                    <div class="caption mb-n4" v-text="$root.label('search_case')" />
-                    <v-radio-group v-model="search.case">
-                        <v-row>
-                            <v-col>
-                                <v-radio :label="$root.label('search_case_insensitive')" value="insensitive" />
-                            </v-col>
-                            <v-col>
-                                <v-radio :label="$root.label('search_case_sensitive')" value="sensitive" />
-                            </v-col>
-                        </v-row>
-                    </v-radio-group>
-                    <!-- Search Gender -->
-                    <div class="caption mb-n4 mt-1" v-text="$root.label('search_gender')" />
-                    <v-select
-                        v-model="search.gender"
-                        :items="genders"
-                        v-on:keyup.enter="setSearchURL()"
-                    />
-                    <!-- Search Class -->
-                    <div class="caption mb-n4 mt-n1" v-text="$root.label('search_class')" />
-                    <v-select
-                        v-model="search.class"
-                        :items="classes"
-                        v-on:keyup.enter="setSearchURL()"
-                    />
-                <!-- Search Button -->
-                <v-btn
-                    tile
-                    block
-                    class="mt-4 primary"
-                    v-text="$root.label('search')"
-                    @click="setSearchURL()"
-                />
-                <!-- Search Reset -->
-                <div class="mt-2 mb-n2 d-flex justify-center">
+    <div :style="$vuetify.breakpoint.mdAndUp ? 'position: fixed; top: 0; height: 100%; width: 400px; padding-top: 80px; padding-bottom: 50px;' : ''">
+        <div class="mt-5" :style="$vuetify.breakpoint.mdAndUp ? 'height: 100%; overflow-y: auto' : ''">
+
+            <v-card tile>
+                <v-card-text>
+                    <!-- Filters -->
+                        <!-- Search Resource -->
+                        <div class="caption mb-n4" v-text="$root.label('search_resource')" />
+                        <v-radio-group v-model="search.resource">
+                            <v-row>
+                                <v-col cols=6 v-for="(item, i) in resources" :key="'resource' + i">
+                                    <v-radio :label="item.text" :value="item.value" />
+                                </v-col>
+                            </v-row>
+                        </v-radio-group>
+                        <!-- Search String -->
+                        <div class="caption mb-n4" v-text="$root.label('search_string')" />
+                        <v-text-field
+                            v-model="search.string"
+                            v-on:keyup.enter="setSearchURL()"
+                        />
+                        <!-- Logical Connector -->
+                        <div class="caption mb-n4" v-text="$root.label('search_connector')" />
+                        <v-radio-group v-model="search.connector">
+                            <v-row>
+                                <v-col>
+                                    <v-radio :label="$root.label('search_connector_and')" value="AND" />
+                                </v-col>
+                                <v-col>
+                                    <v-radio :label="$root.label('search_connector_or')" value="OR" />
+                                </v-col>
+                            </v-row>
+                        </v-radio-group>
+                        <!-- Case sensitivity -->
+                        <div class="caption mb-n4" v-text="$root.label('search_case')" />
+                        <v-radio-group v-model="search.case">
+                            <v-row>
+                                <v-col>
+                                    <v-radio :label="$root.label('search_case_insensitive')" value="insensitive" />
+                                </v-col>
+                                <v-col>
+                                    <v-radio :label="$root.label('search_case_sensitive')" value="sensitive" />
+                                </v-col>
+                            </v-row>
+                        </v-radio-group>
+                        <!-- Search Gender -->
+                        <div class="caption mb-n4 mt-1" v-text="$root.label('search_gender')" />
+                        <v-select
+                            v-model="search.gender"
+                            :items="genders"
+                            v-on:keyup.enter="setSearchURL()"
+                        />
+                        <!-- Search Class -->
+                        <div class="caption mb-n4 mt-n1" v-text="$root.label('search_class')" />
+                        <v-select
+                            v-model="search.class"
+                            :items="classes"
+                            v-on:keyup.enter="setSearchURL()"
+                        />
+                    <!-- Search Button -->
                     <v-btn
-                        text
-                        small
-                        v-text="$root.label('search_reset')"
-                        @click="ResetFilters(true)"
-                    ></v-btn>
-                </div>
-            </v-card-text>
-        </v-card>
+                        tile
+                        block
+                        class="mt-4 primary"
+                        v-text="$root.label('search')"
+                        @click="setSearchURL()"
+                    />
+                    <!-- Search Reset -->
+                    <div class="mt-2 mb-n2 d-flex justify-center">
+                        <v-btn
+                            text
+                            small
+                            v-text="$root.label('search_reset')"
+                            @click="ResetFilters(true)"
+                        ></v-btn>
+                    </div>
+                </v-card-text>
+            </v-card>
+
+        </div>
     </div>
 
     <!-- Container -->
@@ -412,7 +416,7 @@ export default {
         },
 
         setCiteSearch (query) {
-            this.citeSearch = query ? ('https://pir.bbaw.de/search?' + query) : null
+            this.citeSearch = query ? (this.$root.baseURL + '/search?' + query) : null
         },
 
         countMessage () {

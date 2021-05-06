@@ -14,10 +14,11 @@ import store from './global/Store';
 Vue.use(Vuetify);
 
 // global component registrations here
-Vue.component('sessioninfo',        require('./modules/sessioninfo.vue').default);
-Vue.component('pagination',         require('./modules/pagination.vue').default);
-Vue.component('search',             require('./pages/search.vue').default);
-Vue.component('instructions',             require('./modules/instructions.vue').default);
+Vue.component('settings',       require('./modules/settings.vue').default);
+Vue.component('trackingconsent',require('./modules/trackingConsent.vue').default);
+Vue.component('pagination',     require('./modules/pagination.vue').default);
+Vue.component('search',         require('./pages/search.vue').default);
+Vue.component('instructions',   require('./modules/instructions.vue').default);
 
 
 // Own global JS variables/functions
@@ -82,15 +83,6 @@ const app = new Vue({
                 color: null,
                 message: null
             },
-            child_dialog: {
-                width: '75%',
-                fullscreen: false
-            },
-
-            preferences: {
-                show_filters: false,
-            },
-            language: 'en',
 
             navigation: [
                 'search',
@@ -101,7 +93,11 @@ const app = new Vue({
                 'keywords',
                 'addenda',
                 'api',
-            ]
+            ],
+
+            // Settings provided by Backend when created
+            language: 'en',
+            baseURL: null,
         }
     },
 
@@ -120,11 +116,6 @@ const app = new Vue({
     },
 
     methods: {
-        async InitializeSession (data) {
-            // set language (and check if language is supported)
-            this.language = Object.keys(this.$localization).includes(data.language) ? data.language : 'en'
-        },
-
         label (string) {
             if (string) {
                 const response = []

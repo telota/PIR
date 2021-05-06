@@ -25,7 +25,7 @@ class persons implements dbiInterface  {
             $id = $post['id'] ?? $id;
             $split = explode('-', $id);
             $split = explode('/', end($split));
-            $id = 'https://pir.bbaw.de/id/'.intval(end($split));
+            $id = intval(end($split));
         }
         // Keywords or Addenda
         $isAdd = empty($post['resource']) || $post['resource'] === 'keywords' ? false : true;
@@ -109,11 +109,13 @@ class persons implements dbiInterface  {
         $to_return = [];
         for($i = $offset; $i < ($offset + $limit) && $i < count($data); ++$i) {
             if (empty($data[$i])) break;
+            $data[$i]['id'] = env('APP_URL').'/id/'.$data[$i]['id'];
             $to_return[] = $data[$i];
         }
 
         return [
             'pagination' => $paginator -> finalize($pagination, [
+                'resource' =>  empty($isAdd) ? 'keywords' : 'addenda',
                 'string' => $string,
                 'connector' => $isOr === true ? 'OR' : 'AND',
                 'case' => $isCs === true ? 'sensitive' : 'insensitive',
@@ -135,14 +137,23 @@ class persons implements dbiInterface  {
                 unset($input['item']['updated_at']);
                 unset($input['item']['class']);
                 unset($input['item']['gender']);
+                unset($input['item']['annotated']);
+
+                foreach ($input['item'] as $key => $val) {
+                    $input['item'][$key] = strip_tags($val);
+                }
 
                 $string = implode('||', $input['item']);
             }
         }
         else $string = $input['item']['string'];
 
-        $string = empty($input['isCs']) ? strtolower($string) : $string;
-        $finds = empty($input['isCs']) ? strtolower($input['find']) : $input['find'];
+        if (empty($input['isCs'])) {
+            $string = mb_strtolower($string,'UTF-8');
+            $finds = mb_strtolower($input['find'],'UTF-8');
+        }
+        else $finds = $input['find'];
+
         $finds = preg_split('/\s+/', $finds);
         $isOr = empty($input['isOr']) ? false : true;
 
