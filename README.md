@@ -1,6 +1,6 @@
 # PIR | Prosopographia Imperii Romani
 
-## About the CN Project
+## About the PIR Project
 
 **The encyclopaedia indexes and documents the ruling class of the Roman Empire.**  
 
