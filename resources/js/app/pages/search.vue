@@ -220,13 +220,25 @@
 
 <script>
 
+import instructions from './search_instructions.vue'
+import pagination from './../modules/pagination.vue'
+
 export default {
+
+    components: {
+        instructions,
+        pagination
+    },
+
     data () {
         return {
             loading: false,
-            filterExpanded: true,
+            instructions: true,
             searchedString: null,
             citeSearch: null,
+            date: null,
+
+            items: [],
 
             search: {
                 resource: 'keywords',
@@ -237,6 +249,20 @@ export default {
                 case: 'insensitive'
             },
             searchDefaults: {},
+
+            pagination: {
+                offset: 0,
+                limit: 20,
+                count: 0,
+                page: {
+                    current: 1,
+                    total: 1
+                },
+                first: null,
+                previous: null,
+                next: null,
+                last: null
+            },
 
             resources: [
                 { value: 'keywords', text: this.$root.label('search_resource_keywords') },
@@ -252,26 +278,7 @@ export default {
                 { value: 'all', text: this.$root.label('search_gender_all') },
                 { value: 'female', text: this.$root.label('search_gender_female') },
                 { value: 'male', text: this.$root.label('search_gender_male') }
-            ],
-
-            items: [],
-
-            instructions: true,
-            date: null,
-
-            pagination: {
-                offset: 0,
-                limit: 20,
-                count: 0,
-                page: {
-                    current: 1,
-                    total: 1
-                },
-                first: null,
-                previous: null,
-                next: null,
-                last: null
-            }
+            ]
         }
     },
 
@@ -426,7 +433,6 @@ export default {
         },
 
         copyToClipboard (value) {
-            // create temp element
             var el = document.createElement('textarea');
             el.value = value;
             el.setAttribute('readonly', '');
@@ -434,7 +440,6 @@ export default {
             document.body.appendChild(el);
             el.select();
             document.execCommand('copy');
-            // remove temp element
             document.body.removeChild(el);
 
             alert(this.$root.label('clipboard_copied'));

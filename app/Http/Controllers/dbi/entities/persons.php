@@ -17,7 +17,7 @@ class persons implements dbiInterface  {
 
         // pagination parameters
         $offset = empty($post['offset']) ? 0 : intval($post['offset']);
-        $limit = empty($post['limit']) ? 50 : (intval($post['limit']) > 100 ? 100 : intval($post['limit']));
+        $limit = empty($post['limit']) ? 20 : (intval($post['limit']) > 100 ? 100 : intval($post['limit']));
 
         // ID
         if (empty($post['id']) && $id === null) $id = null;

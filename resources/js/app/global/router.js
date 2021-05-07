@@ -6,7 +6,7 @@ Vue.use(Router)
 
 const router = new Router ({
     routes: [
-        { path: '/', redirect: '/search', },
+        { path: '/', redirect: '/overview', },
 
         {
             path: '/search',
@@ -34,14 +34,9 @@ const router = new Router ({
             component: require('./../pages/history').default
         },
         {
-            path: '/keywords',
-            name: 'keywords',
-            component: require('./../pages/keywords').default
-        },
-        {
-            path: '/addenda',
-            name: 'addenda',
-            component: require('./../pages/addenda').default
+            path: '/resources',
+            name: 'resources',
+            component: require('./../pages/resources').default
         },
         {
             path: '/api',

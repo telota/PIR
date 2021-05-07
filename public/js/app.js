@@ -1958,10 +1958,125 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/instructions.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/instructions.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/appFooter.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/appFooter.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      year: new Date().getFullYear(),
+      dialog: {
+        imprint: false,
+        license: false
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/appHeader.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/appHeader.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2068,80 +2183,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      navigation: ['search', 'overview', 'publications', 'methods', 'history', 'resources', 'api'],
+      navMenu: false
+    };
+  }
+});
 
 /***/ }),
 
@@ -2251,6 +2300,7 @@ __webpack_require__.r(__webpack_exports__);
         console.log('App instance created', data);
         this.$root.language = Object.keys(this.$localization).includes(data.language) ? data.language : 'en';
         this.$root.baseURL = data.baseURL;
+        this.$root.statistics = data.statistics;
       }
     }
   }
@@ -2344,81 +2394,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/addenda.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/addenda.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -2548,61 +2523,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/history.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/keywords.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/keywords.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2810,7 +2730,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  computed: {
+    stats: function stats() {
+      return this.$root.stats;
+    }
+  }
+});
 
 /***/ }),
 
@@ -2860,6 +2810,137 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/resources.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/resources.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  computed: {
+    stats: function stats() {
+      return this.$root.stats;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/search.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/search.vue?vue&type=script&lang=js& ***!
@@ -2871,6 +2952,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _search_instructions_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./search_instructions.vue */ "./resources/js/app/pages/search_instructions.vue");
+/* harmony import */ var _modules_pagination_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../modules/pagination.vue */ "./resources/js/app/modules/pagination.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -3097,13 +3180,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    instructions: _search_instructions_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    pagination: _modules_pagination_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
   data: function data() {
     return {
       loading: false,
-      filterExpanded: true,
+      instructions: true,
       searchedString: null,
       citeSearch: null,
+      date: null,
+      items: [],
       search: {
         resource: 'keywords',
         gender: 'all',
@@ -3113,6 +3204,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         "case": 'insensitive'
       },
       searchDefaults: {},
+      pagination: {
+        offset: 0,
+        limit: 20,
+        count: 0,
+        page: {
+          current: 1,
+          total: 1
+        },
+        first: null,
+        previous: null,
+        next: null,
+        last: null
+      },
       resources: [{
         value: 'keywords',
         text: this.$root.label('search_resource_keywords')
@@ -3142,23 +3246,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }, {
         value: 'male',
         text: this.$root.label('search_gender_male')
-      }],
-      items: [],
-      instructions: true,
-      date: null,
-      pagination: {
-        offset: 0,
-        limit: 20,
-        count: 0,
-        page: {
-          current: 1,
-          total: 1
-        },
-        first: null,
-        previous: null,
-        next: null,
-        last: null
-      }
+      }]
     };
   },
   computed: {
@@ -3354,7 +3442,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       return this.count_formated + ' ' + this.$root.label('records_for') + ' "' + (id ? 'ID ' + id : this.searchedString) + '"';
     },
     copyToClipboard: function copyToClipboard(value) {
-      // create temp element
       var el = document.createElement('textarea');
       el.value = value;
       el.setAttribute('readonly', '');
@@ -3364,13 +3451,181 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       };
       document.body.appendChild(el);
       el.select();
-      document.execCommand('copy'); // remove temp element
-
+      document.execCommand('copy');
       document.body.removeChild(el);
       alert(this.$root.label('clipboard_copied'));
     }
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/search_instructions.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/search_instructions.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -5216,10 +5471,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e& ***!
-  \****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/appFooter.vue?vue&type=template&id=0bff18d0&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/appFooter.vue?vue&type=template&id=0bff18d0& ***!
+  \*************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5231,483 +5486,603 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm.$root.language === "de"
-      ? _c("div", [
-          _c("h3", [_vm._v("Erläuterungen zur Suche")]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                Bitte geben sie die Suchbegriffe (oder Zeichenfolgen) in normaler\n                Schrift und ohne die epigraphischen Klammern ein (also U als U und V als V).\n            "
-            )
+  return _c(
+    "div",
+    [
+      _c(
+        "v-footer",
+        {
+          staticClass: "primary d-flex white--text caption",
+          class: _vm.$vuetify.breakpoint.smAndUp
+            ? "justify-space-between"
+            : "justify-center",
+          attrs: { app: "", fixed: "" }
+        },
+        [
+          _c("div", { staticClass: "text-truncate" }, [
+            _c("a", {
+              staticClass: "white--text",
+              attrs: { href: "https://www.bbaw.de", target: "_blank" },
+              domProps: { textContent: _vm._s(_vm.$root.label("bbaw")) }
+            }),
+            _vm._v(" 2020–" + _vm._s(_vm.year) + "\n        ")
           ]),
           _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                Die Ausgabe erfolgt dann wie in den gedruckten PIR-Bänden: Senatoren in Versalien,\n                Ritter höheren Ranges in Fettdruck, nur teilweise erhaltene Namen mit den üblichen Klammern versehen.\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              '\n                Trennen Sie die einzelnen Suchbegriffe bitte durch Blank (= Leerzeichen) ab.\n                Für die Suche können Sie auch Platzhalter-Zeichen ("Joker" oder "wildcards") verwenden.\n            '
-            )
-          ]),
-          _vm._v(" "),
-          _c("h3", [_vm._v("Platzhalter–Zeichen")]),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _vm._m(2),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                Etwas weniger einfach ist es, wenn Sie innerhalb Ihres Suchworts Zeichen unbestimmt lassen wollen.\n                Denn hier kommt es auf Ihre genaue Fragestellung an.\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _vm._m(3),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                Es gibt noch viele weitere Möglichkeiten, wie Sie sehr gezielte Abfragen formulieren können.\n                Hierzu finden Sie im Folgenden eine tabelarische Übersicht.\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _vm._m(4)
-        ])
-      : _vm._e()
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v(
-        "\n                Wenn Sie einen einzelnen Begriff (d. h. einen Namensteil wie "
+          _c("div", { staticClass: "d-flex flex-wrap justify-end" }, [
+            _c("div", {
+              staticClass: "mr-2",
+              staticStyle: { cursor: "pointer" },
+              domProps: {
+                textContent: _vm._s(_vm.$root.label("about_header"))
+              },
+              on: {
+                click: function($event) {
+                  _vm.dialog.imprint = true
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: "ml-2 mr-2",
+              staticStyle: { cursor: "pointer" },
+              domProps: {
+                textContent: _vm._s(_vm.$root.label("license_header"))
+              },
+              on: {
+                click: function($event) {
+                  _vm.dialog.license = true
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-2" }, [
+              _c("a", {
+                staticClass: "white--text",
+                attrs: { href: "", target: "_blank" },
+                domProps: {
+                  textContent: _vm._s(_vm.$root.label("consent_declaration"))
+                }
+              })
+            ])
+          ])
+        ]
       ),
-      _c("code", [_vm._v("Rufus")]),
-      _vm._v(
-        ") suchen,\n                geben Sie einfach Ihr Suchwort ein und starten den Suchvorgang.\n            "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v(
-        "\n                Sie dürfen den Suchbegriff nach Belieben links und rechts trunkieren (d. h. abschneiden).\n                Die Suche vergleicht nur die Buchstabenfolge, die Sie eingegeben haben, mit den Buchstabenfolgen,\n                die es im Namensverzeichnis der PIR findet.\n                Wenn sie also "
-      ),
-      _c("code", [_vm._v("Quintil")]),
-      _vm._v(
-        ' eingeben, findet das Programm "Quintilius", "Quintillus", "Quintilia", "Quintilianus" usw.\n                (und entsprechend bei '
-      ),
-      _c("code", [_vm._v("pilius")]),
-      _vm._v(' sowohl "Rupilius" als auch "Popilius").\n            ')
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v(
-        "\n                Sie können wählen, ob die Suche Groß– und Kleinschreibung beachten oder ignorieren soll.\n                Im ersten Fall gibt das Programm für den Suchbegriff "
-      ),
-      _c("code", [_vm._v("Pius")]),
-      _vm._v(
-        ' nur die Einträge mit "Pius" aus, andernfalls aber beispielsweise auch "Ulpius".\n            '
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v(
-        "\n                Wenn Sie einen einzelnen Buchstaben unbestimmt lassen wollen, geben Sie an dieser Stelle einfach "
-      ),
-      _c("code", [_vm._v(".")]),
-      _vm._v(
-        " (einen Punkt) ein.\n                Wenn Sie offenlassen wollen, ob an einer Stelle überhaupt ein Buchstabe steht, geben Sie "
-      ),
-      _c("code", [_vm._v(".?")]),
-      _vm._v(
-        " (Punkt und Fragezeichen) ein.\n                Wenn Sie den ganzen Mittelteil eines Wortes unbestimmt lassen wollen, geben Sie an der Stelle bitte "
-      ),
-      _c("code", [_vm._v("[a–z]*")]),
-      _vm._v(
-        " ein;\n                dies steht für beliebig viele Kleinbuchstaben. Beim Suchbegriff "
-      ),
-      _c("code", [_vm._v("R[a–z]*ius")]),
-      _vm._v(
-        " werden alle Namen gefunden,\n                die mit R beginnen und auf –ius enden (also im wesentlichen die Gentilicia mit R).\n            "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      { staticClass: "mt-10", staticStyle: { width: "100%" } },
-      [
-        _c("tr", [
+      _vm._v(" "),
+      _c(
+        "v-dialog",
+        {
+          attrs: { "max-width": "500" },
+          model: {
+            value: _vm.dialog.imprint,
+            callback: function($$v) {
+              _vm.$set(_vm.dialog, "imprint", $$v)
+            },
+            expression: "dialog.imprint"
+          }
+        },
+        [
           _c(
-            "td",
-            { staticClass: "font-weight-bold", attrs: { valign: "top" } },
-            [_vm._v("ZEICHEN")]
-          ),
-          _vm._v(" "),
-          _c(
-            "td",
-            { staticClass: "font-weight-bold", attrs: { valign: "top" } },
-            [_vm._v("BEDEUTUNG")]
-          ),
-          _vm._v(" "),
-          _c(
-            "td",
-            { staticClass: "font-weight-bold", attrs: { valign: "top" } },
-            [_vm._v("BEISPIEL")]
+            "v-card",
+            { attrs: { tile: "" } },
+            [
+              _c("v-card-text", [
+                _c("div", {
+                  staticClass: "pa-5 title d-flex justify-center",
+                  domProps: {
+                    textContent: _vm._s(_vm.$root.label("about_header"))
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [
+                    _c("b", {
+                      domProps: {
+                        textContent: _vm._s(
+                          _vm.$root.label("about_published_by")
+                        )
+                      }
+                    }),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("a", {
+                      attrs: { href: "https://www.bbaw.de", target: "_blank" },
+                      domProps: { textContent: _vm._s(_vm.$root.label("bbaw")) }
+                    }),
+                    _c("br"),
+                    _vm._v("\n                        Jägerstraße 22/23"),
+                    _c("br"),
+                    _vm._v(
+                      "\n                        DE-10117 Berlin\n                    "
+                    )
+                  ]),
+                  _c("p", [
+                    _c("b", {
+                      domProps: {
+                        textContent: _vm._s(
+                          _vm.$root.label("about_represented_by")
+                        )
+                      }
+                    }),
+                    _c("br"),
+                    _vm._v(
+                      "\n                        Professor Dr. Dr. h. c. mult. Christoph Markschies"
+                    ),
+                    _c("br"),
+                    _vm._v(
+                      "\n                        Tel.: +49 30 20 37 06 45/-20, E-Mail: bbaw(at)bbaw.de\n                    "
+                    )
+                  ]),
+                  _c("p", [
+                    _c("b", {
+                      domProps: {
+                        textContent: _vm._s(
+                          _vm.$root.label("about_legal_status")
+                        )
+                      }
+                    }),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("span", {
+                      domProps: {
+                        textContent: _vm._s(
+                          _vm.$root.label("about_legal_entity")
+                        )
+                      }
+                    })
+                  ]),
+                  _c("p", [
+                    _c("b", {
+                      domProps: {
+                        textContent: _vm._s(_vm.$root.label("about_vat"))
+                      }
+                    }),
+                    _c("br"),
+                    _vm._v("\n                        DE 167 449 058 ("),
+                    _c("span", {
+                      domProps: {
+                        textContent: _vm._s(_vm.$root.label("about_vat_note"))
+                      }
+                    }),
+                    _vm._v(")\n                    ")
+                  ]),
+                  _c("p", [
+                    _c("b", {
+                      domProps: {
+                        textContent: _vm._s(_vm.$root.label("about_technical"))
+                      }
+                    }),
+                    _c("br"),
+                    _vm._v("\n                        Telota - IT/DH"),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("span", {
+                      domProps: { textContent: _vm._s(_vm.$root.label("bbaw")) }
+                    }),
+                    _c("br"),
+                    _vm._v("\n                        Jägerstraße 22/23"),
+                    _c("br"),
+                    _vm._v(
+                      "\n                        DE-10117 Berlin\n                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", {
+                    staticClass: "primary--text",
+                    staticStyle: { cursor: "pointer" },
+                    domProps: {
+                      textContent: _vm._s(_vm.$root.label("license_note"))
+                    },
+                    on: {
+                      click: function($event) {
+                        _vm.dialog = { imprint: false, license: true }
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mb-n3 d-flex justify-center" },
+                  [
+                    _c(
+                      "v-btn",
+                      {
+                        attrs: { text: "" },
+                        on: {
+                          click: function($event) {
+                            _vm.dialog.imprint = false
+                          }
+                        }
+                      },
+                      [_vm._v("Close")]
+                    )
+                  ],
+                  1
+                )
+              ])
+            ],
+            1
           )
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v(".")])]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v("ein beliebiges Zeichen (das existieren muß)")
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("Ru.ilius")]),
-            _vm._v(' findet "Rutilius", "Rupilius" usw.; '),
-            _c("code", [_vm._v("ius.Ruf")]),
-            _vm._v(' findet "Cluvius Rufus" ebenso wie "Memmius Rufinus".')
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-dialog",
+        {
+          attrs: { "max-width": "500" },
+          model: {
+            value: _vm.dialog.license,
+            callback: function($$v) {
+              _vm.$set(_vm.dialog, "license", $$v)
+            },
+            expression: "dialog.license"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            { attrs: { tile: "" } },
+            [
+              _c("v-card-text", [
+                _c("div", {
+                  staticClass: "pa-5 title d-flex justify-center",
+                  domProps: {
+                    textContent: _vm._s(_vm.$root.label("license_header"))
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [
+                    _c("b", {
+                      domProps: {
+                        textContent: _vm._s(_vm.$root.label("license_rd"))
+                      }
+                    }),
+                    _c("br")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("b", {
+                      domProps: {
+                        textContent: _vm._s(_vm.$root.label("license_sw"))
+                      }
+                    }),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("span", {
+                      domProps: {
+                        textContent: _vm._s(_vm.$root.label("license_text"))
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "http://www.gnu.org/licenses/gpl-3.0.en.html",
+                          target: "_blank"
+                        }
+                      },
+                      [_vm._v("GPLv3")]
+                    ),
+                    _vm._v("."),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("span", {
+                      domProps: {
+                        textContent: _vm._s(_vm.$root.label("license_author"))
+                      }
+                    }),
+                    _vm._v(":\n                        "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "https://orcid.org/0000-0003-2713-5207",
+                          target: "_blank"
+                        }
+                      },
+                      [_vm._v("Jan Köster")]
+                    ),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("span", {
+                      domProps: {
+                        textContent: _vm._s(
+                          _vm.$root.label("license_available")
+                        )
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "https://github.com/telota/PIR",
+                          target: "_blank"
+                        }
+                      },
+                      [_vm._v("Github")]
+                    ),
+                    _vm._v(".\n                    ")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "mb-n3 d-flex justify-center" },
+                  [
+                    _c(
+                      "v-btn",
+                      {
+                        attrs: { text: "" },
+                        on: {
+                          click: function($event) {
+                            _vm.dialog.license = false
+                          }
+                        }
+                      },
+                      [_vm._v("Close")]
+                    )
+                  ],
+                  1
+                )
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/appHeader.vue?vue&type=template&id=1b32d78a&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/modules/appHeader.vue?vue&type=template&id=1b32d78a& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "pl-1 pr-1",
+      staticStyle: {
+        position: "fixed",
+        height: "80px",
+        width: "100%",
+        "background-color": "#fefefe",
+        "border-bottom": "5px solid #b51212",
+        "z-index": "100"
+      }
+    },
+    [
+      _c(
+        "v-row",
+        { attrs: { justify: "center", align: "center" } },
+        [
+          _c("v-col", { attrs: { cols: "12", sm: "10" } }, [
+            _c(
+              "div",
+              {
+                staticClass: "pt-1",
+                staticStyle: { position: "relative", width: "100%" }
+              },
+              [
+                _c(
+                  "div",
+                  { staticStyle: { position: "absolute", right: "0" } },
+                  [
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "https://www.bbaw.de",
+                          alt: "BBAW Homepage",
+                          target: "_blank"
+                        }
+                      },
+                      [
+                        _c("v-img", {
+                          staticStyle: { "margin-right": "-30px" },
+                          attrs: {
+                            src: "/bbaw-logo.svg",
+                            "max-height": "60",
+                            "max-width": "200",
+                            contain: ""
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "text-h4 text-truncate",
+                  staticStyle: {
+                    "font-family": "palatio, serif !important",
+                    "letter-spacing": ".1rem !important",
+                    cursor: "pointer"
+                  },
+                  domProps: {
+                    textContent: _vm._s(
+                      _vm.$vuetify.breakpoint.mdAndUp
+                        ? "PROSOPOGRAPHIA IMPERII ROMANI"
+                        : "PIR"
+                    )
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.$router.push(
+                        _vm.$route.name === "overview" ? "search" : "overview"
+                      )
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.$vuetify.breakpoint.mdAndUp
+                  ? _c(
+                      "div",
+                      {
+                        staticClass: "d-flex mt-1",
+                        staticStyle: { "z-index": "101" }
+                      },
+                      _vm._l(_vm.navigation, function(nav) {
+                        return _c("v-hover", {
+                          key: nav,
+                          scopedSlots: _vm._u(
+                            [
+                              {
+                                key: "default",
+                                fn: function(ref) {
+                                  var hover = ref.hover
+                                  return [
+                                    _c("a", {
+                                      staticClass: "mr-5",
+                                      class:
+                                        (_vm.$route.name === nav || hover
+                                          ? "accent--text"
+                                          : "black--text") +
+                                        (nav === "search"
+                                          ? " font-weight-bold"
+                                          : ""),
+                                      staticStyle: {
+                                        "letter-spacing": ".05rem !important"
+                                      },
+                                      attrs: {
+                                        href: "/#/" + nav,
+                                        disabled: _vm.$route.name === nav
+                                      },
+                                      domProps: {
+                                        textContent: _vm._s(
+                                          _vm.$root.label("nav_" + nav)
+                                        )
+                                      }
+                                    })
+                                  ]
+                                }
+                              }
+                            ],
+                            null,
+                            true
+                          )
+                        })
+                      }),
+                      1
+                    )
+                  : _c(
+                      "v-menu",
+                      {
+                        staticClass: "mt-1",
+                        attrs: {
+                          "offset-y": "",
+                          "open-on-hover": "",
+                          "close-on-click": ""
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "activator",
+                            fn: function(ref) {
+                              var on = ref.on
+                              var attrs = ref.attrs
+                              return [
+                                _c(
+                                  "div",
+                                  _vm._g(
+                                    _vm._b(
+                                      {
+                                        staticClass: "font-weight-bold",
+                                        domProps: {
+                                          textContent: _vm._s("Navigation")
+                                        }
+                                      },
+                                      "div",
+                                      attrs,
+                                      false
+                                    ),
+                                    on
+                                  )
+                                )
+                              ]
+                            }
+                          }
+                        ]),
+                        model: {
+                          value: _vm.navMenu,
+                          callback: function($$v) {
+                            _vm.navMenu = $$v
+                          },
+                          expression: "navMenu"
+                        }
+                      },
+                      [
+                        _vm._v(" "),
+                        _c(
+                          "v-list",
+                          _vm._l(_vm.navigation, function(nav) {
+                            return _c(
+                              "v-list-item",
+                              { key: nav },
+                              [
+                                _c("v-list-item-title", {
+                                  class:
+                                    _vm.$route.name === nav
+                                      ? "accent--text"
+                                      : "black--text",
+                                  staticStyle: { cursor: "pointer" },
+                                  attrs: { disabled: _vm.$route.name === nav },
+                                  domProps: {
+                                    textContent: _vm._s(
+                                      _vm.$root.label("nav_" + nav)
+                                    )
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.$router.push(nav)
+                                      _vm.navMenu = false
+                                    }
+                                  }
+                                })
+                              ],
+                              1
+                            )
+                          }),
+                          1
+                        )
+                      ],
+                      1
+                    )
+              ],
+              1
+            )
           ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v("?")])]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v("Das davorstehende Zeichen darf fehlen.")
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("Aurell?ius")]),
-            _vm._v(' findet "Aurelius" und "Aurellius".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v("+")])]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "Das davorstehende Zeichen darf beliebig oft wiederholt sein."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("Mes+al+a")]),
-            _vm._v(' findet "Mesala", "Messala", "Mesalla" und "Messalla".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v("*")])]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "Das davorstehende Zeichen darf beliebig oft vorkommen; es darf auch fehlen."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("Mess*all*a")]),
-            _vm._v(' findet "Mesala", "Messala", "Mesalla" und "Messalla".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v(".?")])]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v("ein beliebiges Zeichen, das fehlen darf")
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("Rutil.?us")]),
-            _vm._v(' findet "Rutilius" ebenso wie "Rutilus".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v(".+")])]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v("beliebig viele Zeichen (mindestens aber eines)")
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("R.+ius")]),
-            _vm._v(
-              ' findet alle Einträge, in denen ein R vorkommt und irgendwo dahinter die Zeichenfolge "ius", also z. B. "Rutilius" ebenso wie "Aelius Rufus Ianuarius".'
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v(".*")])]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "beliebig viele Zeichen (einschließlich den Fall, daß dort gar keines steht)"
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [_vm._v("ähnlich")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("[pt]")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "An dieser Stelle darf eines der in der Klammer angegebenen Zeichen vorkommenden."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("Ru[pt]ilius")]),
-            _vm._v(
-              ' findet sowohl "Rupilius" als auch "Rutilius" (aber sonst nichts).'
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("[a–z]")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "An dieser Stelle darf ein beliebiger Kleinbuchstabe vorkommen."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("[a–zA–Z0–9]")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "An dieser Stelle darf ein beliebiger Kleinbuchstabe, Großbuchstabe oder eine Ziffer vorkommen (aber z. B. kein Blank)."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("[a–z]*")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "An dieser Stelle dürfen beliebig viele Kleinbuchstaben vorkommen (es muß dort aber keiner stehen)."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("R[a–z]*ius")]),
-            _vm._v(
-              ' findet alle Namen, die mit R beginnen und mit –ius enden, aber nicht etwa "Aelius Rufus Ianuarius".'
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("[a–zA–Z0–9]*")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "An dieser Stelle dürfen beliebig viele Kleinbuchstaben, Großbuchstaben oder Ziffern vorkommen (aber z. B. keine Blanks)."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("[^u]")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "An dieser Stelle darf alles vorkommen außer dem Buchstaben in der Klammer (es dürfen auch verschiedene Buchstaben gleichzeitig negiert werden)."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("R[^u]s")]),
-            _vm._v(' findet z. B. "Rosianus", aber nicht "Ruso".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("…\\b")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v("Die Zeichenfolge vor "),
-            _c("code", [_vm._v("\\b")]),
-            _vm._v(" muß an einem Wortende stehen.")
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("Arria\\b")]),
-            _vm._v(' findet "Arria", aber nicht "Arrianus".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("\\b…")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v("Die Zeichenfolge nach "),
-            _c("code", [_vm._v("\\b")]),
-            _vm._v(" muß an einem Wortanfang stehen.")
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("\\bAr")]),
-            _vm._v(' findet "Arrius" und "Arria", aber nicht "Marius".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("…\\B")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v("Die Zeichenfolge vor "),
-            _c("code", [_vm._v("\\B")]),
-            _vm._v(" darf nicht an einem Wortende stehen.")
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("Arria\\B")]),
-            _vm._v(' findet "Arrianus", aber nicht "Arria".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("\\B…")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "Die Zeichenfolge vor \\B darf nicht an einem Wortanfang stehen."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("\\BAr")]),
-            _vm._v(' findet "Marius", aber nicht "Arrius".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("{1,2}")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "Das davorstehende Zeichen muß mindestens einmal und darf höchstens zweimal vorkommen. (Bei dieser Art von Angaben darf auch die Zahl 0 verwendet werden.)"
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("{1,}")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "Das davorstehende Zeichen muß mindestens einmal vorkommen, darf aber beliebig oft wiederholt sein."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("[a–z]{1,3}")])
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "Hier muß mindestendens ein Kleinbuchstabe stehen und es dürfen höchstens drei sein."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("R[a–z]{2,3}ius")]),
-            _vm._v(' findet "Raecius", aber nicht "Rutilius".')
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v("…|…")])]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _vm._v(
-              "Die Zeichen vor und hinter dem senkrechten Strich werden als Alternativen behandelt."
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", { attrs: { valign: "top" } }, [
-            _c("code", [_vm._v("Rupilius|Rutilius")]),
-            _vm._v(
-              ' findet alle Einträge mit "Rupilius" und alle mit "Rutilius".'
-            )
-          ])
-        ])
-      ]
-    )
-  }
-]
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -5974,83 +6349,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80&":
-/*!*********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80& ***!
-  \*********************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("v-card", { staticClass: "pa-5", attrs: { tile: "" } }, [
-    _c("h3", [_vm._v("Addenda")]),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v(
-        "\n            Die PIR hat eine lange Entstehungszeit. Der erste Band erschien bereits im Jahr 1933, die anderen folgten in mehr oder weniger langem Abstand.\n            Vor allem für die ersten Bände ist seit der Veröffentlichung viel neues Quellenmaterial erschienen,\n            aber auch die Auseinandersetzung mit dem schon bekannten Material hat zu vielen neuen Erkenntnissen geführt.\n            Um die PIR insgesamt für den Benutzer näher an den gegenwärtigen Stand der Forschung heranzuführen,\n            werden hier nach der Stichwortliste von nun an in regelmäßigen Abständen addenda zu den gedruckten Bänden der zweiten Auflage veröffentlicht\n            und sukzessive dem interessierten Kreis von Fachkollegen zugänglich gemacht.\n            Aufgenommen wird im wesentlichen neues Quellenmaterial, und zwar sowohl zu bereits bekannten Personen wie vor allem zu neuen Personen.\n            Sekundärliteratur wird nur begrenzt ausgewertet, um den Fortgang der Präsentation nicht zu sehr zu verzögern.\n            Aus dem gleichen Grund werden Standardwerke (wie beispielsweise Pflaum Carrières, Devijver PME oder Raepsaet FOS) nur im Einzelfall zitiert,\n            sie müssen also prinzipiell unabhängig davon, ob hier zitiert oder nicht, herangezogen werden. Die Einträge bestehen aus\n        "
-      )
-    ]),
-    _vm._v(" "),
-    _c("ul", [
-      _c("li", [_vm._v("Namen + PIR-Nr. der 2. Auflage")]),
-      _vm._v(" "),
-      _c("li", [
-        _vm._v(
-          "neuen Quellen. Konkordanzen beschränken sich auf notwendige Fälle."
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [_vm._v("Auswahl der substantiell wichtigen Literatur")]),
-      _vm._v(" "),
-      _c("li", [_vm._v("knapper kommentierter Auswertung der neuen Quellen")]),
-      _vm._v(" "),
-      _c("li", [
-        _vm._v(
-          "Bearbeitungsdatum. Dieses sollte vom Benutzer als Hinweis auf den Forschungsstand stets berücksichtigt werden."
-        )
-      ])
-    ]),
-    _c("br"),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v(
-        "\n            Zitiert wird nach den Prinzipien der PIR unter Verwendung des Abkürzungsverzeichnisses des jeweils neuesten Bandes.\n            Aus praktischen Gründen hat im laufenden Text das Latein der deutschen Sprache weichen müssen außer bei den termini,\n            bei denen aber auf das Griechische verzichtet werden mußte. Der Ausgangspunkt für den Benutzer ist die Stichwortliste,\n            von der man mittels link von der einzelnen Person zu den addenda gelangt. Darüber hinaus soll es eine begrenzte Freitextsuche ermöglichen,\n            die addenda nach bestimmten Begriffen zu durchsuchen. Es sollte aber immer nach Varianten eines Begriffes\n            (etwa Prokonsul - proconsul; praefectus - Präfekt; Moesia inferior - Untermösien - Niedermoesien;\n            praefectus Aegypti - Praefekt von Ägypten; Statthalter - legatus Augusti pro praetore - Präses - praeses usw.) gesucht werden.\n            Klammern spielen keine Rolle, sie werden bei der Suche unterdrückt.\n            Bei der Suche können die selben Platzhalterzeichen wie bei der Stichwortliste verwendet werden.\n        "
-      )
-    ]),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v(
-        "\n            Die Präsentation dieser addenda wird als Versuch gestartet; deshalb wird um möglichst zahlreiche - positive wie negative - Reaktionen gebeten:\n            Berichtigung von Fehlern, Verbesserungsvorschläge, Hinweise auf Lücken usw. Die Adresse ist bei jeder Datei angegeben.\n            Die Netzeingabe der Einträge erfolgt sukzessiv in nicht zu langen Abständen;\n            gleichzeitig werden kontinuierlich Verbesserungen und Zusätze an den bereits zugänglichen Texten vorgenommen.\n            Die Zusammenstellung des Materials und Abfassung der einzelnen Einträge erfolgen durch A. Strobach.\n            Die Programmierarbeiten und laufende technische Betreuung liegen in der Hand von M. Heil.\n            Für die Zitierung dieser addenda in Veröffentlichungen wird folgende Form empfohlen: (Personenname) PIR addenda electronica (Datum).\n            Diese addenda stehen als Parergon neben der Fertigstellung der zweiten Auflage der PIR und\n            können nur entsprechend den zur Verfügung stehenden zusätzlichen personellen wie finanziellen Mitteln vorangebracht werden.\n            Der Anfang wurde durch eine großzügige finanzielle Unterstützung der Heckmann Wenzel-Stiftung ermöglicht.\n            Dafür sei an dieser Stelle herzlich gedankt.\n        "
-      )
-    ]),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v("\n            Berlin, im Juli 2001"),
-      _c("br"),
-      _vm._v("\n            Werner Eck; Klaus Wachtel\n        ")
-    ]),
-    _vm._v(" "),
-    _c("p", [
-      _c("a", { attrs: { href: "/#/search" } }, [
-        _c("strong", [_vm._v("Suche starten")])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/api.vue?vue&type=template&id=165960d3&":
 /*!*****************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/api.vue?vue&type=template&id=165960d3& ***!
@@ -6263,68 +6561,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1&":
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1& ***!
-  \**********************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("v-card", { staticClass: "pa-5", attrs: { tile: "" } }, [
-    _c("h3", [_vm._v("Stichwortliste")]),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v(
-        "\n            Zur besseren Strukturierung des gesammelten Materials führt das Unternehmen eine Stichwortliste mit den Namen aller Personen,\n            die in der PIR Aufnahme finden (vgl. dazu Überblick; das bedeutet aber beispielsweise:\n            Angehörige der munizipalen und provinzialen Oberschicht sind in der Regel nur berücksichtigt,\n            wenn familiäre Verbindungen zu römischen Senatoren belegt oder die Bekleidung von Reichsämtern bekannt ist).\n            Dieses Personenverzeichnis der Oberschicht des Römischen Reiches (mit den genannten Einschränkungen)\n            soll hiermit der Forschung zu einer ersten informierenden Recherche zur Verfügung gestellt werden.\n        "
-      )
-    ]),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v(
-        "\n            Die Eintragungen bestehen jeweils aus den Personennamen und einer Referenz zur eindeutigen Identifizierung der Personen:\n            Nummer in PIR2 bzw. PIR1, RE-Artikeln, Quellenpublikation oder anderen Standardwerken.\n        "
-      )
-    ]),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v(
-        '\n            Gesucht werden kann nach Gentilnamen oder Cognomina - jeweils einzeln oder kombiniert - sowie nach Namensfragmenten.\n            Um eine möglichst präzise und vielseitige Suche zu gestatten, ist ein Suchprogramm gewählt worden,\n            das die Verwendung verschiedener Platzhalter-Zeichen ("Joker" oder "wildcards") zuläßt. Näheres finden Sie hier.\n        '
-      )
-    ]),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v(
-        "\n            Diese Stichwortliste beansprucht nicht, eine eigenständige und bereits fertige wissenschaftliche Leistung zu sein;\n            sie ist primär ein internes Arbeitsmittel, das lediglich der Orientierung dienen soll.\n            Fehler, die sich bei einer solchen Dokumentation nie ganz vermeiden lassen, werden korrigiert, wo immer sie bemerkt werden.\n            Wenn Sie einen Fehler entdecken oder feststellen, daß eine Person fehlt, schicken Sie der PIR-Arbeitsstelle bitte eine kurze Nachricht.\n            Wir sind unsererseits jederzeit bereit, Ihre Fragen zu beantworten, so gut es unser PIR-Material und unsere personelle Situation erlauben.\n        "
-      )
-    ]),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v(
-        "\n            Da das Forschungshaben offiziell als abgeschlossen gilt, erfolgen Aktualisierungen nur in unregelmäßigen Abständen.\n        "
-      )
-    ]),
-    _vm._v(" "),
-    _c("p", [
-      _c("a", { attrs: { href: "/#/search" } }, [
-        _c("strong", [_vm._v("Suche starten")])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/methods.vue?vue&type=template&id=6b5a2deb&":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/methods.vue?vue&type=template&id=6b5a2deb& ***!
@@ -6452,6 +6688,7 @@ var render = function() {
               "\n                    Die Prosopographia Imperii Romani (PIR) ist ein Personenlexikon."
             ),
             _c("br"),
+            _c("br"),
             _vm._v(
               "\n                    Es soll im wesentlichen die Führungsschicht des Römischen Reiches in der Frühen und Hohen Kaiserzeit erfassen.\n                    Die untere zeitliche Grenze ist die Schlacht von Aktium 31 v. Chr., seit der die monarchische Herrschaftsstruktur für Rom endgültig geworden war;\n                    die obere Grenze bildet die Herrschaft Diokletians (284-305),\n                    mit der eine wesentliche Änderung im staatlichen und gesellschaftlichen Aufbau des Reiches durchgesetzt wurde.\n                "
             )
@@ -6491,7 +6728,68 @@ var render = function() {
                 "\n                        Aufgenommen sind auch die Angehörigen der regierenden Familien in den von Rom abhängigen Klientelstaaten bzw. unabhängiger Reiche, soweit sie mit Rom in Kontakt standen,\n                        so etwa Herodes d. Gr. in Iudaea oder die Könige des Partherreiches.\n                    "
               )
             ])
-          ])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "mt-5" }, [
+            _vm._v(
+              "\n                    Quantitativ setzt sich der behandelte Personenkreis wie folgt zusammen:\n                "
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "table",
+            { staticClass: "mb-5" },
+            [
+              _c(
+                "tr",
+                [
+                  _c("td"),
+                  _vm._v(" "),
+                  _vm._l(["normal", "eques", "senator", "total"], function(
+                    key
+                  ) {
+                    return _c("td", {
+                      key: "th" + key,
+                      staticClass: "font-weight-bold pb-1 pl-5 text-right",
+                      domProps: {
+                        textContent: _vm._s(
+                          _vm.$root.label("search_class_" + key)
+                        )
+                      }
+                    })
+                  })
+                ],
+                2
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.stats.dist, function(row, key, tr) {
+                return _c(
+                  "tr",
+                  { key: "d" + tr },
+                  [
+                    _c("td", {
+                      staticClass: "font-weight-bold",
+                      domProps: {
+                        textContent: _vm._s(
+                          _vm.$root.label("search_gender_" + key)
+                        )
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm._l(row, function(cell, td) {
+                      return _c("td", {
+                        key: "d" + tr + td,
+                        staticClass: "pl-5 text-right",
+                        domProps: { textContent: _vm._s(cell) }
+                      })
+                    })
+                  ],
+                  2
+                )
+              })
+            ],
+            2
+          )
         ])
       ],
       1
@@ -6685,6 +6983,171 @@ var render = function() {
       _vm._v("Fasc. 2 ed. Werner Eck, Matthäus Heil, Johannes Heinrichs 2015 "),
       _c("br"),
       _vm._v(" (Buchstaben U/V-Z)")
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/resources.vue?vue&type=template&id=136aeac4&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/resources.vue?vue&type=template&id=136aeac4& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("v-card", { staticClass: "pa-5", attrs: { tile: "" } }, [
+    _c("h2", { staticClass: "mb-3" }, [_vm._v("Ressourcen")]),
+    _vm._v(" "),
+    _c("h3", [_vm._v("Stichwortliste")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Zur besseren Strukturierung des gesammelten Materials führt das Unternehmen eine Stichwortliste mit den Namen aller " +
+          _vm._s(_vm.stats.total) +
+          " Personen,\n            die in der PIR Aufnahme finden (vgl. dazu Überblick; das bedeutet aber beispielsweise:\n            Angehörige der munizipalen und provinzialen Oberschicht sind in der Regel nur berücksichtigt,\n            wenn familiäre Verbindungen zu römischen Senatoren belegt oder die Bekleidung von Reichsämtern bekannt ist).\n            Dieses Personenverzeichnis der Oberschicht des Römischen Reiches (mit den genannten Einschränkungen)\n            soll hiermit der Forschung zu einer ersten informierenden Recherche zur Verfügung gestellt werden.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Die Eintragungen bestehen jeweils aus den Personennamen und einer Referenz zur eindeutigen Identifizierung der Personen:\n            Nummer in PIR2 bzw. PIR1, RE-Artikeln, Quellenpublikation oder anderen Standardwerken.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Derzeit setzt sich der Personenkreis der PIR wie folgt zusammen:\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c(
+      "table",
+      { staticClass: "mb-5" },
+      [
+        _c(
+          "tr",
+          [
+            _c("td"),
+            _vm._v(" "),
+            _vm._l(["normal", "eques", "senator", "total"], function(key) {
+              return _c("td", {
+                key: "th" + key,
+                staticClass: "font-weight-bold pb-1 pl-5 text-right",
+                domProps: {
+                  textContent: _vm._s(_vm.$root.label("search_class_" + key))
+                }
+              })
+            })
+          ],
+          2
+        ),
+        _vm._v(" "),
+        _vm._l(_vm.stats.dist, function(row, key, tr) {
+          return _c(
+            "tr",
+            { key: "d" + tr },
+            [
+              _c("td", {
+                staticClass: "font-weight-bold",
+                domProps: {
+                  textContent: _vm._s(_vm.$root.label("search_gender_" + key))
+                }
+              }),
+              _vm._v(" "),
+              _vm._l(row, function(cell, td) {
+                return _c("td", {
+                  key: "d" + tr + td,
+                  staticClass: "pl-5 text-right",
+                  domProps: { textContent: _vm._s(cell) }
+                })
+              })
+            ],
+            2
+          )
+        })
+      ],
+      2
+    ),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Diese Stichwortliste beansprucht nicht, eine eigenständige und bereits fertige wissenschaftliche Leistung zu sein;\n            sie ist primär ein internes Arbeitsmittel, das lediglich der Orientierung dienen soll.\n            Fehler, die sich bei einer solchen Dokumentation nie ganz vermeiden lassen, werden korrigiert, wo immer sie bemerkt werden.\n            Wenn Sie einen Fehler entdecken oder feststellen, daß eine Person fehlt, schicken Sie der PIR-Arbeitsstelle bitte eine kurze Nachricht.\n            Wir sind unsererseits jederzeit bereit, Ihre Fragen zu beantworten, so gut es unser PIR-Material und unsere personelle Situation erlauben.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Da das Forschungshaben offiziell als abgeschlossen gilt, erfolgen Aktualisierungen nur in unregelmäßigen Abständen.\n            Das letzte Update erfolgte am " +
+          _vm._s(_vm.stats.date) +
+          ".\n        "
+      )
+    ]),
+    _c("br"),
+    _vm._v(" "),
+    _c("h3", [_vm._v("Addenda")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Die PIR hat eine lange Entstehungszeit. Der erste Band erschien bereits im Jahr 1933, die anderen folgten in mehr oder weniger langem Abstand.\n            Vor allem für die ersten Bände ist seit der Veröffentlichung viel neues Quellenmaterial erschienen,\n            aber auch die Auseinandersetzung mit dem schon bekannten Material hat zu vielen neuen Erkenntnissen geführt.\n            Um die PIR insgesamt für den Benutzer näher an den gegenwärtigen Stand der Forschung heranzuführen,\n            werden hier nach der Stichwortliste von nun an in regelmäßigen Abständen addenda zu den gedruckten Bänden der zweiten Auflage veröffentlicht\n            und sukzessive dem interessierten Kreis von Fachkollegen zugänglich gemacht.\n            Aufgenommen wird im wesentlichen neues Quellenmaterial, und zwar sowohl zu bereits bekannten Personen wie vor allem zu neuen Personen.\n            Sekundärliteratur wird nur begrenzt ausgewertet, um den Fortgang der Präsentation nicht zu sehr zu verzögern.\n            Aus dem gleichen Grund werden Standardwerke (wie beispielsweise Pflaum Carrières, Devijver PME oder Raepsaet FOS) nur im Einzelfall zitiert,\n            sie müssen also prinzipiell unabhängig davon, ob hier zitiert oder nicht, herangezogen werden. Die Einträge bestehen aus\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("ul", [
+      _c("li", [_vm._v("Namen + PIR-Nr. der 2. Auflage")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "neuen Quellen. Konkordanzen beschränken sich auf notwendige Fälle."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Auswahl der substantiell wichtigen Literatur")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("knapper kommentierter Auswertung der neuen Quellen")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Bearbeitungsdatum. Dieses sollte vom Benutzer als Hinweis auf den Forschungsstand stets berücksichtigt werden."
+        )
+      ])
+    ]),
+    _c("br"),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Zitiert wird nach den Prinzipien der PIR unter Verwendung des Abkürzungsverzeichnisses des jeweils neuesten Bandes.\n            Aus praktischen Gründen hat im laufenden Text das Latein der deutschen Sprache weichen müssen außer bei den termini,\n            bei denen aber auf das Griechische verzichtet werden mußte. Der Ausgangspunkt für den Benutzer ist die Stichwortliste,\n            von der man mittels link von der einzelnen Person zu den addenda gelangt. Darüber hinaus soll es eine begrenzte Freitextsuche ermöglichen,\n            die addenda nach bestimmten Begriffen zu durchsuchen. Es sollte aber immer nach Varianten eines Begriffes\n            (etwa Prokonsul - proconsul; praefectus - Präfekt; Moesia inferior - Untermösien - Niedermoesien;\n            praefectus Aegypti - Praefekt von Ägypten; Statthalter - legatus Augusti pro praetore - Präses - praeses usw.) gesucht werden.\n            Klammern spielen keine Rolle, sie werden bei der Suche unterdrückt.\n            Bei der Suche können die selben Platzhalterzeichen wie bei der Stichwortliste verwendet werden.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Die Präsentation dieser addenda wird als Versuch gestartet; deshalb wird um möglichst zahlreiche - positive wie negative - Reaktionen gebeten:\n            Berichtigung von Fehlern, Verbesserungsvorschläge, Hinweise auf Lücken usw. Die Adresse ist bei jeder Datei angegeben.\n            Die Netzeingabe der Einträge erfolgt sukzessiv in nicht zu langen Abständen;\n            gleichzeitig werden kontinuierlich Verbesserungen und Zusätze an den bereits zugänglichen Texten vorgenommen.\n            Die Zusammenstellung des Materials und Abfassung der einzelnen Einträge erfolgen durch A. Strobach.\n            Die Programmierarbeiten und laufende technische Betreuung liegen in der Hand von M. Heil.\n            Für die Zitierung dieser addenda in Veröffentlichungen wird folgende Form empfohlen: (Personenname) PIR addenda electronica (Datum).\n            Diese addenda stehen als Parergon neben der Fertigstellung der zweiten Auflage der PIR und\n            können nur entsprechend den zur Verfügung stehenden zusätzlichen personellen wie finanziellen Mitteln vorangebracht werden.\n            Der Anfang wurde durch eine großzügige finanzielle Unterstützung der Heckmann Wenzel-Stiftung ermöglicht.\n            Dafür sei an dieser Stelle herzlich gedankt.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("\n            Berlin, im Juli 2001"),
+      _c("br"),
+      _vm._v("\n            Werner Eck; Klaus Wachtel\n        ")
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _c("a", { attrs: { href: "/#/search" } }, [
+        _c("strong", [_vm._v("Suche starten")])
+      ])
     ])
   ])
 }
@@ -7412,6 +7875,472 @@ var render = function() {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/search_instructions.vue?vue&type=template&id=080922d6&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/app/pages/search_instructions.vue?vue&type=template&id=080922d6& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h2", { staticClass: "mb-3" }, [_vm._v("Suche")]),
+    _vm._v(" "),
+    _c("h3", [_vm._v("Allgemeine Hinweise")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v("\n            Bitte wählen Sie zunächst, welche "),
+      _c("a", { attrs: { href: "/#/resources" } }, [_vm._v("Ressource")]),
+      _vm._v(
+        " Sie durchsuchen möchten. Die Stichwortliste umfasst alle\n            " +
+          _vm._s(_vm.$root.statistics.total) +
+          " Datensätze,\n            berücksichtigt bei der Suche aber nur den Namen. Bei der Addenda-Suche handelt es sich hingegen um eine Volltext-Suche,\n            die alle Angaben einbezieht. Sie ist aber nur für " +
+          _vm._s(_vm.$root.statistics.addenda) +
+          " Datensätze verfügbar.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n            Sie können Ihre Suche zusätzlich mithilfe der Filter auf das Geschlecht bzw. die soziale Gruppenzugehörigkeit einschränken.\n            Bitte beachten Sie, dass die höchste soziale Gruppe, die die Person in ihrem Leben erreichte, gilt: z.B. ein Mitglied des equester ordo,\n            der in den ordo senatorius aufstieg, wird in der Suche nicht mehr unter ordo equester, sondern nur unter den Senatoren erfasst.\n        "
+      )
+    ]),
+    _c("p", [
+      _vm._v(
+        "\n            Die Ausgabe der Datensätze erfolgt wie in den gedruckten PIR-Bänden: Senatoren in Versalien,\n            Ritter höheren Ranges in Fettdruck, nur teilweise erhaltene Namen mit den üblichen Klammern versehen."
+      ),
+      _c("br"),
+      _vm._v(
+        "\n            Sie können jeden Datensatz im TXT- oder JSON-LD-Format herunterladen.\n            Zusätzlich wird ein Link nach dem Schema "
+      ),
+      _c("code", [_vm._v(_vm._s(_vm.$root.baseURL) + "/id/{id}")]),
+      _vm._v(" generiert, z.B.\n            "),
+      _c("a", {
+        attrs: { href: _vm.$root.baseURL + "/id/1" },
+        domProps: { textContent: _vm._s(_vm.$root.baseURL + "/id/1") }
+      }),
+      _vm._v(
+        ". Bitte verwenden Sie nur diesen Link für die Zitation und nicht die URL,\n            wie Sie in Ihrem Browser angezeigt wird, weil sich letztere bedingt durch die technische Weiterentwicklung verändern kann."
+      ),
+      _c("br"),
+      _vm._v(
+        "\n            Auch zu jedem Suchvorgang, der mindestens einen Treffer erbrachte, wird ein Zitierlink erzeugt, der ebenfalls der Browser-URL vorzuziehen ist.\n        "
+      )
+    ]),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c("h3", { staticClass: "mt-5" }, [
+      _vm._v("Beispiele für reguläre Ausdrücke")
+    ]),
+    _vm._v(" "),
+    _vm._m(2)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "\n            Bitte geben sie die Suchbegriffe (oder Zeichenfolgen) in normaler\n            Schrift (also U als U und V als V) und ohne die epigraphischen Klammern ein."
+      ),
+      _c("br"),
+      _vm._v(
+        "\n            Trennen Sie die einzelnen Suchbegriffe bitte durch Blank (= Leerzeichen) ab.\n            Für die Suche können Sie auch Platzhalter-Zeichen bzw. reguläre Ausdrücke (REGEX) verwenden.\n        "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "\n            Wenn Sie den Datenbestand der PIR maschinell durchsuchen möchten, nutzen Sie bitte die "
+      ),
+      _c("a", { attrs: { href: "/#/api" } }, [_vm._v("API")]),
+      _vm._v(".\n        ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      { staticClass: "mt-5", staticStyle: { width: "100%" } },
+      [
+        _c("tr", [
+          _c(
+            "td",
+            { staticClass: "font-weight-bold pb-1", attrs: { valign: "top" } },
+            [_vm._v("ZEICHEN")]
+          ),
+          _vm._v(" "),
+          _c(
+            "td",
+            { staticClass: "font-weight-bold pb-1", attrs: { valign: "top" } },
+            [_vm._v("BEDEUTUNG")]
+          ),
+          _vm._v(" "),
+          _c(
+            "td",
+            { staticClass: "font-weight-bold pb-1", attrs: { valign: "top" } },
+            [_vm._v("BEISPIEL")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v(".")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("ein beliebiges Zeichen (das existieren muß)")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("Ru.ilius")]),
+            _vm._v(' findet "Rutilius", "Rupilius" usw.; '),
+            _c("code", [_vm._v("ius.Ruf")]),
+            _vm._v(' findet "Cluvius Rufus" ebenso wie "Memmius Rufinus".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v("?")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("Das davorstehende Zeichen darf fehlen.")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("Aurell?ius")]),
+            _vm._v(' findet "Aurelius" und "Aurellius".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v("+")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Das davorstehende Zeichen darf beliebig oft wiederholt sein."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("Mes+al+a")]),
+            _vm._v(' findet "Mesala", "Messala", "Mesalla" und "Messalla".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v("*")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Das davorstehende Zeichen darf beliebig oft vorkommen; es darf auch fehlen."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("Mess*all*a")]),
+            _vm._v(' findet "Mesala", "Messala", "Mesalla" und "Messalla".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v(".?")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("ein beliebiges Zeichen, das fehlen darf")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("Rutil.?us")]),
+            _vm._v(' findet "Rutilius" ebenso wie "Rutilus".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v(".+")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("beliebig viele Zeichen (mindestens aber eines)")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("R.+ius")]),
+            _vm._v(
+              ' findet alle Einträge, in denen ein R vorkommt und irgendwo dahinter die Zeichenfolge "ius", also z. B. "Rutilius" ebenso wie "Aelius Rufus Ianuarius".'
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v(".*")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "beliebig viele Zeichen (einschließlich den Fall, daß dort gar keines steht)"
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v("ähnlich")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("[pt]")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle darf eines der in der Klammer angegebenen Zeichen vorkommenden."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("Ru[pt]ilius")]),
+            _vm._v(
+              ' findet sowohl "Rupilius" als auch "Rutilius" (aber sonst nichts).'
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("[a–z]")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle darf ein beliebiger Kleinbuchstabe vorkommen."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("[a–zA–Z0–9]")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle darf ein beliebiger Kleinbuchstabe, Großbuchstabe oder eine Ziffer vorkommen (aber z. B. kein Blank)."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("[a–z]*")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle dürfen beliebig viele Kleinbuchstaben vorkommen (es muß dort aber keiner stehen)."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("R[a–z]*ius")]),
+            _vm._v(
+              ' findet alle Namen, die mit R beginnen und mit –ius enden, aber nicht etwa "Aelius Rufus Ianuarius".'
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c(
+            "td",
+            {
+              staticClass: "pr-5",
+              staticStyle: { "white-space": "nowrap" },
+              attrs: { valign: "top" }
+            },
+            [_c("code", [_vm._v("[a–zA–Z0–9]*")])]
+          ),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle dürfen beliebig viele Kleinbuchstaben, Großbuchstaben oder Ziffern vorkommen (aber z. B. keine Blanks)."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("[^u]")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "An dieser Stelle darf alles vorkommen außer dem Buchstaben in der Klammer (es dürfen auch verschiedene Buchstaben gleichzeitig negiert werden)."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("R[^u]s")]),
+            _vm._v(' findet z. B. "Rosianus", aber nicht "Ruso".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("…\\b")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("Die Zeichenfolge vor "),
+            _c("code", [_vm._v("\\b")]),
+            _vm._v(" muß an einem Wortende stehen.")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("Arria\\b")]),
+            _vm._v(' findet "Arria", aber nicht "Arrianus".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("\\b…")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("Die Zeichenfolge nach "),
+            _c("code", [_vm._v("\\b")]),
+            _vm._v(" muß an einem Wortanfang stehen.")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("\\bAr")]),
+            _vm._v(' findet "Arrius" und "Arria", aber nicht "Marius".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("…\\B")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v("Die Zeichenfolge vor "),
+            _c("code", [_vm._v("\\B")]),
+            _vm._v(" darf nicht an einem Wortende stehen.")
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("Arria\\B")]),
+            _vm._v(' findet "Arrianus", aber nicht "Arria".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("\\B…")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Die Zeichenfolge vor \\B darf nicht an einem Wortanfang stehen."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("\\BAr")]),
+            _vm._v(' findet "Marius", aber nicht "Arrius".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("{1,2}")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Das davorstehende Zeichen muß mindestens einmal und darf höchstens zweimal vorkommen. (Bei dieser Art von Angaben darf auch die Zahl 0 verwendet werden.)"
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("{1,}")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Das davorstehende Zeichen muß mindestens einmal vorkommen, darf aber beliebig oft wiederholt sein."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [_vm._v(" ")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("[a–z]{1,3}")])
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Hier muß mindestendens ein Kleinbuchstabe stehen und es dürfen höchstens drei sein."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("R[a–z]{2,3}ius")]),
+            _vm._v(' findet "Raecius", aber nicht "Rutilius".')
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { valign: "top" } }, [_c("code", [_vm._v("…|…")])]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _vm._v(
+              "Die Zeichen vor und hinter dem senkrechten Strich werden als Alternativen behandelt."
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", { attrs: { valign: "top" } }, [
+            _c("code", [_vm._v("Rupilius|Rutilius")]),
+            _vm._v(
+              ' findet alle Einträge mit "Rupilius" und alle mit "Rutilius".'
+            )
+          ])
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -67541,1271 +68470,6 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/vuex/dist/vuex.esm.js":
-/*!********************************************!*\
-  !*** ./node_modules/vuex/dist/vuex.esm.js ***!
-  \********************************************/
-/*! exports provided: default, Store, createLogger, createNamespacedHelpers, install, mapActions, mapGetters, mapMutations, mapState */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Store", function() { return Store; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createLogger", function() { return createLogger; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNamespacedHelpers", function() { return createNamespacedHelpers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapActions", function() { return mapActions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapGetters", function() { return mapGetters; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapMutations", function() { return mapMutations; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapState", function() { return mapState; });
-/*!
- * vuex v3.6.2
- * (c) 2021 Evan You
- * @license MIT
- */
-function applyMixin (Vue) {
-  var version = Number(Vue.version.split('.')[0]);
-
-  if (version >= 2) {
-    Vue.mixin({ beforeCreate: vuexInit });
-  } else {
-    // override init and inject vuex init procedure
-    // for 1.x backwards compatibility.
-    var _init = Vue.prototype._init;
-    Vue.prototype._init = function (options) {
-      if ( options === void 0 ) options = {};
-
-      options.init = options.init
-        ? [vuexInit].concat(options.init)
-        : vuexInit;
-      _init.call(this, options);
-    };
-  }
-
-  /**
-   * Vuex init hook, injected into each instances init hooks list.
-   */
-
-  function vuexInit () {
-    var options = this.$options;
-    // store injection
-    if (options.store) {
-      this.$store = typeof options.store === 'function'
-        ? options.store()
-        : options.store;
-    } else if (options.parent && options.parent.$store) {
-      this.$store = options.parent.$store;
-    }
-  }
-}
-
-var target = typeof window !== 'undefined'
-  ? window
-  : typeof global !== 'undefined'
-    ? global
-    : {};
-var devtoolHook = target.__VUE_DEVTOOLS_GLOBAL_HOOK__;
-
-function devtoolPlugin (store) {
-  if (!devtoolHook) { return }
-
-  store._devtoolHook = devtoolHook;
-
-  devtoolHook.emit('vuex:init', store);
-
-  devtoolHook.on('vuex:travel-to-state', function (targetState) {
-    store.replaceState(targetState);
-  });
-
-  store.subscribe(function (mutation, state) {
-    devtoolHook.emit('vuex:mutation', mutation, state);
-  }, { prepend: true });
-
-  store.subscribeAction(function (action, state) {
-    devtoolHook.emit('vuex:action', action, state);
-  }, { prepend: true });
-}
-
-/**
- * Get the first item that pass the test
- * by second argument function
- *
- * @param {Array} list
- * @param {Function} f
- * @return {*}
- */
-function find (list, f) {
-  return list.filter(f)[0]
-}
-
-/**
- * Deep copy the given object considering circular structure.
- * This function caches all nested objects and its copies.
- * If it detects circular structure, use cached copy to avoid infinite loop.
- *
- * @param {*} obj
- * @param {Array<Object>} cache
- * @return {*}
- */
-function deepCopy (obj, cache) {
-  if ( cache === void 0 ) cache = [];
-
-  // just return if obj is immutable value
-  if (obj === null || typeof obj !== 'object') {
-    return obj
-  }
-
-  // if obj is hit, it is in circular structure
-  var hit = find(cache, function (c) { return c.original === obj; });
-  if (hit) {
-    return hit.copy
-  }
-
-  var copy = Array.isArray(obj) ? [] : {};
-  // put the copy into cache at first
-  // because we want to refer it in recursive deepCopy
-  cache.push({
-    original: obj,
-    copy: copy
-  });
-
-  Object.keys(obj).forEach(function (key) {
-    copy[key] = deepCopy(obj[key], cache);
-  });
-
-  return copy
-}
-
-/**
- * forEach for object
- */
-function forEachValue (obj, fn) {
-  Object.keys(obj).forEach(function (key) { return fn(obj[key], key); });
-}
-
-function isObject (obj) {
-  return obj !== null && typeof obj === 'object'
-}
-
-function isPromise (val) {
-  return val && typeof val.then === 'function'
-}
-
-function assert (condition, msg) {
-  if (!condition) { throw new Error(("[vuex] " + msg)) }
-}
-
-function partial (fn, arg) {
-  return function () {
-    return fn(arg)
-  }
-}
-
-// Base data struct for store's module, package with some attribute and method
-var Module = function Module (rawModule, runtime) {
-  this.runtime = runtime;
-  // Store some children item
-  this._children = Object.create(null);
-  // Store the origin module object which passed by programmer
-  this._rawModule = rawModule;
-  var rawState = rawModule.state;
-
-  // Store the origin module's state
-  this.state = (typeof rawState === 'function' ? rawState() : rawState) || {};
-};
-
-var prototypeAccessors = { namespaced: { configurable: true } };
-
-prototypeAccessors.namespaced.get = function () {
-  return !!this._rawModule.namespaced
-};
-
-Module.prototype.addChild = function addChild (key, module) {
-  this._children[key] = module;
-};
-
-Module.prototype.removeChild = function removeChild (key) {
-  delete this._children[key];
-};
-
-Module.prototype.getChild = function getChild (key) {
-  return this._children[key]
-};
-
-Module.prototype.hasChild = function hasChild (key) {
-  return key in this._children
-};
-
-Module.prototype.update = function update (rawModule) {
-  this._rawModule.namespaced = rawModule.namespaced;
-  if (rawModule.actions) {
-    this._rawModule.actions = rawModule.actions;
-  }
-  if (rawModule.mutations) {
-    this._rawModule.mutations = rawModule.mutations;
-  }
-  if (rawModule.getters) {
-    this._rawModule.getters = rawModule.getters;
-  }
-};
-
-Module.prototype.forEachChild = function forEachChild (fn) {
-  forEachValue(this._children, fn);
-};
-
-Module.prototype.forEachGetter = function forEachGetter (fn) {
-  if (this._rawModule.getters) {
-    forEachValue(this._rawModule.getters, fn);
-  }
-};
-
-Module.prototype.forEachAction = function forEachAction (fn) {
-  if (this._rawModule.actions) {
-    forEachValue(this._rawModule.actions, fn);
-  }
-};
-
-Module.prototype.forEachMutation = function forEachMutation (fn) {
-  if (this._rawModule.mutations) {
-    forEachValue(this._rawModule.mutations, fn);
-  }
-};
-
-Object.defineProperties( Module.prototype, prototypeAccessors );
-
-var ModuleCollection = function ModuleCollection (rawRootModule) {
-  // register root module (Vuex.Store options)
-  this.register([], rawRootModule, false);
-};
-
-ModuleCollection.prototype.get = function get (path) {
-  return path.reduce(function (module, key) {
-    return module.getChild(key)
-  }, this.root)
-};
-
-ModuleCollection.prototype.getNamespace = function getNamespace (path) {
-  var module = this.root;
-  return path.reduce(function (namespace, key) {
-    module = module.getChild(key);
-    return namespace + (module.namespaced ? key + '/' : '')
-  }, '')
-};
-
-ModuleCollection.prototype.update = function update$1 (rawRootModule) {
-  update([], this.root, rawRootModule);
-};
-
-ModuleCollection.prototype.register = function register (path, rawModule, runtime) {
-    var this$1 = this;
-    if ( runtime === void 0 ) runtime = true;
-
-  if ((true)) {
-    assertRawModule(path, rawModule);
-  }
-
-  var newModule = new Module(rawModule, runtime);
-  if (path.length === 0) {
-    this.root = newModule;
-  } else {
-    var parent = this.get(path.slice(0, -1));
-    parent.addChild(path[path.length - 1], newModule);
-  }
-
-  // register nested modules
-  if (rawModule.modules) {
-    forEachValue(rawModule.modules, function (rawChildModule, key) {
-      this$1.register(path.concat(key), rawChildModule, runtime);
-    });
-  }
-};
-
-ModuleCollection.prototype.unregister = function unregister (path) {
-  var parent = this.get(path.slice(0, -1));
-  var key = path[path.length - 1];
-  var child = parent.getChild(key);
-
-  if (!child) {
-    if ((true)) {
-      console.warn(
-        "[vuex] trying to unregister module '" + key + "', which is " +
-        "not registered"
-      );
-    }
-    return
-  }
-
-  if (!child.runtime) {
-    return
-  }
-
-  parent.removeChild(key);
-};
-
-ModuleCollection.prototype.isRegistered = function isRegistered (path) {
-  var parent = this.get(path.slice(0, -1));
-  var key = path[path.length - 1];
-
-  if (parent) {
-    return parent.hasChild(key)
-  }
-
-  return false
-};
-
-function update (path, targetModule, newModule) {
-  if ((true)) {
-    assertRawModule(path, newModule);
-  }
-
-  // update target module
-  targetModule.update(newModule);
-
-  // update nested modules
-  if (newModule.modules) {
-    for (var key in newModule.modules) {
-      if (!targetModule.getChild(key)) {
-        if ((true)) {
-          console.warn(
-            "[vuex] trying to add a new module '" + key + "' on hot reloading, " +
-            'manual reload is needed'
-          );
-        }
-        return
-      }
-      update(
-        path.concat(key),
-        targetModule.getChild(key),
-        newModule.modules[key]
-      );
-    }
-  }
-}
-
-var functionAssert = {
-  assert: function (value) { return typeof value === 'function'; },
-  expected: 'function'
-};
-
-var objectAssert = {
-  assert: function (value) { return typeof value === 'function' ||
-    (typeof value === 'object' && typeof value.handler === 'function'); },
-  expected: 'function or object with "handler" function'
-};
-
-var assertTypes = {
-  getters: functionAssert,
-  mutations: functionAssert,
-  actions: objectAssert
-};
-
-function assertRawModule (path, rawModule) {
-  Object.keys(assertTypes).forEach(function (key) {
-    if (!rawModule[key]) { return }
-
-    var assertOptions = assertTypes[key];
-
-    forEachValue(rawModule[key], function (value, type) {
-      assert(
-        assertOptions.assert(value),
-        makeAssertionMessage(path, key, type, value, assertOptions.expected)
-      );
-    });
-  });
-}
-
-function makeAssertionMessage (path, key, type, value, expected) {
-  var buf = key + " should be " + expected + " but \"" + key + "." + type + "\"";
-  if (path.length > 0) {
-    buf += " in module \"" + (path.join('.')) + "\"";
-  }
-  buf += " is " + (JSON.stringify(value)) + ".";
-  return buf
-}
-
-var Vue; // bind on install
-
-var Store = function Store (options) {
-  var this$1 = this;
-  if ( options === void 0 ) options = {};
-
-  // Auto install if it is not done yet and `window` has `Vue`.
-  // To allow users to avoid auto-installation in some cases,
-  // this code should be placed here. See #731
-  if (!Vue && typeof window !== 'undefined' && window.Vue) {
-    install(window.Vue);
-  }
-
-  if ((true)) {
-    assert(Vue, "must call Vue.use(Vuex) before creating a store instance.");
-    assert(typeof Promise !== 'undefined', "vuex requires a Promise polyfill in this browser.");
-    assert(this instanceof Store, "store must be called with the new operator.");
-  }
-
-  var plugins = options.plugins; if ( plugins === void 0 ) plugins = [];
-  var strict = options.strict; if ( strict === void 0 ) strict = false;
-
-  // store internal state
-  this._committing = false;
-  this._actions = Object.create(null);
-  this._actionSubscribers = [];
-  this._mutations = Object.create(null);
-  this._wrappedGetters = Object.create(null);
-  this._modules = new ModuleCollection(options);
-  this._modulesNamespaceMap = Object.create(null);
-  this._subscribers = [];
-  this._watcherVM = new Vue();
-  this._makeLocalGettersCache = Object.create(null);
-
-  // bind commit and dispatch to self
-  var store = this;
-  var ref = this;
-  var dispatch = ref.dispatch;
-  var commit = ref.commit;
-  this.dispatch = function boundDispatch (type, payload) {
-    return dispatch.call(store, type, payload)
-  };
-  this.commit = function boundCommit (type, payload, options) {
-    return commit.call(store, type, payload, options)
-  };
-
-  // strict mode
-  this.strict = strict;
-
-  var state = this._modules.root.state;
-
-  // init root module.
-  // this also recursively registers all sub-modules
-  // and collects all module getters inside this._wrappedGetters
-  installModule(this, state, [], this._modules.root);
-
-  // initialize the store vm, which is responsible for the reactivity
-  // (also registers _wrappedGetters as computed properties)
-  resetStoreVM(this, state);
-
-  // apply plugins
-  plugins.forEach(function (plugin) { return plugin(this$1); });
-
-  var useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools;
-  if (useDevtools) {
-    devtoolPlugin(this);
-  }
-};
-
-var prototypeAccessors$1 = { state: { configurable: true } };
-
-prototypeAccessors$1.state.get = function () {
-  return this._vm._data.$$state
-};
-
-prototypeAccessors$1.state.set = function (v) {
-  if ((true)) {
-    assert(false, "use store.replaceState() to explicit replace store state.");
-  }
-};
-
-Store.prototype.commit = function commit (_type, _payload, _options) {
-    var this$1 = this;
-
-  // check object-style commit
-  var ref = unifyObjectStyle(_type, _payload, _options);
-    var type = ref.type;
-    var payload = ref.payload;
-    var options = ref.options;
-
-  var mutation = { type: type, payload: payload };
-  var entry = this._mutations[type];
-  if (!entry) {
-    if ((true)) {
-      console.error(("[vuex] unknown mutation type: " + type));
-    }
-    return
-  }
-  this._withCommit(function () {
-    entry.forEach(function commitIterator (handler) {
-      handler(payload);
-    });
-  });
-
-  this._subscribers
-    .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
-    .forEach(function (sub) { return sub(mutation, this$1.state); });
-
-  if (
-    ( true) &&
-    options && options.silent
-  ) {
-    console.warn(
-      "[vuex] mutation type: " + type + ". Silent option has been removed. " +
-      'Use the filter functionality in the vue-devtools'
-    );
-  }
-};
-
-Store.prototype.dispatch = function dispatch (_type, _payload) {
-    var this$1 = this;
-
-  // check object-style dispatch
-  var ref = unifyObjectStyle(_type, _payload);
-    var type = ref.type;
-    var payload = ref.payload;
-
-  var action = { type: type, payload: payload };
-  var entry = this._actions[type];
-  if (!entry) {
-    if ((true)) {
-      console.error(("[vuex] unknown action type: " + type));
-    }
-    return
-  }
-
-  try {
-    this._actionSubscribers
-      .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
-      .filter(function (sub) { return sub.before; })
-      .forEach(function (sub) { return sub.before(action, this$1.state); });
-  } catch (e) {
-    if ((true)) {
-      console.warn("[vuex] error in before action subscribers: ");
-      console.error(e);
-    }
-  }
-
-  var result = entry.length > 1
-    ? Promise.all(entry.map(function (handler) { return handler(payload); }))
-    : entry[0](payload);
-
-  return new Promise(function (resolve, reject) {
-    result.then(function (res) {
-      try {
-        this$1._actionSubscribers
-          .filter(function (sub) { return sub.after; })
-          .forEach(function (sub) { return sub.after(action, this$1.state); });
-      } catch (e) {
-        if ((true)) {
-          console.warn("[vuex] error in after action subscribers: ");
-          console.error(e);
-        }
-      }
-      resolve(res);
-    }, function (error) {
-      try {
-        this$1._actionSubscribers
-          .filter(function (sub) { return sub.error; })
-          .forEach(function (sub) { return sub.error(action, this$1.state, error); });
-      } catch (e) {
-        if ((true)) {
-          console.warn("[vuex] error in error action subscribers: ");
-          console.error(e);
-        }
-      }
-      reject(error);
-    });
-  })
-};
-
-Store.prototype.subscribe = function subscribe (fn, options) {
-  return genericSubscribe(fn, this._subscribers, options)
-};
-
-Store.prototype.subscribeAction = function subscribeAction (fn, options) {
-  var subs = typeof fn === 'function' ? { before: fn } : fn;
-  return genericSubscribe(subs, this._actionSubscribers, options)
-};
-
-Store.prototype.watch = function watch (getter, cb, options) {
-    var this$1 = this;
-
-  if ((true)) {
-    assert(typeof getter === 'function', "store.watch only accepts a function.");
-  }
-  return this._watcherVM.$watch(function () { return getter(this$1.state, this$1.getters); }, cb, options)
-};
-
-Store.prototype.replaceState = function replaceState (state) {
-    var this$1 = this;
-
-  this._withCommit(function () {
-    this$1._vm._data.$$state = state;
-  });
-};
-
-Store.prototype.registerModule = function registerModule (path, rawModule, options) {
-    if ( options === void 0 ) options = {};
-
-  if (typeof path === 'string') { path = [path]; }
-
-  if ((true)) {
-    assert(Array.isArray(path), "module path must be a string or an Array.");
-    assert(path.length > 0, 'cannot register the root module by using registerModule.');
-  }
-
-  this._modules.register(path, rawModule);
-  installModule(this, this.state, path, this._modules.get(path), options.preserveState);
-  // reset store to update getters...
-  resetStoreVM(this, this.state);
-};
-
-Store.prototype.unregisterModule = function unregisterModule (path) {
-    var this$1 = this;
-
-  if (typeof path === 'string') { path = [path]; }
-
-  if ((true)) {
-    assert(Array.isArray(path), "module path must be a string or an Array.");
-  }
-
-  this._modules.unregister(path);
-  this._withCommit(function () {
-    var parentState = getNestedState(this$1.state, path.slice(0, -1));
-    Vue.delete(parentState, path[path.length - 1]);
-  });
-  resetStore(this);
-};
-
-Store.prototype.hasModule = function hasModule (path) {
-  if (typeof path === 'string') { path = [path]; }
-
-  if ((true)) {
-    assert(Array.isArray(path), "module path must be a string or an Array.");
-  }
-
-  return this._modules.isRegistered(path)
-};
-
-Store.prototype.hotUpdate = function hotUpdate (newOptions) {
-  this._modules.update(newOptions);
-  resetStore(this, true);
-};
-
-Store.prototype._withCommit = function _withCommit (fn) {
-  var committing = this._committing;
-  this._committing = true;
-  fn();
-  this._committing = committing;
-};
-
-Object.defineProperties( Store.prototype, prototypeAccessors$1 );
-
-function genericSubscribe (fn, subs, options) {
-  if (subs.indexOf(fn) < 0) {
-    options && options.prepend
-      ? subs.unshift(fn)
-      : subs.push(fn);
-  }
-  return function () {
-    var i = subs.indexOf(fn);
-    if (i > -1) {
-      subs.splice(i, 1);
-    }
-  }
-}
-
-function resetStore (store, hot) {
-  store._actions = Object.create(null);
-  store._mutations = Object.create(null);
-  store._wrappedGetters = Object.create(null);
-  store._modulesNamespaceMap = Object.create(null);
-  var state = store.state;
-  // init all modules
-  installModule(store, state, [], store._modules.root, true);
-  // reset vm
-  resetStoreVM(store, state, hot);
-}
-
-function resetStoreVM (store, state, hot) {
-  var oldVm = store._vm;
-
-  // bind store public getters
-  store.getters = {};
-  // reset local getters cache
-  store._makeLocalGettersCache = Object.create(null);
-  var wrappedGetters = store._wrappedGetters;
-  var computed = {};
-  forEachValue(wrappedGetters, function (fn, key) {
-    // use computed to leverage its lazy-caching mechanism
-    // direct inline function use will lead to closure preserving oldVm.
-    // using partial to return function with only arguments preserved in closure environment.
-    computed[key] = partial(fn, store);
-    Object.defineProperty(store.getters, key, {
-      get: function () { return store._vm[key]; },
-      enumerable: true // for local getters
-    });
-  });
-
-  // use a Vue instance to store the state tree
-  // suppress warnings just in case the user has added
-  // some funky global mixins
-  var silent = Vue.config.silent;
-  Vue.config.silent = true;
-  store._vm = new Vue({
-    data: {
-      $$state: state
-    },
-    computed: computed
-  });
-  Vue.config.silent = silent;
-
-  // enable strict mode for new vm
-  if (store.strict) {
-    enableStrictMode(store);
-  }
-
-  if (oldVm) {
-    if (hot) {
-      // dispatch changes in all subscribed watchers
-      // to force getter re-evaluation for hot reloading.
-      store._withCommit(function () {
-        oldVm._data.$$state = null;
-      });
-    }
-    Vue.nextTick(function () { return oldVm.$destroy(); });
-  }
-}
-
-function installModule (store, rootState, path, module, hot) {
-  var isRoot = !path.length;
-  var namespace = store._modules.getNamespace(path);
-
-  // register in namespace map
-  if (module.namespaced) {
-    if (store._modulesNamespaceMap[namespace] && ("development" !== 'production')) {
-      console.error(("[vuex] duplicate namespace " + namespace + " for the namespaced module " + (path.join('/'))));
-    }
-    store._modulesNamespaceMap[namespace] = module;
-  }
-
-  // set state
-  if (!isRoot && !hot) {
-    var parentState = getNestedState(rootState, path.slice(0, -1));
-    var moduleName = path[path.length - 1];
-    store._withCommit(function () {
-      if ((true)) {
-        if (moduleName in parentState) {
-          console.warn(
-            ("[vuex] state field \"" + moduleName + "\" was overridden by a module with the same name at \"" + (path.join('.')) + "\"")
-          );
-        }
-      }
-      Vue.set(parentState, moduleName, module.state);
-    });
-  }
-
-  var local = module.context = makeLocalContext(store, namespace, path);
-
-  module.forEachMutation(function (mutation, key) {
-    var namespacedType = namespace + key;
-    registerMutation(store, namespacedType, mutation, local);
-  });
-
-  module.forEachAction(function (action, key) {
-    var type = action.root ? key : namespace + key;
-    var handler = action.handler || action;
-    registerAction(store, type, handler, local);
-  });
-
-  module.forEachGetter(function (getter, key) {
-    var namespacedType = namespace + key;
-    registerGetter(store, namespacedType, getter, local);
-  });
-
-  module.forEachChild(function (child, key) {
-    installModule(store, rootState, path.concat(key), child, hot);
-  });
-}
-
-/**
- * make localized dispatch, commit, getters and state
- * if there is no namespace, just use root ones
- */
-function makeLocalContext (store, namespace, path) {
-  var noNamespace = namespace === '';
-
-  var local = {
-    dispatch: noNamespace ? store.dispatch : function (_type, _payload, _options) {
-      var args = unifyObjectStyle(_type, _payload, _options);
-      var payload = args.payload;
-      var options = args.options;
-      var type = args.type;
-
-      if (!options || !options.root) {
-        type = namespace + type;
-        if (( true) && !store._actions[type]) {
-          console.error(("[vuex] unknown local action type: " + (args.type) + ", global type: " + type));
-          return
-        }
-      }
-
-      return store.dispatch(type, payload)
-    },
-
-    commit: noNamespace ? store.commit : function (_type, _payload, _options) {
-      var args = unifyObjectStyle(_type, _payload, _options);
-      var payload = args.payload;
-      var options = args.options;
-      var type = args.type;
-
-      if (!options || !options.root) {
-        type = namespace + type;
-        if (( true) && !store._mutations[type]) {
-          console.error(("[vuex] unknown local mutation type: " + (args.type) + ", global type: " + type));
-          return
-        }
-      }
-
-      store.commit(type, payload, options);
-    }
-  };
-
-  // getters and state object must be gotten lazily
-  // because they will be changed by vm update
-  Object.defineProperties(local, {
-    getters: {
-      get: noNamespace
-        ? function () { return store.getters; }
-        : function () { return makeLocalGetters(store, namespace); }
-    },
-    state: {
-      get: function () { return getNestedState(store.state, path); }
-    }
-  });
-
-  return local
-}
-
-function makeLocalGetters (store, namespace) {
-  if (!store._makeLocalGettersCache[namespace]) {
-    var gettersProxy = {};
-    var splitPos = namespace.length;
-    Object.keys(store.getters).forEach(function (type) {
-      // skip if the target getter is not match this namespace
-      if (type.slice(0, splitPos) !== namespace) { return }
-
-      // extract local getter type
-      var localType = type.slice(splitPos);
-
-      // Add a port to the getters proxy.
-      // Define as getter property because
-      // we do not want to evaluate the getters in this time.
-      Object.defineProperty(gettersProxy, localType, {
-        get: function () { return store.getters[type]; },
-        enumerable: true
-      });
-    });
-    store._makeLocalGettersCache[namespace] = gettersProxy;
-  }
-
-  return store._makeLocalGettersCache[namespace]
-}
-
-function registerMutation (store, type, handler, local) {
-  var entry = store._mutations[type] || (store._mutations[type] = []);
-  entry.push(function wrappedMutationHandler (payload) {
-    handler.call(store, local.state, payload);
-  });
-}
-
-function registerAction (store, type, handler, local) {
-  var entry = store._actions[type] || (store._actions[type] = []);
-  entry.push(function wrappedActionHandler (payload) {
-    var res = handler.call(store, {
-      dispatch: local.dispatch,
-      commit: local.commit,
-      getters: local.getters,
-      state: local.state,
-      rootGetters: store.getters,
-      rootState: store.state
-    }, payload);
-    if (!isPromise(res)) {
-      res = Promise.resolve(res);
-    }
-    if (store._devtoolHook) {
-      return res.catch(function (err) {
-        store._devtoolHook.emit('vuex:error', err);
-        throw err
-      })
-    } else {
-      return res
-    }
-  });
-}
-
-function registerGetter (store, type, rawGetter, local) {
-  if (store._wrappedGetters[type]) {
-    if ((true)) {
-      console.error(("[vuex] duplicate getter key: " + type));
-    }
-    return
-  }
-  store._wrappedGetters[type] = function wrappedGetter (store) {
-    return rawGetter(
-      local.state, // local state
-      local.getters, // local getters
-      store.state, // root state
-      store.getters // root getters
-    )
-  };
-}
-
-function enableStrictMode (store) {
-  store._vm.$watch(function () { return this._data.$$state }, function () {
-    if ((true)) {
-      assert(store._committing, "do not mutate vuex store state outside mutation handlers.");
-    }
-  }, { deep: true, sync: true });
-}
-
-function getNestedState (state, path) {
-  return path.reduce(function (state, key) { return state[key]; }, state)
-}
-
-function unifyObjectStyle (type, payload, options) {
-  if (isObject(type) && type.type) {
-    options = payload;
-    payload = type;
-    type = type.type;
-  }
-
-  if ((true)) {
-    assert(typeof type === 'string', ("expects string as the type, but found " + (typeof type) + "."));
-  }
-
-  return { type: type, payload: payload, options: options }
-}
-
-function install (_Vue) {
-  if (Vue && _Vue === Vue) {
-    if ((true)) {
-      console.error(
-        '[vuex] already installed. Vue.use(Vuex) should be called only once.'
-      );
-    }
-    return
-  }
-  Vue = _Vue;
-  applyMixin(Vue);
-}
-
-/**
- * Reduce the code which written in Vue.js for getting the state.
- * @param {String} [namespace] - Module's namespace
- * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
- * @param {Object}
- */
-var mapState = normalizeNamespace(function (namespace, states) {
-  var res = {};
-  if (( true) && !isValidMap(states)) {
-    console.error('[vuex] mapState: mapper parameter must be either an Array or an Object');
-  }
-  normalizeMap(states).forEach(function (ref) {
-    var key = ref.key;
-    var val = ref.val;
-
-    res[key] = function mappedState () {
-      var state = this.$store.state;
-      var getters = this.$store.getters;
-      if (namespace) {
-        var module = getModuleByNamespace(this.$store, 'mapState', namespace);
-        if (!module) {
-          return
-        }
-        state = module.context.state;
-        getters = module.context.getters;
-      }
-      return typeof val === 'function'
-        ? val.call(this, state, getters)
-        : state[val]
-    };
-    // mark vuex getter for devtools
-    res[key].vuex = true;
-  });
-  return res
-});
-
-/**
- * Reduce the code which written in Vue.js for committing the mutation
- * @param {String} [namespace] - Module's namespace
- * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept another params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
- * @return {Object}
- */
-var mapMutations = normalizeNamespace(function (namespace, mutations) {
-  var res = {};
-  if (( true) && !isValidMap(mutations)) {
-    console.error('[vuex] mapMutations: mapper parameter must be either an Array or an Object');
-  }
-  normalizeMap(mutations).forEach(function (ref) {
-    var key = ref.key;
-    var val = ref.val;
-
-    res[key] = function mappedMutation () {
-      var args = [], len = arguments.length;
-      while ( len-- ) args[ len ] = arguments[ len ];
-
-      // Get the commit method from store
-      var commit = this.$store.commit;
-      if (namespace) {
-        var module = getModuleByNamespace(this.$store, 'mapMutations', namespace);
-        if (!module) {
-          return
-        }
-        commit = module.context.commit;
-      }
-      return typeof val === 'function'
-        ? val.apply(this, [commit].concat(args))
-        : commit.apply(this.$store, [val].concat(args))
-    };
-  });
-  return res
-});
-
-/**
- * Reduce the code which written in Vue.js for getting the getters
- * @param {String} [namespace] - Module's namespace
- * @param {Object|Array} getters
- * @return {Object}
- */
-var mapGetters = normalizeNamespace(function (namespace, getters) {
-  var res = {};
-  if (( true) && !isValidMap(getters)) {
-    console.error('[vuex] mapGetters: mapper parameter must be either an Array or an Object');
-  }
-  normalizeMap(getters).forEach(function (ref) {
-    var key = ref.key;
-    var val = ref.val;
-
-    // The namespace has been mutated by normalizeNamespace
-    val = namespace + val;
-    res[key] = function mappedGetter () {
-      if (namespace && !getModuleByNamespace(this.$store, 'mapGetters', namespace)) {
-        return
-      }
-      if (( true) && !(val in this.$store.getters)) {
-        console.error(("[vuex] unknown getter: " + val));
-        return
-      }
-      return this.$store.getters[val]
-    };
-    // mark vuex getter for devtools
-    res[key].vuex = true;
-  });
-  return res
-});
-
-/**
- * Reduce the code which written in Vue.js for dispatch the action
- * @param {String} [namespace] - Module's namespace
- * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
- * @return {Object}
- */
-var mapActions = normalizeNamespace(function (namespace, actions) {
-  var res = {};
-  if (( true) && !isValidMap(actions)) {
-    console.error('[vuex] mapActions: mapper parameter must be either an Array or an Object');
-  }
-  normalizeMap(actions).forEach(function (ref) {
-    var key = ref.key;
-    var val = ref.val;
-
-    res[key] = function mappedAction () {
-      var args = [], len = arguments.length;
-      while ( len-- ) args[ len ] = arguments[ len ];
-
-      // get dispatch function from store
-      var dispatch = this.$store.dispatch;
-      if (namespace) {
-        var module = getModuleByNamespace(this.$store, 'mapActions', namespace);
-        if (!module) {
-          return
-        }
-        dispatch = module.context.dispatch;
-      }
-      return typeof val === 'function'
-        ? val.apply(this, [dispatch].concat(args))
-        : dispatch.apply(this.$store, [val].concat(args))
-    };
-  });
-  return res
-});
-
-/**
- * Rebinding namespace param for mapXXX function in special scoped, and return them by simple object
- * @param {String} namespace
- * @return {Object}
- */
-var createNamespacedHelpers = function (namespace) { return ({
-  mapState: mapState.bind(null, namespace),
-  mapGetters: mapGetters.bind(null, namespace),
-  mapMutations: mapMutations.bind(null, namespace),
-  mapActions: mapActions.bind(null, namespace)
-}); };
-
-/**
- * Normalize the map
- * normalizeMap([1, 2, 3]) => [ { key: 1, val: 1 }, { key: 2, val: 2 }, { key: 3, val: 3 } ]
- * normalizeMap({a: 1, b: 2, c: 3}) => [ { key: 'a', val: 1 }, { key: 'b', val: 2 }, { key: 'c', val: 3 } ]
- * @param {Array|Object} map
- * @return {Object}
- */
-function normalizeMap (map) {
-  if (!isValidMap(map)) {
-    return []
-  }
-  return Array.isArray(map)
-    ? map.map(function (key) { return ({ key: key, val: key }); })
-    : Object.keys(map).map(function (key) { return ({ key: key, val: map[key] }); })
-}
-
-/**
- * Validate whether given map is valid or not
- * @param {*} map
- * @return {Boolean}
- */
-function isValidMap (map) {
-  return Array.isArray(map) || isObject(map)
-}
-
-/**
- * Return a function expect two param contains namespace and map. it will normalize the namespace and then the param's function will handle the new namespace and the map.
- * @param {Function} fn
- * @return {Function}
- */
-function normalizeNamespace (fn) {
-  return function (namespace, map) {
-    if (typeof namespace !== 'string') {
-      map = namespace;
-      namespace = '';
-    } else if (namespace.charAt(namespace.length - 1) !== '/') {
-      namespace += '/';
-    }
-    return fn(namespace, map)
-  }
-}
-
-/**
- * Search a special module from store by namespace. if module not exist, print error message.
- * @param {Object} store
- * @param {String} helper
- * @param {String} namespace
- * @return {Object}
- */
-function getModuleByNamespace (store, helper, namespace) {
-  var module = store._modulesNamespaceMap[namespace];
-  if (( true) && !module) {
-    console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
-  }
-  return module
-}
-
-// Credits: borrowed code from fcomb/redux-logger
-
-function createLogger (ref) {
-  if ( ref === void 0 ) ref = {};
-  var collapsed = ref.collapsed; if ( collapsed === void 0 ) collapsed = true;
-  var filter = ref.filter; if ( filter === void 0 ) filter = function (mutation, stateBefore, stateAfter) { return true; };
-  var transformer = ref.transformer; if ( transformer === void 0 ) transformer = function (state) { return state; };
-  var mutationTransformer = ref.mutationTransformer; if ( mutationTransformer === void 0 ) mutationTransformer = function (mut) { return mut; };
-  var actionFilter = ref.actionFilter; if ( actionFilter === void 0 ) actionFilter = function (action, state) { return true; };
-  var actionTransformer = ref.actionTransformer; if ( actionTransformer === void 0 ) actionTransformer = function (act) { return act; };
-  var logMutations = ref.logMutations; if ( logMutations === void 0 ) logMutations = true;
-  var logActions = ref.logActions; if ( logActions === void 0 ) logActions = true;
-  var logger = ref.logger; if ( logger === void 0 ) logger = console;
-
-  return function (store) {
-    var prevState = deepCopy(store.state);
-
-    if (typeof logger === 'undefined') {
-      return
-    }
-
-    if (logMutations) {
-      store.subscribe(function (mutation, state) {
-        var nextState = deepCopy(state);
-
-        if (filter(mutation, prevState, nextState)) {
-          var formattedTime = getFormattedTime();
-          var formattedMutation = mutationTransformer(mutation);
-          var message = "mutation " + (mutation.type) + formattedTime;
-
-          startMessage(logger, message, collapsed);
-          logger.log('%c prev state', 'color: #9E9E9E; font-weight: bold', transformer(prevState));
-          logger.log('%c mutation', 'color: #03A9F4; font-weight: bold', formattedMutation);
-          logger.log('%c next state', 'color: #4CAF50; font-weight: bold', transformer(nextState));
-          endMessage(logger);
-        }
-
-        prevState = nextState;
-      });
-    }
-
-    if (logActions) {
-      store.subscribeAction(function (action, state) {
-        if (actionFilter(action, state)) {
-          var formattedTime = getFormattedTime();
-          var formattedAction = actionTransformer(action);
-          var message = "action " + (action.type) + formattedTime;
-
-          startMessage(logger, message, collapsed);
-          logger.log('%c action', 'color: #03A9F4; font-weight: bold', formattedAction);
-          endMessage(logger);
-        }
-      });
-    }
-  }
-}
-
-function startMessage (logger, message, collapsed) {
-  var startMessage = collapsed
-    ? logger.groupCollapsed
-    : logger.group;
-
-  // render
-  try {
-    startMessage.call(logger, message);
-  } catch (e) {
-    logger.log(message);
-  }
-}
-
-function endMessage (logger) {
-  try {
-    logger.groupEnd();
-  } catch (e) {
-    logger.log('—— log end ——');
-  }
-}
-
-function getFormattedTime () {
-  var time = new Date();
-  return (" @ " + (pad(time.getHours(), 2)) + ":" + (pad(time.getMinutes(), 2)) + ":" + (pad(time.getSeconds(), 2)) + "." + (pad(time.getMilliseconds(), 3)))
-}
-
-function repeat (str, times) {
-  return (new Array(times + 1)).join(str)
-}
-
-function pad (num, maxLength) {
-  return repeat('0', maxLength - num.toString().length) + num
-}
-
-var index = {
-  Store: Store,
-  install: install,
-  version: '3.6.2',
-  mapState: mapState,
-  mapMutations: mapMutations,
-  mapGetters: mapGetters,
-  mapActions: mapActions,
-  createNamespacedHelpers: createNamespacedHelpers,
-  createLogger: createLogger
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (index);
-
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -68846,46 +68510,35 @@ module.exports = g;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuetify/dist/vuetify.min.css */ "./node_modules/vuetify/dist/vuetify.min.css");
-/* harmony import */ var vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuetify */ "./node_modules/vuetify/dist/vuetify.js");
-/* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vuetify__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _global_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./global/router */ "./resources/js/app/global/router.js");
-/* harmony import */ var _global_Store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./global/Store */ "./resources/js/app/global/Store.js");
-/* harmony import */ var _global_localization__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./global/localization */ "./resources/js/app/global/localization.js");
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
+/* harmony import */ var vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuetify/dist/vuetify.min.css */ "./node_modules/vuetify/dist/vuetify.min.css");
+/* harmony import */ var vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuetify_dist_vuetify_min_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuetify */ "./node_modules/vuetify/dist/vuetify.js");
+/* harmony import */ var vuetify__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vuetify__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _global_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./global/router */ "./resources/js/app/global/router.js");
+/* harmony import */ var _global_localization__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./global/localization */ "./resources/js/app/global/localization.js");
 // vendor
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"); // 3rd party
-//import '@mdi/font/css/materialdesignicons.css'
 
 
 
 
+ //import store from './global/Store';
+// this is the vuetify theming options
 
- // this is the vuetify theming options
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_2___default.a); // global component registrations here
 
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_3___default.a); // global component registrations here
-
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('settings', __webpack_require__(/*! ./modules/settings.vue */ "./resources/js/app/modules/settings.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('trackingconsent', __webpack_require__(/*! ./modules/trackingConsent.vue */ "./resources/js/app/modules/trackingConsent.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('pagination', __webpack_require__(/*! ./modules/pagination.vue */ "./resources/js/app/modules/pagination.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('search', __webpack_require__(/*! ./pages/search.vue */ "./resources/js/app/pages/search.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('instructions', __webpack_require__(/*! ./modules/instructions.vue */ "./resources/js/app/modules/instructions.vue")["default"]); // Own global JS variables/functions
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('settings', __webpack_require__(/*! ./modules/settings.vue */ "./resources/js/app/modules/settings.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('appheader', __webpack_require__(/*! ./modules/appHeader.vue */ "./resources/js/app/modules/appHeader.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('appfooter', __webpack_require__(/*! ./modules/appFooter.vue */ "./resources/js/app/modules/appFooter.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('trackingconsent', __webpack_require__(/*! ./modules/trackingConsent.vue */ "./resources/js/app/modules/trackingConsent.vue")["default"]); // Own global JS variables/functions
 
 
-vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(_global_localization__WEBPACK_IMPORTED_MODULE_6__["default"]);
-var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
-  vuetify: new vuetify__WEBPACK_IMPORTED_MODULE_3___default.a({
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(_global_localization__WEBPACK_IMPORTED_MODULE_4__["default"]);
+var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
+  vuetify: new vuetify__WEBPACK_IMPORTED_MODULE_2___default.a({
     theme: {
       dark: false,
       themes: {
@@ -68915,47 +68568,66 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
     }
   }),
   el: '#app',
-  router: _global_router__WEBPACK_IMPORTED_MODULE_4__["default"],
-  store: _global_Store__WEBPACK_IMPORTED_MODULE_5__["default"],
+  router: _global_router__WEBPACK_IMPORTED_MODULE_3__["default"],
+  //store,
   data: function data() {
     return {
       loading: false,
-      dialog: {
-        about: false,
-        license: false
-      },
-      consent: null,
-      error: {
-        active: false
-      },
       snack: {
         color: null,
         message: null
       },
-      navigation: ['search', 'overview', 'publications', 'methods', 'history', 'keywords', 'addenda', 'api'],
       // Settings provided by Backend when created
       language: 'en',
-      baseURL: null
+      baseURL: null,
+      statistics: {}
     };
   },
-  created: function created() {//this.drawer.active = this.$vuetify.breakpoint.mdAndUp;
-  },
+  created: function created() {},
   computed: {
-    getBreadcrumbs: function getBreadcrumbs() {
-      return _global_Store__WEBPACK_IMPORTED_MODULE_5__["default"].getters.getBreadcrumbs;
-    },
     labels: function labels() {
       return this.$localization[this.language];
+    },
+    stats: function stats() {
+      var _this$statistics,
+          _this$statistics2,
+          _this = this;
+
+      var stats = {};
+      stats.total = (_this$statistics = this.statistics) === null || _this$statistics === void 0 ? void 0 : _this$statistics.total;
+      stats.date = this.formatDate((_this$statistics2 = this.statistics) === null || _this$statistics2 === void 0 ? void 0 : _this$statistics2.date);
+      stats.dist = {};
+      var total = {
+        normal: 0,
+        eques: 0,
+        senator: 0,
+        total: stats.total
+      };
+      ['female', 'male', 'notKnown'].forEach(function (key) {
+        var _this$statistics$key$, _this$statistics3, _this$statistics$key$2, _this$statistics4, _this$statistics$key$3, _this$statistics5;
+
+        stats.dist[key] = {
+          normal: (_this$statistics$key$ = (_this$statistics3 = _this.statistics) === null || _this$statistics3 === void 0 ? void 0 : _this$statistics3[key].normal) !== null && _this$statistics$key$ !== void 0 ? _this$statistics$key$ : 0,
+          eques: (_this$statistics$key$2 = (_this$statistics4 = _this.statistics) === null || _this$statistics4 === void 0 ? void 0 : _this$statistics4[key].eques) !== null && _this$statistics$key$2 !== void 0 ? _this$statistics$key$2 : 0,
+          senator: (_this$statistics$key$3 = (_this$statistics5 = _this.statistics) === null || _this$statistics5 === void 0 ? void 0 : _this$statistics5[key].senator) !== null && _this$statistics$key$3 !== void 0 ? _this$statistics$key$3 : 0
+        };
+        stats.dist[key].total = stats.dist[key].normal + stats.dist[key].eques + stats.dist[key].senator;
+        total.normal += stats.dist[key].normal;
+        total.eques += stats.dist[key].eques;
+        total.senator += stats.dist[key].senator;
+      });
+      stats.dist.total = total;
+      return stats;
     }
   },
   methods: {
     label: function label(string) {
-      var _this = this;
+      var _this2 = this;
 
       if (string) {
         var response = [];
         string.split(',').forEach(function (value) {
-          if (_this.labels[value]) response.push(_this.labels[value]);else response.push(value.slice(0, 1).toUpperCase() + value.slice(1).replaceAll('_', ' '));
+          if (_this2.labels[value]) response.push(_this2.labels[value]);else response.push(value.slice(0, 1).toUpperCase() + value.slice(1).replaceAll('_', ' '));
         });
         return response.join(" ");
       } else return 'NONE';
@@ -68970,647 +68642,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
 
       if (!date) date = ['----', '--', '--'];else date = (_date = date) === null || _date === void 0 ? void 0 : _date.split('-');
       return this.language === 'de' ? date.reverse().join('.') : [date[1], date[2], date[0]].join('/');
-    },
-    // JK: DBI-API-AXIOS Functions ----------------------------------------------------------------------------------
-    DBI_SELECT_GET: function DBI_SELECT_GET(entity, id) {
-      var _this2 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var self, source, dbi;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                if (!entity) {
-                  _context.next = 8;
-                  break;
-                }
-
-                self = _this2;
-                source = 'dbi/' + entity + (id ? '/' + id : '');
-                dbi = {};
-                console.log('AXIOS: Fetching Data from "' + source + '" using GET. Awaiting Server Response ...');
-                _context.next = 7;
-                return axios.get(source).then(function (response) {
-                  var _dbi$contents, _dbi$contents2, _dbi$contents3;
-
-                  dbi = response.data;
-                  console.log('AXIOS: ' + ((_dbi$contents = dbi.contents) !== null && _dbi$contents !== void 0 && _dbi$contents[0] ? ((_dbi$contents2 = dbi.contents) !== null && _dbi$contents2 !== void 0 && _dbi$contents2[0].id ? (_dbi$contents3 = dbi.contents) === null || _dbi$contents3 === void 0 ? void 0 : _dbi$contents3.length : 0) + ' items' : 'data') + ' received.');
-                  console.log(response);
-                })["catch"](function (error) {
-                  self.AXIOS_ERROR_HANDLER(error);
-                });
-
-              case 7:
-                return _context.abrupt("return", dbi);
-
-              case 8:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    },
-
-    /*async DBI_SELECT_POST (entity, params, search) {
-        if (entity) {
-            const self = this
-            const source = 'dbi/' + entity
-            let dbi = {}
-             console.log ('AXIOS: Fetching Data from "' + source + '" using POST. Awaiting Server Response ...');
-             if (search) {
-                for (const[key, value] of Object.entries(search)) {
-                    params[key] = value
-                }
-            }
-             await axios.post(source, Object.assign ({}, params))
-                .then((response) => {
-                    dbi = response.data
-                    console.log ('AXIOS: ' + (dbi.contents?.[0] ? ((dbi.contents?.[0].id ? dbi.contents?.length : 0) + ' items') : 'data') + ' received.')
-                    console.log (response)
-                })
-                .catch((error) => {
-                    self.AXIOS_ERROR_HANDLER (error)
-                })
-             return dbi
-        }
-    },*/
-    AXIOS_ERROR_HANDLER: function AXIOS_ERROR_HANDLER(error) {
-      this.snackbar('System Error!', 'error');
-      console.log('RESPONSE CHECK: System Error:');
-      console.log(error);
-      this.error = {
-        active: true,
-        validation: null,
-        resource: error.config ? error.config.url ? error.config.url : 'unknown' : 'unknown',
-        exception: error.response ? error.response.data.exception : error.request ? error.request.data.exception : 'unknown',
-        message: error.response ? error.response.data.message : error.request ? error.request.data.message : error.message ? error.message : '--',
-        params: error.config ? error.config.data ? error.config.data : 'none given' : 'none given'
-      };
     }
   }
-});
-
-/***/ }),
-
-/***/ "./resources/js/app/global/Store.js":
-/*!******************************************!*\
-  !*** ./resources/js/app/global/Store.js ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _StoreModules_entitylists__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./StoreModules/entitylists */ "./resources/js/app/global/StoreModules/entitylists.js");
-/* harmony import */ var _StoreModules_screenkeys__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./StoreModules/screenkeys */ "./resources/js/app/global/StoreModules/screenkeys.js");
-/*
-|--------------------------------------------------------------------------
-| VueX Store Main file
-|--------------------------------------------------------------------------
-|
-| Here is where you can control and manipulate the VueX Store. Please create
-| separate files for additional non-global content (e.g. specific requests).
-| You can store these additional files in the StoreModules directory. Don't
-| forget to register these files in the modules section of this main file.
-|
-*/
-// import Vue components
-
- //  import StorModules here (you may choose an alias if you want):
-//import attributes   from './StoreModules/entityattributes';
-
-
- //import objects      from './StoreModules/objects';
-
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
-/* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
-  modules: {
-    //attributes,
-    lists: _StoreModules_entitylists__WEBPACK_IMPORTED_MODULE_2__["default"],
-    screenkeys: _StoreModules_screenkeys__WEBPACK_IMPORTED_MODULE_3__["default"] //objects
-
-  },
-  state: {
-    // basic form
-    ItemsPerPage: [6, 12, 18, 24, 36, 48],
-    // JK: Limit of Items in "DataItems"
-    ItemsScales: [// JK: Grid of Cards in "DataItems"
-    {
-      sm: 3,
-      md: 2,
-      lg: 1,
-      text: 'small'
-    }, {
-      sm: 4,
-      md: 3,
-      lg: 2,
-      text: 'medium'
-    }, {
-      sm: 6,
-      md: 6,
-      lg: 4,
-      text: 'large'
-    }],
-    // SearchItem
-    displayMode: 0,
-    previousSearches: {
-      coins: [],
-      types: []
-    },
-    // SimpleDataTemplate
-    std_display: null,
-    std_filters: true,
-    // Old Stuff - needs to be investigated!
-    dt_ItemsPerPage: [10, 20, 50],
-    // JK: number of items per page for data table - OLD OLD OLD !
-    // InputCheck
-    InputCheckDialog: false,
-    InputCheckMessage: null,
-    // Starterkit Defaults --------------------------------------*/
-    breadcrumbs: [],
-    showLoader: false
-  },
-  actions: {},
-  mutations: {
-    set_display_mode: function set_display_mode(state, input) {
-      state.displayMode = input;
-    },
-    set_previous_search: function set_previous_search(state, input) {
-      state.previousSearches[input.entity] = input.data;
-    },
-    set_std_display: function set_std_display(state, input) {
-      state.std_display = input;
-    },
-    set_std_filters: function set_std_filters(state) {
-      state.std_filters = !state.std_filters;
-    },
-    // Starterkit Defaults --------------------------------------
-    setBreadcrumbs: function setBreadcrumbs(state, items) {
-      // breadcrumbs
-      items.unshift({
-        label: 'Editor',
-        to: {
-          name: 'dashboard'
-        }
-      });
-      state.breadcrumbs = items;
-    },
-    // loader
-    showLoader: function showLoader(state) {
-      // loader
-      state.showLoader = true;
-    },
-    hideLoader: function hideLoader(state) {
-      state.showLoader = false;
-    }
-  },
-  getters: {
-    // Starterkit Defaults --------------------------------------
-    getBreadcrumbs: function getBreadcrumbs(state) {
-      // get breadcrumbs
-      return state.breadcrumbs;
-    },
-    // loader
-    showLoader: function showLoader(state) {
-      return state.showLoader;
-    }
-  }
-}));
-
-/***/ }),
-
-/***/ "./resources/js/app/global/StoreModules/entitylists.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/app/global/StoreModules/entitylists.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Entity Lists Module
-/* harmony default export */ __webpack_exports__["default"] = ({
-  state: {
-    /*data: {
-        authorities: [],
-        denominations: [],
-        designs: [],
-        designs_obverse: [],
-        designs_reverse: [],
-        dies: [],
-        dies_obverse: [],
-        dies_reverse: [],
-        epochs: [],
-        findspots: [],
-        functions: [],
-        hoards: [],
-        legend_directions: [],
-        legends: [],
-        legends_obverse: [],
-        legends_reverse: [],
-        materials: [],
-        mints: [],
-        monograms: [],
-        objectgroups: [],
-        owners: [],
-        persons: [],
-        positions: [],
-        references: [],
-        regions: [],
-        standards: [],
-        symbols: [],
-        tribes: [],
-        controlmarks: [],
-        users: []
-    },*/
-    cache: {},
-    manual: {
-      imports: [{
-        value: null,
-        text: 'none'
-      }, {
-        value: 'TypeCopy',
-        text: 'TypeCopy'
-      }, {
-        value: 'Import',
-        text: 'Münzkabinett 1'
-      }, {
-        value: 'Import2',
-        text: 'Münzkabinett 2'
-      }, {
-        value: 'Import3',
-        text: 'Münzkabinett3'
-      }, {
-        value: 'Import4',
-        text: 'Münzkabinett 4'
-      }, {
-        value: 'Import5',
-        text: 'Münzkabinett 5'
-      }, {
-        value: 'Import6',
-        text: 'Münzkabinett 6'
-      }, {
-        value: 'Import7',
-        text: 'Münzkabinett 7'
-      }, {
-        value: 'ImportParis',
-        text: 'Paris 1'
-      }, {
-        value: 'ImportParis2',
-        text: 'Paris 2'
-      }]
-    },
-    dropdowns: {
-      legends_languages: [{
-        value: 'el',
-        text: 'greek'
-      }, {
-        value: 'la',
-        text: 'latin'
-      }],
-      sides: [{
-        value: 0,
-        text: 'obverse'
-      }, {
-        value: 1,
-        text: 'reverse'
-      }, {
-        value: 2,
-        text: 'obverse,&,reverse'
-      }],
-      typeCoin: [{
-        value: 0,
-        text: 'coin'
-      }, {
-        value: 1,
-        text: 'type'
-      }, {
-        value: 2,
-        text: 'coin,&,type'
-      }],
-      yesNo: [{
-        value: 0,
-        text: 'no'
-      }, {
-        value: 1,
-        text: 'yes'
-      }]
-    }
-  },
-  mutations: {
-    SET_ENTITYLIST: function SET_ENTITYLIST(state, input) {
-      state.data[input.entity] = input.data;
-    },
-    SET_LIST: function SET_LIST(state, input) {
-      state.cache[input.entity] = input.data;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./resources/js/app/global/StoreModules/screenkeys.js":
-/*!************************************************************!*\
-  !*** ./resources/js/app/global/StoreModules/screenkeys.js ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// Screen Keys
-/* harmony default export */ __webpack_exports__["default"] = ({
-  state: {
-    el_uc: [// JK: Greek capital letters without anything else
-    {
-      value: 'Α',
-      text: 'Alpha'
-    }, {
-      value: 'Β',
-      text: 'Beta'
-    }, {
-      value: 'Γ',
-      text: 'Gamma'
-    }, {
-      value: 'Δ',
-      text: 'Delta'
-    }, {
-      value: 'Ε',
-      text: 'Epsilon'
-    }, {
-      value: 'Ζ',
-      text: 'Zeta'
-    }, {
-      value: 'Η',
-      text: 'Eta'
-    }, {
-      value: 'Θ',
-      text: 'Theta'
-    }, {
-      value: 'Ι',
-      text: 'Iota'
-    }, {
-      value: 'Κ',
-      text: 'Kappa'
-    }, {
-      value: 'Λ',
-      text: 'Lambda'
-    }, {
-      value: 'Μ',
-      text: 'Mu'
-    }, {
-      value: 'Ν',
-      text: 'Nu'
-    }, {
-      value: 'Ξ',
-      text: 'Xi'
-    }, {
-      value: 'Ο',
-      text: 'Omicron'
-    }, {
-      value: 'Π',
-      text: 'Pi'
-    }, {
-      value: 'Ρ',
-      text: 'Rho'
-    }, {
-      value: 'Σ',
-      text: 'Sigma'
-    }, {
-      value: 'Τ',
-      text: 'Tau'
-    }, {
-      value: 'Υ',
-      text: 'Ypsilon'
-    }, {
-      value: 'Φ',
-      text: 'Phi'
-    }, {
-      value: 'Χ',
-      text: 'Chi'
-    }, {
-      value: 'Ψ',
-      text: 'Psi'
-    }, {
-      value: 'Ω',
-      text: 'Omega'
-    }],
-    el_uc_adv: [// JK: Greek capital letters extended
-    {
-      value: 'Α',
-      text: 'Alpha'
-    }, {
-      value: 'Β',
-      text: 'Beta'
-    }, {
-      value: 'Γ',
-      text: 'Gamma'
-    }, {
-      value: 'Δ',
-      text: 'Delta'
-    }, {
-      value: 'Ε',
-      text: 'Epsilon'
-    }, {
-      value: 'Є',
-      text: 'Epsilon'
-    }, {
-      value: 'Ζ',
-      text: 'Zeta'
-    }, {
-      value: 'Η',
-      text: 'Eta'
-    }, {
-      value: 'Θ',
-      text: 'Theta'
-    }, {
-      value: 'Ι',
-      text: 'Iota'
-    }, {
-      value: 'Κ',
-      text: 'Kappa'
-    }, {
-      value: 'Λ',
-      text: 'Lambda'
-    }, {
-      value: 'Μ',
-      text: 'Mu'
-    }, {
-      value: 'Ν',
-      text: 'Nu'
-    }, {
-      value: 'Ξ',
-      text: 'Xi'
-    }, {
-      value: 'Ο',
-      text: 'Omicron'
-    }, {
-      value: 'Π',
-      text: 'Pi'
-    }, {
-      value: 'Ρ',
-      text: 'Rho'
-    }, {
-      value: 'Σ',
-      text: 'Sigma'
-    }, {
-      value: 'ᛈ',
-      text: 'Sigma'
-    }, {
-      value: 'Ϲ',
-      text: 'Sigma'
-    }, {
-      value: 'Τ',
-      text: 'Tau'
-    }, {
-      value: 'Υ',
-      text: 'Ypsilon'
-    }, {
-      value: 'V',
-      text: 'Ypsilon'
-    }, {
-      value: 'Φ',
-      text: 'Phi'
-    }, {
-      value: 'Χ',
-      text: 'Chi'
-    }, {
-      value: 'Ψ',
-      text: 'Psi'
-    }, {
-      value: 'Ω',
-      text: 'Omega'
-    }, {
-      value: 'W',
-      text: 'W'
-    }],
-    critical: [// Critical Signs
-    {
-      value: '.',
-      text: 'Dot'
-    }, //{ value: '·', text: 'Colon' },
-    {
-      value: '•',
-      text: 'Colon'
-    }, {
-      value: '*',
-      text: 'Star'
-    }, {
-      value: '–',
-      text: 'Dash'
-    }, {
-      value: '/',
-      text: 'Slash'
-    }, {
-      value: '(',
-      text: '('
-    }, {
-      value: ')',
-      text: ')'
-    }, {
-      value: '{',
-      text: '{'
-    }, {
-      value: '}',
-      text: '}'
-    }, {
-      value: '[',
-      text: '['
-    }, {
-      value: ']',
-      text: ']'
-    }, {
-      value: '[...]',
-      text: 'Omission Sign'
-    }],
-    la_uc: [// JK: Latin capital letters without anything else
-    {
-      value: 'A',
-      text: 'A'
-    }, {
-      value: 'B',
-      text: 'B'
-    }, {
-      value: 'C',
-      text: 'C'
-    }, {
-      value: 'D',
-      text: 'V'
-    }, {
-      value: 'E',
-      text: 'E'
-    }, {
-      value: 'F',
-      text: 'F'
-    }, {
-      value: 'G',
-      text: 'G'
-    }, {
-      value: 'H',
-      text: 'H'
-    }, {
-      value: 'I',
-      text: 'I'
-    }, {
-      value: 'J',
-      text: 'J'
-    }, {
-      value: 'K',
-      text: 'K'
-    }, {
-      value: 'L',
-      text: 'L'
-    }, {
-      value: 'M',
-      text: 'M'
-    }, {
-      value: 'N',
-      text: 'N'
-    }, {
-      value: 'O',
-      text: 'O'
-    }, {
-      value: 'P',
-      text: 'P'
-    }, {
-      value: 'Q',
-      text: 'Q'
-    }, {
-      value: 'R',
-      text: 'R'
-    }, {
-      value: 'S',
-      text: 'S'
-    }, {
-      value: 'T',
-      text: 'T'
-    }, {
-      value: 'U',
-      text: 'U'
-    }, {
-      value: 'V',
-      text: 'V'
-    }, {
-      value: 'W',
-      text: 'W'
-    }, {
-      value: 'X',
-      text: 'X'
-    }, {
-      value: 'Y',
-      text: 'Y'
-    }, {
-      value: 'Z',
-      text: 'Z'
-    }]
-  },
-  actions: {},
-  mutations: {}
 });
 
 /***/ }),
@@ -69673,18 +68706,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         search_gender_all: 'Alle',
         search_gender_female: 'Weiblich',
         search_gender_male: 'Männlich',
+        search_gender_notKnown: 'Unbekannt',
+        search_gender_total: 'Alle',
         search_class: 'Soziale Gruppe',
         search_class_all: 'Alle',
-        search_class_normal: 'kein Adel',
-        search_class_eques: 'ordo equester',
+        search_class_normal: 'Normal',
+        search_class_eques: 'equester ordo',
         search_class_senator: 'ordo senatorius',
+        search_class_total: 'Alle',
         nav_search: 'Suche',
         nav_overview: 'Überblick',
         nav_publications: 'Publikationen',
         nav_methods: 'Arbeitsweise',
         nav_history: 'Geschichte',
-        nav_keywords: 'Stichwortliste',
-        nav_addenda: 'Addenda',
+        nav_resources: 'Ressourcen',
         nav_api: 'API',
         cite_item: 'Zitiervorschlag',
         cite_date: 'abgerufen am',
@@ -69744,33 +68779,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         search_gender_all: 'All',
         search_gender_female: 'Female',
         search_gender_male: 'Male',
+        search_gender_notKnown: 'Not known',
+        search_gender_total: 'All',
         search_class: 'Social Class',
         search_class_all: 'All',
-        search_class_normal: 'No nobiles',
-        search_class_eques: 'ordo equester',
-        search_class_senator: 'ordo senatorius',
-        nav_search: 'Search',
-        nav_overview: 'Overview',
-        nav_publications: 'Publications',
-        nav_methods: 'Methods',
-        nav_history: 'History',
-        nav_keywords: 'Keywords',
-        nav_addenda: 'Addenda',
-        nav_api: 'API',
-        cite_item: 'Proposed citation',
-        cite_date: 'downloaded at',
-        clipboard_copy: 'Copy to clipboard',
-        clipboard_copied: 'Value was copied to clipboard',
-        reference: 'Reference',
-        add_tribe: 'Tribe',
-        add_origin: 'Origin',
-        add_lifespan: 'Lifespan',
-        add_career: 'Career',
-        add_occupations: 'Other occupations',
-        add_relatives: 'Relatives',
-        add_article: 'Article',
-        add_sources: 'Career'
-      }, _defineProperty(_en, "add_sources", 'Sources'), _defineProperty(_en, "add_literature", 'Literature'), _defineProperty(_en, "add_notes", 'Notes'), _en)
+        search_class_normal: 'Normal',
+        search_class_eques: 'equester ordo',
+        search_class_senator: 'ordo senatorius'
+      }, _defineProperty(_en, "search_gender_total", 'All'), _defineProperty(_en, "nav_search", 'Search'), _defineProperty(_en, "nav_overview", 'Overview'), _defineProperty(_en, "nav_publications", 'Publications'), _defineProperty(_en, "nav_methods", 'Methods'), _defineProperty(_en, "nav_history", 'History'), _defineProperty(_en, "nav_resources", 'Resources'), _defineProperty(_en, "nav_api", 'API'), _defineProperty(_en, "cite_item", 'Proposed citation'), _defineProperty(_en, "cite_date", 'downloaded at'), _defineProperty(_en, "clipboard_copy", 'Copy to clipboard'), _defineProperty(_en, "clipboard_copied", 'Value was copied to clipboard'), _defineProperty(_en, "reference", 'Reference'), _defineProperty(_en, "add_tribe", 'Tribe'), _defineProperty(_en, "add_origin", 'Origin'), _defineProperty(_en, "add_lifespan", 'Lifespan'), _defineProperty(_en, "add_career", 'Career'), _defineProperty(_en, "add_occupations", 'Other occupations'), _defineProperty(_en, "add_relatives", 'Relatives'), _defineProperty(_en, "add_article", 'Article'), _defineProperty(_en, "add_sources", 'Career'), _defineProperty(_en, "add_sources", 'Sources'), _defineProperty(_en, "add_literature", 'Literature'), _defineProperty(_en, "add_notes", 'Notes'), _en)
     };
   }
 });
@@ -69796,7 +68812,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '/',
-    redirect: '/search'
+    redirect: '/overview'
   }, {
     path: '/search',
     name: 'search',
@@ -69818,13 +68834,9 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     name: 'history',
     component: __webpack_require__(/*! ./../pages/history */ "./resources/js/app/pages/history.vue")["default"]
   }, {
-    path: '/keywords',
-    name: 'keywords',
-    component: __webpack_require__(/*! ./../pages/keywords */ "./resources/js/app/pages/keywords.vue")["default"]
-  }, {
-    path: '/addenda',
-    name: 'addenda',
-    component: __webpack_require__(/*! ./../pages/addenda */ "./resources/js/app/pages/addenda.vue")["default"]
+    path: '/resources',
+    name: 'resources',
+    component: __webpack_require__(/*! ./../pages/resources */ "./resources/js/app/pages/resources.vue")["default"]
   }, {
     path: '/api',
     name: 'api',
@@ -69844,17 +68856,17 @@ router.afterEach(function (to, from) {
 
 /***/ }),
 
-/***/ "./resources/js/app/modules/instructions.vue":
-/*!***************************************************!*\
-  !*** ./resources/js/app/modules/instructions.vue ***!
-  \***************************************************/
+/***/ "./resources/js/app/modules/appFooter.vue":
+/*!************************************************!*\
+  !*** ./resources/js/app/modules/appFooter.vue ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./instructions.vue?vue&type=template&id=cc68594e& */ "./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e&");
-/* harmony import */ var _instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./instructions.vue?vue&type=script&lang=js& */ "./resources/js/app/modules/instructions.vue?vue&type=script&lang=js&");
+/* harmony import */ var _appFooter_vue_vue_type_template_id_0bff18d0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./appFooter.vue?vue&type=template&id=0bff18d0& */ "./resources/js/app/modules/appFooter.vue?vue&type=template&id=0bff18d0&");
+/* harmony import */ var _appFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./appFooter.vue?vue&type=script&lang=js& */ "./resources/js/app/modules/appFooter.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -69864,9 +68876,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _appFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _appFooter_vue_vue_type_template_id_0bff18d0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _appFooter_vue_vue_type_template_id_0bff18d0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -69876,38 +68888,107 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/app/modules/instructions.vue"
+component.options.__file = "resources/js/app/modules/appFooter.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/app/modules/instructions.vue?vue&type=script&lang=js&":
-/*!****************************************************************************!*\
-  !*** ./resources/js/app/modules/instructions.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************/
+/***/ "./resources/js/app/modules/appFooter.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/app/modules/appFooter.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./instructions.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/instructions.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_appFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./appFooter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/appFooter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_appFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e& ***!
-  \**********************************************************************************/
+/***/ "./resources/js/app/modules/appFooter.vue?vue&type=template&id=0bff18d0&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/app/modules/appFooter.vue?vue&type=template&id=0bff18d0& ***!
+  \*******************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./instructions.vue?vue&type=template&id=cc68594e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/instructions.vue?vue&type=template&id=cc68594e&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appFooter_vue_vue_type_template_id_0bff18d0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./appFooter.vue?vue&type=template&id=0bff18d0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/appFooter.vue?vue&type=template&id=0bff18d0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appFooter_vue_vue_type_template_id_0bff18d0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_instructions_vue_vue_type_template_id_cc68594e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appFooter_vue_vue_type_template_id_0bff18d0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/app/modules/appHeader.vue":
+/*!************************************************!*\
+  !*** ./resources/js/app/modules/appHeader.vue ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _appHeader_vue_vue_type_template_id_1b32d78a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./appHeader.vue?vue&type=template&id=1b32d78a& */ "./resources/js/app/modules/appHeader.vue?vue&type=template&id=1b32d78a&");
+/* harmony import */ var _appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./appHeader.vue?vue&type=script&lang=js& */ "./resources/js/app/modules/appHeader.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _appHeader_vue_vue_type_template_id_1b32d78a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _appHeader_vue_vue_type_template_id_1b32d78a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/modules/appHeader.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/modules/appHeader.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/app/modules/appHeader.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./appHeader.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/appHeader.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/modules/appHeader.vue?vue&type=template&id=1b32d78a&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/app/modules/appHeader.vue?vue&type=template&id=1b32d78a& ***!
+  \*******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_template_id_1b32d78a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./appHeader.vue?vue&type=template&id=1b32d78a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/modules/appHeader.vue?vue&type=template&id=1b32d78a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_template_id_1b32d78a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_template_id_1b32d78a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -70120,75 +69201,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/app/pages/addenda.vue":
-/*!********************************************!*\
-  !*** ./resources/js/app/pages/addenda.vue ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addenda.vue?vue&type=template&id=6aebfa80& */ "./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80&");
-/* harmony import */ var _addenda_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addenda.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/addenda.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _addenda_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/app/pages/addenda.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/app/pages/addenda.vue?vue&type=script&lang=js&":
-/*!*********************************************************************!*\
-  !*** ./resources/js/app/pages/addenda.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./addenda.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/addenda.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80&":
-/*!***************************************************************************!*\
-  !*** ./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80& ***!
-  \***************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./addenda.vue?vue&type=template&id=6aebfa80& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/addenda.vue?vue&type=template&id=6aebfa80&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_addenda_vue_vue_type_template_id_6aebfa80___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
 /***/ "./resources/js/app/pages/api.vue":
 /*!****************************************!*\
   !*** ./resources/js/app/pages/api.vue ***!
@@ -70322,75 +69334,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_history_vue_vue_type_template_id_92eaf466___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_history_vue_vue_type_template_id_92eaf466___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/app/pages/keywords.vue":
-/*!*********************************************!*\
-  !*** ./resources/js/app/pages/keywords.vue ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./keywords.vue?vue&type=template&id=34a428c1& */ "./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1&");
-/* harmony import */ var _keywords_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./keywords.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/keywords.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _keywords_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/app/pages/keywords.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/app/pages/keywords.vue?vue&type=script&lang=js&":
-/*!**********************************************************************!*\
-  !*** ./resources/js/app/pages/keywords.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./keywords.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/keywords.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1&":
-/*!****************************************************************************!*\
-  !*** ./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1& ***!
-  \****************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./keywords.vue?vue&type=template&id=34a428c1& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/keywords.vue?vue&type=template&id=34a428c1&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_keywords_vue_vue_type_template_id_34a428c1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -70603,6 +69546,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/app/pages/resources.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/app/pages/resources.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _resources_vue_vue_type_template_id_136aeac4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./resources.vue?vue&type=template&id=136aeac4& */ "./resources/js/app/pages/resources.vue?vue&type=template&id=136aeac4&");
+/* harmony import */ var _resources_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./resources.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/resources.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _resources_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _resources_vue_vue_type_template_id_136aeac4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _resources_vue_vue_type_template_id_136aeac4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/pages/resources.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/resources.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/app/pages/resources.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_resources_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./resources.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/resources.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_resources_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/resources.vue?vue&type=template&id=136aeac4&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/app/pages/resources.vue?vue&type=template&id=136aeac4& ***!
+  \*****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_resources_vue_vue_type_template_id_136aeac4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./resources.vue?vue&type=template&id=136aeac4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/resources.vue?vue&type=template&id=136aeac4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_resources_vue_vue_type_template_id_136aeac4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_resources_vue_vue_type_template_id_136aeac4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/app/pages/search.vue":
 /*!*******************************************!*\
   !*** ./resources/js/app/pages/search.vue ***!
@@ -70667,6 +69679,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_search_vue_vue_type_template_id_4627937f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_search_vue_vue_type_template_id_4627937f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/search_instructions.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/app/pages/search_instructions.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _search_instructions_vue_vue_type_template_id_080922d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search_instructions.vue?vue&type=template&id=080922d6& */ "./resources/js/app/pages/search_instructions.vue?vue&type=template&id=080922d6&");
+/* harmony import */ var _search_instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./search_instructions.vue?vue&type=script&lang=js& */ "./resources/js/app/pages/search_instructions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _search_instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _search_instructions_vue_vue_type_template_id_080922d6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _search_instructions_vue_vue_type_template_id_080922d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/app/pages/search_instructions.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/search_instructions.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/app/pages/search_instructions.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_search_instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./search_instructions.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/search_instructions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_search_instructions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/app/pages/search_instructions.vue?vue&type=template&id=080922d6&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/app/pages/search_instructions.vue?vue&type=template&id=080922d6& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_search_instructions_vue_vue_type_template_id_080922d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./search_instructions.vue?vue&type=template&id=080922d6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/app/pages/search_instructions.vue?vue&type=template&id=080922d6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_search_instructions_vue_vue_type_template_id_080922d6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_search_instructions_vue_vue_type_template_id_080922d6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

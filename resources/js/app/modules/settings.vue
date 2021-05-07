@@ -19,6 +19,7 @@ export default {
 
                 this.$root.language = Object.keys(this.$localization).includes(data.language) ? data.language : 'en'
                 this.$root.baseURL = data.baseURL
+                this.$root.statistics = data.statistics
             }
         }
     }

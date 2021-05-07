@@ -3,23 +3,20 @@ window.Vue = require('vue');
 window.axios = require('axios');
 
 // 3rd party
-//import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/dist/vuetify.min.css';
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import router from './global/router';
-import store from './global/Store';
+//import store from './global/Store';
 
 // this is the vuetify theming options
 Vue.use(Vuetify);
 
 // global component registrations here
 Vue.component('settings',       require('./modules/settings.vue').default);
+Vue.component('appheader',      require('./modules/appHeader.vue').default);
+Vue.component('appfooter',      require('./modules/appFooter.vue').default);
 Vue.component('trackingconsent',require('./modules/trackingConsent.vue').default);
-Vue.component('pagination',     require('./modules/pagination.vue').default);
-Vue.component('search',         require('./pages/search.vue').default);
-Vue.component('instructions',   require('./modules/instructions.vue').default);
-
 
 // Own global JS variables/functions
 import localization from './global/localization';
@@ -30,7 +27,6 @@ Vue.use(localization);
 const app = new Vue({
 
     vuetify: new Vuetify({
-
         theme: {
             dark: false,
             themes: {
@@ -57,7 +53,6 @@ const app = new Vue({
                 },
             },
         },
-
         icons: {
             iconfont: 'md'
         }
@@ -65,53 +60,59 @@ const app = new Vue({
 
     el: '#app',
     router,
-    store,
-
+    //store,
 
     data () {
         return {
             loading: false,
-            dialog: {
-                about: false,
-                license: false
-            },
-            consent: null,
-            error: {
-                active: false
-            },
+
             snack: {
                 color: null,
                 message: null
             },
 
-            navigation: [
-                'search',
-                'overview',
-                'publications',
-                'methods',
-                'history',
-                'keywords',
-                'addenda',
-                'api',
-            ],
-
             // Settings provided by Backend when created
             language: 'en',
             baseURL: null,
+            statistics: {},
         }
     },
 
-    created () {
-        //this.drawer.active = this.$vuetify.breakpoint.mdAndUp;
-    },
+    created () {},
 
     computed: {
-        getBreadcrumbs() {
-            return store.getters.getBreadcrumbs
-        },
-
         labels() {
             return this.$localization[this.language]
+        },
+        stats () {
+            const stats = {}
+
+            stats.total = this.statistics?.total
+            stats.date = this.formatDate(this.statistics?.date)
+            stats.dist = {}
+            const total = {
+                normal: 0,
+                eques: 0,
+                senator: 0,
+                total: stats.total
+            }
+
+            ;['female', 'male', 'notKnown'].forEach((key) => {
+                stats.dist[key] = {
+                    normal: this.statistics?.[key].normal ?? 0,
+                    eques: this.statistics?.[key].eques ?? 0,
+                    senator: this.statistics?.[key].senator ?? 0,
+                }
+                stats.dist[key].total = stats.dist[key].normal + stats.dist[key].eques + stats.dist[key].senator
+
+                total.normal += stats.dist[key].normal
+                total.eques += stats.dist[key].eques
+                total.senator += stats.dist[key].senator
+            })
+
+            stats.dist.total = total
+
+            return stats
         }
     },
 
@@ -136,72 +137,6 @@ const app = new Vue({
             if (!date) date = ['----', '--', '--']
             else date = date?.split('-')
             return this.language === 'de' ? date.reverse().join('.') : [date[1], date[2], date[0]].join('/')
-        },
-
-        // JK: DBI-API-AXIOS Functions ----------------------------------------------------------------------------------
-        async DBI_SELECT_GET (entity, id) {
-            if (entity) {
-                const self = this
-                const source = 'dbi/' + entity + (id ? ('/' + id) : '')
-                let dbi = {}
-
-                console.log('AXIOS: Fetching Data from "' + source + '" using GET. Awaiting Server Response ...');
-
-                await axios.get(source)
-                    .then((response) => {
-                        dbi = response.data
-                        console.log('AXIOS: ' + (dbi.contents?.[0] ? ((dbi.contents?.[0].id ? dbi.contents?.length : 0) + ' items') : 'data') + ' received.')
-                        console.log(response)
-                    })
-                    .catch((error) => {
-                        self.AXIOS_ERROR_HANDLER(error)
-                    })
-
-                return dbi
-            }
-        },
-
-        /*async DBI_SELECT_POST (entity, params, search) {
-            if (entity) {
-                const self = this
-                const source = 'dbi/' + entity
-                let dbi = {}
-
-                console.log ('AXIOS: Fetching Data from "' + source + '" using POST. Awaiting Server Response ...');
-
-                if (search) {
-                    for (const[key, value] of Object.entries(search)) {
-                        params[key] = value
-                    }
-                }
-
-                await axios.post(source, Object.assign ({}, params))
-                    .then((response) => {
-                        dbi = response.data
-                        console.log ('AXIOS: ' + (dbi.contents?.[0] ? ((dbi.contents?.[0].id ? dbi.contents?.length : 0) + ' items') : 'data') + ' received.')
-                        console.log (response)
-                    })
-                    .catch((error) => {
-                        self.AXIOS_ERROR_HANDLER (error)
-                    })
-
-                return dbi
-            }
-        },*/
-
-        AXIOS_ERROR_HANDLER (error) {
-            this.snackbar('System Error!', 'error')
-            console.log('RESPONSE CHECK: System Error:')
-            console.log(error)
-
-            this.error = {
-                active:     true,
-                validation: null,
-                resource:   error.config   ? (error.config.url ? error.config.url : 'unknown') : 'unknown',
-                exception:  error.response ? error.response.data.exception : (error.request ? error.request.data.exception : 'unknown'),
-                message:    error.response ? error.response.data.message   : (error.request ? error.request.data.message   : (error.message ? error.message : '--') ),
-                params:     error.config   ? (error.config.data ? error.config.data : 'none given') : 'none given'
-            }
         }
     }
 });

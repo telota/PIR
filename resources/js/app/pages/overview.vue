@@ -6,7 +6,7 @@
 
             <!--<template v-if="$root.language === 'de'">-->
                 <p>
-                    Die Prosopographia Imperii Romani (PIR) ist ein Personenlexikon.<br />
+                    Die Prosopographia Imperii Romani (PIR) ist ein Personenlexikon.<br/><br/>
                     Es soll im wesentlichen die Führungsschicht des Römischen Reiches in der Frühen und Hohen Kaiserzeit erfassen.
                     Die untere zeitliche Grenze ist die Schlacht von Aktium 31 v. Chr., seit der die monarchische Herrschaftsstruktur für Rom endgültig geworden war;
                     die obere Grenze bildet die Herrschaft Diokletians (284-305),
@@ -35,6 +35,30 @@
                         so etwa Herodes d. Gr. in Iudaea oder die Könige des Partherreiches.
                     </li>
                 </ol>
+
+                <p class="mt-5">
+                    Quantitativ setzt sich der behandelte Personenkreis wie folgt zusammen:
+                </p>
+                <table class="mb-5">
+                    <tr>
+                        <td />
+                        <td
+                            v-for="(key) in ['normal', 'eques', 'senator', 'total']"
+                            :key="'th' + key"
+                            class="font-weight-bold pb-1 pl-5 text-right"
+                            v-text="$root.label('search_class_' + key)"
+                        />
+                    </tr>
+                    <tr v-for="(row, key, tr) in stats.dist" :key="'d' + tr">
+                        <td class="font-weight-bold" v-text="$root.label('search_gender_' + key)" />
+                        <td
+                            v-for="(cell, td) in row"
+                            :key="'d' + tr + td"
+                            class="pl-5 text-right"
+                            v-text="cell"
+                        />
+                    </tr>
+                </table>
             <!--</template>-->
 
         </v-card>
@@ -58,7 +82,13 @@
 
 <script>
 
-export default {}
+export default {
+    computed: {
+        stats () {
+            return this.$root.stats
+        }
+    }
+}
 
 </script>
 
