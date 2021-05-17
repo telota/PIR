@@ -33,6 +33,7 @@
             if (decodedCookie.includes('mtm_cookie_consent=')) {
                 console.log('Tracking Consent given');
                 removeTrackingDialog();
+                enableTracking();
             }
             // Enable Tracking
             else {
