@@ -16,7 +16,7 @@ Vue.use(Vuetify);
 Vue.component('settings',       require('./modules/settings.vue').default);
 Vue.component('appheader',      require('./modules/appHeader.vue').default);
 Vue.component('appfooter',      require('./modules/appFooter.vue').default);
-Vue.component('trackingconsent',require('./modules/trackingConsent.vue').default);
+//Vue.component('trackingconsent',require('./modules/trackingConsent.vue').default);
 
 // Own global JS variables/functions
 import localization from './global/localization';

@@ -32,8 +32,8 @@
             </v-row>
         </v-main>
 
-        <!-- Tracking Consent -->
-        <trackingconsent></trackingconsent>
+        <!-- Tracking Consent
+        <trackingconsent></trackingconsent>-->
 
         <!-- Footer -->
         <appfooter></appfooter>
