@@ -16,7 +16,7 @@ class DataConverter {
         ];
 
         foreach ($data as $key => $val) {
-            if ($key !== 'string' && $key !== 'id') {
+            if (!in_array($key, ['string', 'class', 'id']) && !empty($val)) {
                 if ($key === 'annotated') $key = 'name';
                 if ($key === 'updated_at') $key = 'modified';
                 $return[] = $key.":\n".$val;
@@ -24,6 +24,33 @@ class DataConverter {
         }
 
         return implode("\n\n", $return);
+    }
+
+    public function json ($data) {
+
+        $data = $this->removeTustepComments($data[0]);
+        $return = [
+            'id' => $data['id'],
+            'publisher' => [
+                'id' => 'https://pir.bbaw.de',
+                'value' => 'Prosopographia Imperii Romani, Berlin-Brandenburg Academy of Sciences and Humanities, Jägerstraße 22/23, 10117 Berlin, Germany'
+            ],
+            'license' => [
+                'id' => 'https://creativecommons.org/licenses/by/4.0',
+                'value' => 'CC BY 4.0'
+            ]
+        ];
+
+        foreach ($data as $key => $val) {
+            if (!in_array($key, ['string', 'class', 'id']) && !empty($val)) {
+                if ($key === 'annotated') $key = 'name';
+                if ($key === 'updated_at') $key = 'modified';
+
+                $return[$key] = $val;
+            }
+        }
+
+        return Response::json($return);
     }
 
     public function jsonld ($data) {

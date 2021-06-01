@@ -23,7 +23,7 @@ class dbiController extends Controller {
             if (empty($dbi['contents'][0]['id'])) die(abort(404, 'unknown ID'));
             else {
                 $converter = new DataConverter();
-                return $converter->jsonld($dbi['contents']);
+                return $converter->json($dbi['contents']);
             }
         }
         else return Response::json($dbi, 400);

@@ -167,11 +167,7 @@
                                 <!-- Citation -->
                                 <div class="d-flex">
                                     <div>
-                                        {{ $root.label('cite_item') }}:
-                                        <i>
-                                            {{ item.id }}
-                                            {{ date }}
-                                        </i>
+                                        <i v-text="item.id" />
                                     </div>
                                     <v-tooltip bottom>
                                         <template v-slot:activator="{ on }">
@@ -189,7 +185,7 @@
                                 <!-- Download-->
                                 <div class="d-flex">
                                     <a :href="item.id + '.txt'" download v-text="'TXT'" class="mr-3" />
-                                    <a :href="item.id + '.jsonld'" download v-text="'JSON-LD'" />
+                                    <a :href="item.id + '.json'" download v-text="'JSON'" />
                                 </div>
                             </div>
                         </div>

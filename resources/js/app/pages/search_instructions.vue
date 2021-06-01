@@ -21,15 +21,15 @@
         <p>
             Sie können Ihre Suche zusätzlich mithilfe der Filter auf das Geschlecht bzw. die soziale Gruppenzugehörigkeit einschränken.
             Bitte beachten Sie, dass die höchste soziale Gruppe, die die Person in ihrem Leben erreichte, gilt: z.B. ein Mitglied des equester ordo,
-            der in den ordo senatorius aufstieg, wird in der Suche nicht mehr unter ordo equester, sondern nur unter den Senatoren erfasst.
+            der in den ordo senatorius aufstieg, wird in der Suche nicht mehr unter equester ordo, sondern nur unter den Senatoren erfasst.
         <p>
             Die Ausgabe der Datensätze erfolgt wie in den gedruckten PIR-Bänden: Senatoren in Versalien,
             Ritter höheren Ranges in Fettdruck, nur teilweise erhaltene Namen mit den üblichen Klammern versehen.<br/>
-            Sie können jeden Datensatz im TXT- oder JSON-LD-Format herunterladen.
+            Sie können jeden Datensatz im TXT- oder JSON-Format herunterladen.
             Zusätzlich wird ein Link nach dem Schema <code>{{ $root.baseURL }}/id/{id}</code> generiert, z.B.
             <a :href="$root.baseURL + '/id/1'" v-text="$root.baseURL + '/id/1'" />. Bitte verwenden Sie nur diesen Link für die Zitation und nicht die URL,
             wie Sie in Ihrem Browser angezeigt wird, weil sich letztere bedingt durch die technische Weiterentwicklung verändern kann.<br/>
-            Auch zu jedem Suchvorgang, der mindestens einen Treffer erbrachte, wird ein Zitierlink erzeugt, der ebenfalls der Browser-URL vorzuziehen ist.
+            Analog dazu wird zu jedem Suchvorgang, der mindestens einen Treffer erbrachte, ein Zitierlink erzeugt, der ebenfalls der Browser-URL vorzuziehen ist.
         </p>
         <p>
             Wenn Sie den Datenbestand der PIR maschinell durchsuchen möchten, nutzen Sie bitte die <a href="/#/api">API</a>.

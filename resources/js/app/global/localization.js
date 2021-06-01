@@ -66,7 +66,7 @@ export default {
                 nav_resources: 'Ressourcen',
                 nav_api: 'API',
 
-                cite_item: 'Zitiervorschlag',
+                cite_item: 'Permalink',
                 cite_date: 'abgerufen am',
                 clipboard_copy: 'In die Zwischenablage kopieren',
                 clipboard_copied: 'Der Wert wurde in die Zwischenablage kopiert',
@@ -148,7 +148,7 @@ export default {
                 nav_resources: 'Resources',
                 nav_api: 'API',
 
-                cite_item: 'Proposed citation',
+                cite_item: 'Perma Link',
                 cite_date: 'downloaded at',
                 clipboard_copy: 'Copy to clipboard',
                 clipboard_copied: 'Value was copied to clipboard',

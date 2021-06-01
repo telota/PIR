@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\AppController@initiate');
 Route::get('/search', 'App\Http\Controllers\AppController@redirectSearch');
 
-Route::get('/id/{id}.jsonld', 'App\Http\Controllers\dbi\dbiController@provideJson');
+Route::get('/id/{id}.json', 'App\Http\Controllers\dbi\dbiController@provideJson');
 Route::get('/id/{id}.txt', 'App\Http\Controllers\dbi\dbiController@provideTxt');
 Route::get('/id/{id}', 'App\Http\Controllers\dbi\dbiController@redirectID');
 
-Route::get('/id-{id}.jsonld', 'App\Http\Controllers\dbi\dbiController@provideJson');
-Route::get('/pir-id-{id}.jsonld', 'App\Http\Controllers\dbi\dbiController@provideJson');
+Route::get('/id-{id}.json', 'App\Http\Controllers\dbi\dbiController@provideJson');
+Route::get('/pir-id-{id}.json', 'App\Http\Controllers\dbi\dbiController@provideJson');

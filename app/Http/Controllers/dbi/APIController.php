@@ -76,7 +76,7 @@ class APIController extends Controller {
         }
         else {
             return array_map(function ($item) {
-                return $item['id'].'.jsonld';
+                return $item['id'].'.json';
             }, $data);
         }
     }

@@ -35,13 +35,13 @@
             </li>
             <li>
                 Die gefundenen Datensätze finden sie schließlich als einfaches Array in <code>contents</code>.
-                Es handelt sich um Links auf die Datensätze im JSON-LD-Format.
+                Es handelt sich um Links auf die Datensätze im JSON-Format.
             </li><br/>
         </ul>
         <p>
             Möchten Sie einen Datensatz direkt über seine ID aufrufen, müssen Sie nicht den Umweg über die API nehmen.<br/>
-            Sie können ihn direkt mit <code>{{ $root.baseURL }}/id/{id}.jsonld</code> aufrufen, z.B.
-            <a :href="$root.baseURL + '/id/1.jsonld'" target="_blank">{{ $root.baseURL }}/id/1.jsonld</a>.
+            Sie können ihn direkt mit <code>{{ $root.baseURL }}/id/{id}.json</code> aufrufen, z.B.
+            <a :href="$root.baseURL + '/id/1.json'" target="_blank">{{ $root.baseURL }}/id/1.json</a>.
         </p>
         <p>
             <a href="/api" target="_blank"><strong>Zur API wechseln</strong></a>
