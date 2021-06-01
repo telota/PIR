@@ -40,7 +40,7 @@
     </v-footer>
 
     <!-- Legal Notice -->
-    <v-dialog v-model="dialog.imprint" max-width="500">
+    <v-dialog v-model="dialog.imprint" max-width="600">
         <v-card tile>
             <v-card-text>
                 <div class="pa-5 title d-flex justify-center" v-text="$root.label('about_header')"></div>
@@ -72,7 +72,7 @@
                         DE-10117 Berlin
                     </p>
                     <div
-                        class="primary--text"
+                        class="primary--text mb-3"
                         style="cursor: pointer"
                         v-text="$root.label('license_note')"
                         @click="dialog = { imprint: false, license: true }"
@@ -85,22 +85,21 @@
 
 
     <!-- Copyright -->
-    <v-dialog v-model="dialog.license" max-width="500">
+    <v-dialog v-model="dialog.license" max-width="600">
         <v-card tile>
             <v-card-text>
                 <div class="pa-5 title d-flex justify-center" v-text="$root.label('license_header')"></div>
                 <div>
                     <p>
                         <b v-text="$root.label('license_rd')"></b><br/>
+                        Die PIR-Datensätze unterliegen in der hier veröffentlichten Form der <a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank">CC BY 4.0</a>.
                     </p>
                     <p>
                         <b v-text="$root.label('license_sw')"></b><br />
-                        <span v-text="$root.label('license_text')"></span>
-                        <a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a>.<br />
-                        <span v-text="$root.label('license_author')"></span>:
+                        Die PIR-App ist Open Source Software veröffentlicht unter der
+                        <a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a>
+                        auf <a href="https://github.com/telota/PIR" target="_blank">Github</a>, <br/>Autor:
                         <a href="https://orcid.org/0000-0003-2713-5207" target="_blank">Jan Köster</a><br />
-                        <span v-text="$root.label('license_available')"></span>
-                        <a href="https://github.com/telota/PIR" target="_blank">Github</a>.
                     </p>
                 </div>
                 <div class="mb-n3 d-flex justify-center"><v-btn text @click="dialog.license = false">Close</v-btn></div>

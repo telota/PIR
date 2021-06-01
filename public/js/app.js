@@ -2079,7 +2079,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5488,7 +5487,7 @@ var render = function() {
       _c(
         "v-dialog",
         {
-          attrs: { "max-width": "500" },
+          attrs: { "max-width": "600" },
           model: {
             value: _vm.dialog.imprint,
             callback: function($$v) {
@@ -5604,7 +5603,7 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", {
-                    staticClass: "primary--text",
+                    staticClass: "primary--text mb-3",
                     staticStyle: { cursor: "pointer" },
                     domProps: {
                       textContent: _vm._s(_vm.$root.label("license_note"))
@@ -5647,7 +5646,7 @@ var render = function() {
       _c(
         "v-dialog",
         {
-          attrs: { "max-width": "500" },
+          attrs: { "max-width": "600" },
           model: {
             value: _vm.dialog.license,
             callback: function($$v) {
@@ -5676,7 +5675,22 @@ var render = function() {
                         textContent: _vm._s(_vm.$root.label("license_rd"))
                       }
                     }),
-                    _c("br")
+                    _c("br"),
+                    _vm._v(
+                      "\n                        Die PIR-Datensätze unterliegen in der hier veröffentlichten Form der "
+                    ),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href:
+                            "https://creativecommons.org/licenses/by/4.0/deed.de",
+                          target: "_blank"
+                        }
+                      },
+                      [_vm._v("CC BY 4.0")]
+                    ),
+                    _vm._v(".\n                    ")
                   ]),
                   _vm._v(" "),
                   _c("p", [
@@ -5686,13 +5700,9 @@ var render = function() {
                       }
                     }),
                     _c("br"),
-                    _vm._v(" "),
-                    _c("span", {
-                      domProps: {
-                        textContent: _vm._s(_vm.$root.label("license_text"))
-                      }
-                    }),
-                    _vm._v(" "),
+                    _vm._v(
+                      "\n                        Die PIR-App ist Open Source Software veröffentlicht unter der\n                        "
+                    ),
                     _c(
                       "a",
                       {
@@ -5703,35 +5713,7 @@ var render = function() {
                       },
                       [_vm._v("GPLv3")]
                     ),
-                    _vm._v("."),
-                    _c("br"),
-                    _vm._v(" "),
-                    _c("span", {
-                      domProps: {
-                        textContent: _vm._s(_vm.$root.label("license_author"))
-                      }
-                    }),
-                    _vm._v(":\n                        "),
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "https://orcid.org/0000-0003-2713-5207",
-                          target: "_blank"
-                        }
-                      },
-                      [_vm._v("Jan Köster")]
-                    ),
-                    _c("br"),
-                    _vm._v(" "),
-                    _c("span", {
-                      domProps: {
-                        textContent: _vm._s(
-                          _vm.$root.label("license_available")
-                        )
-                      }
-                    }),
-                    _vm._v(" "),
+                    _vm._v("\n                        auf "),
                     _c(
                       "a",
                       {
@@ -5742,7 +5724,20 @@ var render = function() {
                       },
                       [_vm._v("Github")]
                     ),
-                    _vm._v(".\n                    ")
+                    _vm._v(", "),
+                    _c("br"),
+                    _vm._v("Autor:\n                        "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "https://orcid.org/0000-0003-2713-5207",
+                          target: "_blank"
+                        }
+                      },
+                      [_vm._v("Jan Köster")]
+                    ),
+                    _c("br")
                   ])
                 ]),
                 _vm._v(" "),
@@ -68496,7 +68491,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         about_vat_note: 'gemäß §27 a des Mehrwertsteuergesetzes der Bundesrepublik Deutschland',
         about_technical: 'Technische Umsetzung',
         license_header: 'Lizenzhinweise',
-        license_note: 'Bitte beachten Sie unsere Lizenzierungshinweise',
+        license_note: 'Bitte beachten Sie unsere Lizenzhinweise',
         license_rd: 'Forschungsdaten',
         license_sw: 'Software',
         license_text: 'Die PIR App ist Open Source Software veröffentlicht unter der',

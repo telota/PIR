@@ -14,7 +14,7 @@ export default {
                 about_technical: 'Technische Umsetzung',
 
                 license_header: 'Lizenzhinweise',
-                license_note: 'Bitte beachten Sie unsere Lizenzierungshinweise',
+                license_note: 'Bitte beachten Sie unsere Lizenzhinweise',
                 license_rd: 'Forschungsdaten',
                 license_sw: 'Software',
                 license_text: 'Die PIR App ist Open Source Software veröffentlicht unter der',
