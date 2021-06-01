@@ -91,3 +91,52 @@ h3 {
 li {
     margin-bottom: 10px;
 }
+
+#tracking-consent-banner {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0.2em;
+    background-color: white;
+    z-index: 500;
+    font-family: sans-serif !important;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width:1000px) {
+    #tracking-consent-banner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+#tracking-consent-text {
+    padding: 1em;
+}
+#tracking-consent-btns {
+    display: flex;
+}
+.tracking-consent-btn {
+    padding: 0.75em;
+    margin: 0 0.5em 0 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+#tracking-consent-accept {
+    font-weight: 600;
+    background-color: #b51212;
+    color: #fff;
+}
+#tracking-consent-accept:hover {
+    background-color: #e65454;
+    color: #fff;
+}
+#tracking-consent-decline {
+}
+#tracking-consent-decline:hover {
+    background-color: #ddd;
+}

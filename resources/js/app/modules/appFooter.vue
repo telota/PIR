@@ -9,12 +9,33 @@
         :class="$vuetify.breakpoint.smAndUp ? 'justify-space-between' : 'justify-center'"
     >
         <div class="text-truncate">
-            <a href="https://www.bbaw.de" target="_blank" class="white--text" v-text="$root.label('bbaw')"></a>&ensp;2020&ndash;{{ year }}
+            <a
+                href="https://www.bbaw.de"
+                target="_blank" class="white--text"
+                v-html="$root.label('bbaw') + '&ensp;2021' + (year > 2021 ? ('&ndash;' + year) : '')"
+            />
         </div>
         <div class="d-flex flex-wrap justify-end">
-            <div class="mr-2" style="cursor: pointer" v-text="$root.label('about_header')" @click="dialog.imprint = true"></div>
-            <div class="ml-2 mr-2" style="cursor: pointer" v-text="$root.label('license_header')" @click="dialog.license = true"></div>
-            <div class="ml-2"><a href="" target="_blank" class="white--text" v-text="$root.label('consent_declaration')"></a></div>
+            <div
+                class="mr-2"
+                style="cursor: pointer"
+                v-text="$root.label('about_header')"
+                @click="dialog.imprint = true"
+            />
+            <div
+                class="ml-2 mr-2"
+                style="cursor: pointer"
+                v-text="$root.label('license_header')"
+                @click="dialog.license = true"
+            />
+            <div class="ml-2">
+                <a
+                    href="https://dschutz.bbaw.de/"
+                    target="_blank"
+                    class="white--text"
+                    v-text="$root.label('consent_declaration')"
+                />
+            </div>
         </div>
     </v-footer>
 

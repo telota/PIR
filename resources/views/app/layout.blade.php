@@ -25,45 +25,49 @@
         LSK_APP.APP_URL = '{{env('APP_URL')}}';
     </script>
 
-    <!-- Matomo -->
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const decodedCookie = decodeURIComponent(document.cookie);
-            // Check if cookies contain matomo cookie, remove dialog if yes
-            if (decodedCookie.includes('mtm_cookie_consent=')) {
-                console.log('Tracking Consent given');
-                removeTrackingDialog();
-                enableTracking();
-            }
-            // Enable Tracking
-            else {
-                document.getElementById("tracking-consent-decline").onclick = removeTrackingDialog;
-                document.getElementById("tracking-consent-given").onclick = enableTracking;
-            }
+<!-- Matomo -->
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var decodedCookie = decodeURIComponent(document.cookie);
+        // Check if cookies contain matomo cookie, remove dialog if yes
+        if (decodedCookie && decodedCookie.includes('mtm_cookie_consent=')) {
+            console.log('Motomo Cookie detected: Tracking Consent given');
+            removeTrackingDialog();
+            enableTracking();
+        }
+        // Add Clickevents to Dialog
+        else {
+            console.log('No Motomo Cookie detected: Tracking Consent required');
+            var btnDecline = document.getElementById("tracking-consent-decline")
+            if (btnDecline) btnDecline.onclick = removeTrackingDialog;
+            var btnAccept = document.getElementById("tracking-consent-accept")
+            if (btnAccept) btnAccept.onclick = enableTracking;
+        }
 
-            function removeTrackingDialog () {
-                document.getElementById("tracking-consent-dialog").remove();
-            }
+        function removeTrackingDialog () {
+            var dialog = document.getElementById("tracking-consent-banner")
+            if (dialog) dialog.remove();
+        }
 
-            function enableTracking () {
-                console.log('Tracking Consent given')
-                var _paq = window._paq = window._paq || [];
-                _paq.push(['trackPageView']);
-                _paq.push(['enableLinkTracking']);
-                _paq.push(['rememberCookieConsentGiven']);
-                (function() {
-                    var u="https://piwik.bbaw.de/";
-                    _paq.push(['setTrackerUrl', u+'matomo.php']);
-                    _paq.push(['setSiteId', '46']);
-                    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-                })();
-                removeTrackingDialog();
-            }
-        })
-    </script>
-    <noscript><p><img src="https://piwik.bbaw.de/matomo.php?idsite=46&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-    <!-- End Matomo Code -->
+        function enableTracking () {
+            console.log('Tracking Consent given')
+            var _paq = window._paq = window._paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            _paq.push(['rememberCookieConsentGiven']);
+            (function() {
+                var u="https://piwik.bbaw.de/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '46']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+            removeTrackingDialog();
+        }
+    })
+</script>
+<noscript><p><img src="https://piwik.bbaw.de/matomo.php?idsite=46&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
 
 </head>
 
@@ -94,52 +98,21 @@
     <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Tracking Consent -->
-    <div id="tracking-consent-dialog">
-        <div id="tracking-content-text">
+    <div id="tracking-consent-banner">
+        <div id="tracking-consent-text">
             Zur Verbesserung unseres Webangebots nutzen wir <a href="https://matomo.org/tracking-personal-data-with-matomo/" target="_blank">Matomo</a>.
-            Bitten gestatten Sie uns, einen entsprechenden Cookie zu setzen.<br/><br/>
+            Bitten gestatten Sie uns, einen entsprechenden Cookie zu setzen.
             Nähreres entnehmen Sie bitte unserer <a href="https://dschutz.bbaw.de/" target="_blank">Datenschutzerklärung</a>.
         </div>
-        <div>
+        <div id="tracking-consent-btns">
             <button id="tracking-consent-decline" class="tracking-consent-btn">
                 Ablehnen
             </button>
-            <button id="tracking-consent-given" class="tracking-consent-btn">
+            <button id="tracking-consent-accept" class="tracking-consent-btn">
                 Akzeptieren
             </button>
         </div>
     </div>
-
-    <style>
-        #tracking-consent-dialog {
-            position: fixed;
-            bottom: 45px;
-            right: 15px;
-            width: 250px;
-            background-color: white;
-            z-index: 500;
-            font-family: sans-serif !important;
-            box-shadow: 1px 1px 7px rgba(0,0,0,0.5);
-        }
-        #tracking-content-text {
-            padding: 1em;
-            font-size: 0.8em;
-        }
-        #tracking-consent-given {
-
-        }
-        #tracking-consent-decline {
-            float: left;
-        }
-        .tracking-consent-btn {
-            width: 50%;
-            padding: 1em;
-            text-align: center;
-        }
-        .tracking-consent-btn:hover {
-            background-color: #ddd;
-        }
-    </style>
 
 </body>
 
