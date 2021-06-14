@@ -66,7 +66,7 @@ class persons implements dbiInterface  {
             $item_class = $item['class'] ?? null;
             if ($matched === true && !empty($class) && $class !== $item_class) $matched = false;
             // Check String
-            if ($matched === true && !empty($string)) $matched = $this->checkMatch([
+            if ($matched === true && (!empty($string) || !empty($isAdd))) $matched = $this->checkMatch([
                 'isAdd' => $isAdd,
                 'item' => $item,
                 'find' => $string,
@@ -78,6 +78,7 @@ class persons implements dbiInterface  {
                 // Check if additional data can be shown
                 if ($item['is_public'] === true) {
                     unset($item['is_public']);
+                    unset($item['article']); // hide due to possible copyright issue
                     $data[] = $item;
                 }
                 else {
